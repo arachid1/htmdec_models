@@ -1,5 +1,5 @@
 from openmsimodel.interactive.gemd_modeller import GEMDModeller
-from gemd import MaterialTemplate, ProcessTemplate, MeasurementTemplate, ParameterTemplate, ConditionTemplate, MaterialRun, MaterialSpec, RealBounds, CategoricalBounds, Parameter, NominalReal, FileLink, NominalCategorical
+from gemd import MaterialTemplate, ProcessTemplate, MeasurementTemplate, ParameterTemplate, PropertyTemplate,ConditionTemplate, MaterialRun, MaterialSpec, RealBounds, CategoricalBounds, Parameter, NominalReal, FileLink, NominalCategorical, Condition, Property, PropertyAndConditions
 from openmsimodel.structures.materials_sequence import MaterialsSequence
 from openmsimodel.science_kit.science_kit import ScienceKit
 from openmsimodel.science_kit.science_kit import ScienceKit
@@ -570,6 +570,115 @@ def eds_model(file_name, file_path, component):
     ebsd_eds_mapping_sequence = make_ebsd_eds_mapping_sequence(ebsd_eds_data)
     return science_kit.assets()
 
+
+def synthesis_model(file_name, file_path, component):
+    science_kit = ScienceKit()
+    file_id = component['file_id_regex_pattern']
+    match = re.search(file_id[0], file_path)
+
+    if not match:
+        print("No pattern found.")
+        return
+
+    raw_data_forms = client.get(
+        'entry/search', parameters={'query': f'^{match.group()[:3]}.._VAM-.', 'limit': 1000}
+    )
+    synthesis_data = {}
+    for form in raw_data_forms:
+        if 'Syn' in form['data']['targetPath'] and match.group() in form['data']['targetPath']:
+            synthesis_data.update(form['data'])
+    print(synthesis_data)
+
+    def make_arc_melting_sequence(data):
+
+        science_kit = ScienceKit()
+
+        mixture_ingredient = Ingredient('Mixture')
+
+        argon_pressure_template = ConditionTemplate(name="Argon Pressure", bounds=RealBounds(0, 1000, "pascal"))
+        vacuum_before_melt_template = ConditionTemplate(name="Vacuum Before Melt", bounds=RealBounds(0, 1, "pascal"))
+        arc_melting_process_template = ProcessTemplate(
+            name="Arc Melting",
+            conditions=[argon_pressure_template, vacuum_before_melt_template]
+        )
+        arc_melting_process = Process(
+            name="Arc Melting",
+            template=arc_melting_process_template
+        )
+        arc_melting_process.update_conditions(
+            Condition('Argon Pressure', value=NominalReal(data['Arc Melting']['VAM Details']['Argon Pressure'], 'pascal'), template=argon_pressure_template),
+            Condition('Vacuum Before Melt', value=NominalReal(data['Arc Melting']['VAM Details']['Vacuum Before Melt'], 'pascal'), template=vacuum_before_melt_template),
+            which='run'
+        )
+
+        
+        mass_property_template = PropertyTemplate(
+            name="Mass in grams", 
+            bounds=RealBounds(0, 100, "gram")  # RealBounds for mass in grams
+        )
+        sample_material_template = MaterialTemplate("Sample", properties=mass_property_template)
+        arc_melted_material = Material(name="Arc Melted Sample", template=sample_material_template)
+
+        # homogenized_alloy_material._update_attributes(
+        #     AttrType=PropertyAndConditions,
+        #     attributes=(
+        #         PropertyAndConditions(
+        #             property=Property(
+        #                 "Form",
+        #                 value=NominalCategorical("Ingot"),
+        #                 origin="predicted",
+        #                 notes="",
+        #                 file_links=[],
+        #             ),
+        #             conditions=[],
+        #         ),
+        #     ),
+        #     which="spec",
+        # )
+        arc_melted_material.update_properties_and_conditions( # TODO: update_properties causes clash and shouldnt be called
+            PropertyAndConditions(property=Property('Target Al Mass', value=NominalReal(data['Material Preparation']['Target Mass']['Al'], 'gram'), template=mass_property_template), conditions=[]),
+            # Condition('Co', value=NominalReal(data['Material Preparation']['Target Mass']['Co'], 'gram'), template=mass_property_template),
+            # Condition('Cr', value=NominalReal(data['Material Preparation']['Target Mass']['Cr'], 'gram'), template=mass_property_template),
+            # Condition('Fe', value=NominalReal(data['Material Preparation']['Target Mass']['Fe'], 'gram'), template=mass_property_template),
+            # Property('Mn', value=NominalReal(data['Material Preparation']['Target Mass']['Mn'], 'gram'), template=mass_property_template),
+            # Property('Ni', value=NominalReal(data['Material Preparation']['Target Mass']['Ni'], 'gram'), template=mass_property_template),
+            # Property('V', value=NominalReal(data['Material Preparation']['Target Mass']['V'], 'gram'), template=mass_property_template)),
+            which='spec'
+        )
+        
+
+
+        # Create a measurement for the weighed mass
+        weighed_mass_measurement_template = MeasurementTemplate(name="Weighing")
+        weighed_mass_measurement = Measurement(name="Weighed Mass", template=weighed_mass_measurement_template)
+
+        weighed_mass_measurement.update_properties(
+            Property('Al', value=NominalReal(data['Material Preparation']['Weighed Mass']['Al'], 'gram'), template=mass_property_template),
+            Property('Co', value=NominalReal(data['Material Preparation']['Weighed Mass']['Co'], 'gram'), template=mass_property_template),
+            Property('Cr', value=NominalReal(data['Material Preparation']['Weighed Mass']['Cr'], 'gram'), template=mass_property_template),
+            Property('Fe', value=NominalReal(data['Material Preparation']['Weighed Mass']['Fe'], 'gram'), template=mass_property_template),
+            Property('Mn', value=NominalReal(data['Material Preparation']['Weighed Mass']['Mn'], 'gram'), template=mass_property_template),
+            Property('Ni', value=NominalReal(data['Material Preparation']['Weighed Mass']['Ni'], 'gram'), template=mass_property_template),
+            Property('V', value=NominalReal(data['Material Preparation']['Weighed Mass']['V'], 'gram'), template=mass_property_template),
+            which='run'
+
+        )
+
+        # Create the MaterialsSequence for Arc Melting
+        arc_melting_sequence = MaterialsSequence(
+            name="Arc Melting Sequence",
+            science_kit=science_kit,
+            ingredients=[mixture_ingredient],
+            material=arc_melted_material,
+            process=arc_melting_process,
+            measurements=[weighed_mass_measurement]
+        )
+
+        arc_melting_sequence.link_within()
+        return science_kit.assets()
+    
+    return make_arc_melting_sequence(synthesis_data)
+
 class BIRDSHOTModeller(GEMDModeller):
 
     def __init__(self, files_folder, gemd_folder, instantiate_build):
@@ -588,6 +697,12 @@ class BIRDSHOTModeller(GEMDModeller):
             (r'\b[A-Z]{3}[0-9]{2}\b', True),
             [], 
             lambda file_name, file_path, component: eds_model(file_name, file_path, component)
+        )
+        self.add_automatable_component(
+            lambda s: 'Syn' in s and (not ('.' in s)),  
+            (r'\b[A-Z]{3}[0-9]{2}\b', True),
+            [], 
+            lambda file_name, file_path, component: synthesis_model(file_name, file_path, component)
         )
         self.start_folder_monitoring()
 

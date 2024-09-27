@@ -2,28 +2,29 @@
   "conditions": [],
   "file_links": [],
   "material": {
-    "id": "1182fbb1-68c9-413f-8b3f-3f7258b6727f",
+    "id": "e62c6ac4-c4ea-4f7c-a77a-4540e752827e",
     "scope": "auto",
     "type": "link_by_uid"
   },
-  "name": "EDS Measured Composition StdDev",
+  "name": "Weighed Mass",
   "notes": null,
-  "parameters": [
+  "parameters": [],
+  "properties": [
     {
       "file_links": [],
       "name": "Al",
       "notes": null,
       "origin": "unknown",
       "template": {
-        "id": "75c7acfb-01a0-46eb-8abc-abb24c364882",
+        "id": "f59d7fb0-f0a4-4b47-b86e-3ddd73172c02",
         "scope": "auto",
         "type": "link_by_uid"
       },
-      "type": "parameter",
+      "type": "property",
       "value": {
         "nominal": 0.0,
         "type": "nominal_real",
-        "units": "dimensionless"
+        "units": "gram"
       }
     },
     {
@@ -32,15 +33,15 @@
       "notes": null,
       "origin": "unknown",
       "template": {
-        "id": "75c7acfb-01a0-46eb-8abc-abb24c364882",
+        "id": "f59d7fb0-f0a4-4b47-b86e-3ddd73172c02",
         "scope": "auto",
         "type": "link_by_uid"
       },
-      "type": "parameter",
+      "type": "property",
       "value": {
-        "nominal": 0.0,
+        "nominal": 8.8061,
         "type": "nominal_real",
-        "units": "dimensionless"
+        "units": "gram"
       }
     },
     {
@@ -49,32 +50,15 @@
       "notes": null,
       "origin": "unknown",
       "template": {
-        "id": "75c7acfb-01a0-46eb-8abc-abb24c364882",
+        "id": "f59d7fb0-f0a4-4b47-b86e-3ddd73172c02",
         "scope": "auto",
         "type": "link_by_uid"
       },
-      "type": "parameter",
+      "type": "property",
       "value": {
-        "nominal": 0.0,
+        "nominal": 1.2939,
         "type": "nominal_real",
-        "units": "dimensionless"
-      }
-    },
-    {
-      "file_links": [],
-      "name": "Cu",
-      "notes": null,
-      "origin": "unknown",
-      "template": {
-        "id": "75c7acfb-01a0-46eb-8abc-abb24c364882",
-        "scope": "auto",
-        "type": "link_by_uid"
-      },
-      "type": "parameter",
-      "value": {
-        "nominal": 0.0,
-        "type": "nominal_real",
-        "units": "dimensionless"
+        "units": "gram"
       }
     },
     {
@@ -83,15 +67,15 @@
       "notes": null,
       "origin": "unknown",
       "template": {
-        "id": "75c7acfb-01a0-46eb-8abc-abb24c364882",
+        "id": "f59d7fb0-f0a4-4b47-b86e-3ddd73172c02",
         "scope": "auto",
         "type": "link_by_uid"
       },
-      "type": "parameter",
+      "type": "property",
       "value": {
-        "nominal": 0.0,
+        "nominal": 2.7816,
         "type": "nominal_real",
-        "units": "dimensionless"
+        "units": "gram"
       }
     },
     {
@@ -100,15 +84,15 @@
       "notes": null,
       "origin": "unknown",
       "template": {
-        "id": "75c7acfb-01a0-46eb-8abc-abb24c364882",
+        "id": "f59d7fb0-f0a4-4b47-b86e-3ddd73172c02",
         "scope": "auto",
         "type": "link_by_uid"
       },
-      "type": "parameter",
+      "type": "property",
       "value": {
-        "nominal": 0.0,
+        "nominal": 1.3674790978732931,
         "type": "nominal_real",
-        "units": "dimensionless"
+        "units": "gram"
       }
     },
     {
@@ -117,15 +101,15 @@
       "notes": null,
       "origin": "unknown",
       "template": {
-        "id": "75c7acfb-01a0-46eb-8abc-abb24c364882",
+        "id": "f59d7fb0-f0a4-4b47-b86e-3ddd73172c02",
         "scope": "auto",
         "type": "link_by_uid"
       },
-      "type": "parameter",
+      "type": "property",
       "value": {
-        "nominal": 0.0,
+        "nominal": 13.1497,
         "type": "nominal_real",
-        "units": "dimensionless"
+        "units": "gram"
       }
     },
     {
@@ -134,28 +118,27 @@
       "notes": null,
       "origin": "unknown",
       "template": {
-        "id": "75c7acfb-01a0-46eb-8abc-abb24c364882",
+        "id": "f59d7fb0-f0a4-4b47-b86e-3ddd73172c02",
         "scope": "auto",
         "type": "link_by_uid"
       },
-      "type": "parameter",
+      "type": "property",
       "value": {
-        "nominal": 0.0,
+        "nominal": 7.6111,
         "type": "nominal_real",
-        "units": "dimensionless"
+        "units": "gram"
       }
     }
   ],
-  "properties": [],
   "source": null,
   "spec": {
-    "id": "033bc44c-a3cb-48d8-a2b1-0c79ac34be24",
+    "id": "135f1fc6-e9e0-4d51-b268-5592bd44bdb8",
     "scope": "auto",
     "type": "link_by_uid"
   },
   "tags": [],
   "type": "measurement_run",
   "uids": {
-    "auto": "cb93b23a-3924-4e5f-80f8-ec87ffa97bba"
+    "auto": "9874e94c-3b31-4c0b-b327-e0dac0744175"
   }
 }

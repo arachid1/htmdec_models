@@ -1,0 +1,53 @@
+{
+  "conditions": [
+    {
+      "file_links": [],
+      "name": "Argon Pressure",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "ba92af34-c6a5-4eb8-ae92-0c6cdaaa49a3",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "condition",
+      "value": {
+        "nominal": 800.0,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Vacuum Before Melt",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "848c5829-9051-4efc-8137-3cfb89527fd0",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "condition",
+      "value": {
+        "nominal": 3e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    }
+  ],
+  "file_links": [],
+  "name": "Arc Melting",
+  "notes": null,
+  "parameters": [],
+  "source": null,
+  "spec": {
+    "id": "86c74514-3e5c-4d1d-baf0-f3dba1778bab",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "process_run",
+  "uids": {
+    "auto": "e7060fe3-9326-4f58-9a31-2f7ecbf8135b"
+  }
+}
