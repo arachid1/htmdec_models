@@ -1,0 +1,169 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "Homogenization",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Atmosphere",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "224a850b-1538-4b1f-ae3a-bac969451b59",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "category": "Ar",
+        "type": "nominal_categorical"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Cooling Rate",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "2640b709-d5e8-41bb-99b8-88f0930ab9aa",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "category": "FC",
+        "type": "nominal_categorical"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Duration",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "17103cd0-8c3f-4f9a-9771-318ac3c88feb",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 24.0,
+        "type": "nominal_real",
+        "units": "hour"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Pressure",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "4c90ac7b-3ace-4c9b-9bd8-085b80e3b953",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Temperature",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "efcbe943-8dd3-4f50-be15-e9f20be0ebc6",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 1150.0,
+        "type": "nominal_real",
+        "units": "degree_Celsius"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 1",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "24474358-0126-4e3e-ae29-801606880ae3",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 2",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "24474358-0126-4e3e-ae29-801606880ae3",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 3",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "24474358-0126-4e3e-ae29-801606880ae3",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 4",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "24474358-0126-4e3e-ae29-801606880ae3",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    }
+  ],
+  "tags": [],
+  "template": {
+    "id": "2f224d31-6fb0-4f4c-93df-d675c59da81e",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "type": "process_spec",
+  "uids": {
+    "auto": "17b4e282-c115-40ed-8082-eeab2ecc94bf"
+  }
+}

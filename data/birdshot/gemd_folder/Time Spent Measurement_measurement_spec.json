@@ -1,0 +1,35 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "Time Spent Measurement",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Time",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "ae03493c-4ebd-4aa2-a488-67a3bf2537d6",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 5.0,
+        "type": "nominal_real",
+        "units": "hour"
+      }
+    }
+  ],
+  "tags": [],
+  "template": {
+    "id": "d72fe22b-ee5e-4484-9977-d4552e45434c",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "type": "measurement_spec",
+  "uids": {
+    "auto": "6e236dee-e8ef-43b6-aeaf-2b005bab1e5c"
+  }
+}
