@@ -762,7 +762,7 @@ def synthesis_model(file_name, file_path, component):
 
     def make_arc_melting_sequence(data, ingredient_name):
 
-        mixture_ingredient = Ingredient(ingredient_name)
+        homogenous_sample_ingredient = Ingredient(ingredient_name)
 
         argon_pressure_template = ConditionTemplate(name="Argon Pressure", bounds=RealBounds(0, 1000, "pascal"))
         vacuum_before_melt_template = ConditionTemplate(name="Vacuum Before Melt", bounds=RealBounds(0, 1, "pascal"))
@@ -818,7 +818,7 @@ def synthesis_model(file_name, file_path, component):
         arc_melting_sequence = MaterialsSequence(
             name="Arc Melting Sequence",
             science_kit=science_kit,
-            ingredients=[mixture_ingredient],
+            ingredients=[homogenous_sample_ingredient],
             material=arc_melted_material,
             process=arc_melting_process,
             measurements=[weighed_mass_measurement]

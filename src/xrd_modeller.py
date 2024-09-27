@@ -11,6 +11,8 @@ from openmsimodel.structures.materials_sequence import MaterialsSequence
 from openmsimodel.db.open_db import OpenDB
 from openmsimodel.graph.open_graph import OpenGraph
 from openmsimodel.graph.helpers import launch_graph_widget
+import re
+from girder_client import GirderClient
 
 def xrd_model(file_name, file_path, component):
 
@@ -109,21 +111,49 @@ def xrd_model(file_name, file_path, component):
 
     return science_kit.assets()
 
+def powder_synthesis(file_name, file_path, component):
+    science_kit = ScienceKit()
+    file_id = component['file_id_regex_pattern']
+    
+    match = re.search(file_id[0], file_path)
+
+    client = GirderClient(apiUrl='https://data.htmdec.org/api/v1')
+    client.authenticate(apiKey='MFfpVN81hmOaUV7cTGsovnzdr0iB87ygR0RxkDYA')
+
+    if not match:
+        print("No pattern found.")
+        return
+
+    raw_data_forms = client.get(
+        'entry/search', parameters={'query': f'^{match.group()[:3]}', 'limit': 1000}
+    )
+    print("heree")
+    for form in raw_data_forms:
+        print(form)
+        exit
+        
+
+
 class XRDModeller(GEMDModeller):
 
-
-    def __init__(self, files_folder, gemd_folder):
+    def __init__(self, files_folder, gemd_folder, instantiate_build):
         """
         Initialize the GEMDModeller with stores_config, files_folder, and gemd_folder.
         """
-        super().__init__(files_folder, gemd_folder)
+        super().__init__(files_folder, gemd_folder, instantiate_build)
         self.add_automatable_component(
-            lambda s: True,  
-            r'^([A-Za-z]+_\d+)',
+            lambda s: not ('.' in s),
+            (r'\w+_\d{4}-\d{2}-\d{2}_\d+_[A-Z]{2}_\d+', True),
             [], 
             lambda file_name, file_path, component:xrd_model(file_name, file_path, component)
         )
-
+        self.add_automatable_component(
+            lambda s: s.endswith('.txt'),  
+            (r'\w+_\d{4}-\d{2}-\d{2}_\d+_[A-Z]{2}_\d+', False),
+            [], 
+            lambda file_name, file_path, component:powder_synthesis(file_name, file_path, component)
+        )
+        self.start_folder_monitoring()
 
 def main(args=None):
     """
