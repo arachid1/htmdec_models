@@ -74,9 +74,6 @@ def ni_model(file_name, file_path, component):
         if 'NI-HSR' in form['data']['targetPath'] and match.group() in form['data']['targetPath']:
             ni_data = form['data']
 
-    print(ni_data)
-    print(ni_data['Analysis Parameters'])
-
     ni_folder_id = find_folder_by_path('66310ca21b56c53abc7e0f9f', ni_data['targetPath'])
 
     dms_ni_folder_items = client.get(f"/item", parameters={
@@ -201,12 +198,8 @@ def ni_model(file_name, file_path, component):
 
             if 'Coefficient' in parameter_name:
                 if parameter_name == 'Tip Area Function Coefficients':
-                    print(ni_data['Analysis Parameters'][parameter_name])
                     for coefficient_name in ni_data['Analysis Parameters'][parameter_name].keys():
                         percentage = ni_data['Analysis Parameters'][parameter_name][coefficient_name]
-                        print("aqui")
-                        print(percentage)
-                        print(type(percentage))
                         param = Parameter(parameter_name, value=NominalReal(percentage, unit), template=tip_area_coefficient_template)
                         nanoindentation_process.update_parameters((param), which='both')
                     continue
@@ -233,11 +226,6 @@ def ni_model(file_name, file_path, component):
                     template = piezo_load_cell_effective_mass_template
 
             # value = NominalReal(ni_data['Analysis Parameters'][parameter_name], unit)
-            print("here")
-            print(parameter_name)
-            print(ni_data['Analysis Parameters'][parameter_name])
-            print(type(ni_data['Analysis Parameters'][parameter_name]))
-            print(unit)
             param = Parameter(parameter_name, value=NominalReal(ni_data['Analysis Parameters'][parameter_name], unit), template=template)
 
             nanoindentation_process.update_parameters((param) , which='both')
@@ -587,10 +575,7 @@ def synthesis_model(file_name, file_path, component):
     for form in raw_data_forms:
         if 'Syn' in form['data']['targetPath'] and match.group() in form['data']['targetPath']:
             synthesis_data.update(form['data'])
-    print(synthesis_data)
     
-    exit
-
     def make_forging_sequence(data):
         ingot_ingredient = Ingredient('Ingot')
 

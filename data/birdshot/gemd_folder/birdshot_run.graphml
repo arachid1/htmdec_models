@@ -9,607 +9,607 @@
 <key id="color" for="node" attr.name="color" attr.type="string"/>
 <key id="name" for="graph" attr.name="name" attr.type="string"/>
 <graph edgedefault="directed"><data key="name">birdshot</data>
-<node id="Attached Sample (100 SR) [cfac, ingredient_run]">
-  <data key="color">blue</data>
-  <data key="shape">circle</data>
-  <data key="uuid">cfacd515-4660-48f9-8ace-e1b75910b93f</data>
-  <data key="type">ingredient_run</data>
-  <data key="short_name">Attached Sample (100 SR)</data>
-  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "8cbf1662-332c-4b60-9cfa-e99187338bc1", "scope": "auto", "type": "link_by_uid"}, "name": "Attached Sample (100 SR)", "notes": null, "number_fraction": null, "process": {"id": "f0f836af-34bf-47f5-b68c-1eee791c993d", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "d25d7d49-6878-4848-9517-09f46ff496e9", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "cfacd515-4660-48f9-8ace-e1b75910b93f"}, "volume_fraction": null}</data>
-  <data key="source">Attached Sample (100 SR)_ingredient_run.json</data>
-</node>
-<node id="Calibration (100 SR) 5-Indent Experiment [f0f8, process_run]">
-  <data key="color">red</data>
-  <data key="shape">circle</data>
-  <data key="uuid">f0f836af-34bf-47f5-b68c-1eee791c993d</data>
-  <data key="type">process_run</data>
-  <data key="short_name">Calibration (100 SR) 5-Indent Experiment</data>
-  <data key="object">{"conditions": [], "file_links": [{"filename": "BBB01_CSR_100.NMD (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2005ce080931a559c98c6"}, {"filename": "BBB01_CSR_100_Test001.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e200f0e080931a559c98e9"}, {"filename": "BBB01_CSR_100_Test001_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e200f2e080931a559c98ef"}, {"filename": "BBB01_CSR_100_Test002.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20189e080931a559c9911"}, {"filename": "BBB01_CSR_100_Test002_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2018ae080931a559c9914"}, {"filename": "BBB01_CSR_100_Test003.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2023be080931a559c9938"}, {"filename": "BBB01_CSR_100_Test003_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2023ce080931a559c993b"}, {"filename": "BBB01_CSR_100_Test004.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e202efe080931a559c9971"}, {"filename": "BBB01_CSR_100_Test004_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e202f0e080931a559c9977"}, {"filename": "BBB01_CSR_100_Test005.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2039ee080931a559c999b"}, {"filename": "BBB01_CSR_100_Test005_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2039fe080931a559c999e"}], "name": "Calibration (100 SR) 5-Indent Experiment", "notes": null, "parameters": [{"file_links": [], "name": "Strain Rate", "notes": null, "origin": "unknown", "template": null, "type": "parameter", "value": {"nominal": 100.0, "type": "nominal_real", "units": "millimeter / second"}}, {"file_links": [], "name": "Actuator Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "901511eb-3e31-483b-822b-928a08f9d461", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 10.546, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Column Mass", "notes": null, "origin": "unknown", "template": {"id": "3af2be51-0a32-4ebe-bc13-8a0b1c426c6d", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0090855, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Actuator Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "3af2be51-0a32-4ebe-bc13-8a0b1c426c6d", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.144, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Spring Stiffness", "notes": null, "origin": "unknown", "template": {"id": "2dffa2e3-1c2b-4534-92c2-d1a64b819b20", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 448.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Frame Stiffness", "notes": null, "origin": "unknown", "template": {"id": "73750017-fad1-4a98-b0d7-6bef6d8c62a7", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 8000000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Pieze Load Cell Stiffness", "notes": null, "origin": "unknown", "template": {"id": "5d03dc6c-83be-4aec-8fd5-6c4d1d6462bf", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 14700000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Piezo Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "5ca08941-349a-42f6-8048-0569344a8653", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "33651328-8cca-4994-98e6-02decc69fab5", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 40.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Effective Mass", "notes": null, "origin": "unknown", "template": {"id": "02243943-7017-405e-ac1e-87e1183939ef", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.00513, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Tip Area Function Coefficients", "notes": null, "origin": "unknown", "template": {"id": "a24eae04-aa6f-486c-bdae-6703fa60a4ce", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "source": null, "spec": {"id": "7be6961b-6b38-44f8-a604-ee75d0dd070f", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "f0f836af-34bf-47f5-b68c-1eee791c993d"}}</data>
-  <data key="source">Calibration (100 SR) 5-Indent Experiment_process_run.json</data>
-</node>
-<node id="Sample Attached with Crystal Bond [8cbf, material_run]">
-  <data key="color">green</data>
-  <data key="shape">circle</data>
-  <data key="uuid">8cbf1662-332c-4b60-9cfa-e99187338bc1</data>
-  <data key="type">material_run</data>
-  <data key="short_name">Sample Attached with Crystal Bond</data>
-  <data key="object">{"file_links": [], "name": "Sample Attached with Crystal Bond", "notes": null, "process": {"id": "00249531-5bde-4451-9c75-c0fc911f3333", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "0f105d29-23c8-40be-b733-80bd73d96f85", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "8cbf1662-332c-4b60-9cfa-e99187338bc1"}}</data>
-  <data key="source">Sample Attached with Crystal Bond_material_run.json</data>
-</node>
-<node id="Crystal Bond [8bab, ingredient_run]">
-  <data key="color">blue</data>
-  <data key="shape">circle</data>
-  <data key="uuid">8bab71bc-8cad-47c8-9ce8-d28a6ca234c2</data>
-  <data key="type">ingredient_run</data>
-  <data key="short_name">Crystal Bond</data>
-  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": null, "name": "Crystal Bond", "notes": null, "number_fraction": null, "process": {"id": "00249531-5bde-4451-9c75-c0fc911f3333", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "efca7a98-59ce-4b4f-a5bf-91d20a27e976", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "8bab71bc-8cad-47c8-9ce8-d28a6ca234c2"}, "volume_fraction": null}</data>
-  <data key="source">Crystal Bond_ingredient_run.json</data>
-</node>
-<node id="Melting Crystal Bond [0024, process_run]">
-  <data key="color">red</data>
-  <data key="shape">circle</data>
-  <data key="uuid">00249531-5bde-4451-9c75-c0fc911f3333</data>
-  <data key="type">process_run</data>
-  <data key="short_name">Melting Crystal Bond</data>
-  <data key="object">{"conditions": [], "file_links": [], "name": "Melting Crystal Bond", "notes": null, "parameters": [], "source": null, "spec": {"id": "f4d08eed-1c16-4eda-acd7-5e2b7c486eed", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "00249531-5bde-4451-9c75-c0fc911f3333"}}</data>
-  <data key="source">Melting Crystal Bond_process_run.json</data>
-</node>
-<node id="Keyence Profilometry Step 1 [3f7d, process_run]">
-  <data key="color">red</data>
-  <data key="shape">circle</data>
-  <data key="uuid">3f7d3ca5-8ccd-4edf-8f8d-5717edc222be</data>
-  <data key="type">process_run</data>
-  <data key="short_name">Keyence Profilometry Step 1</data>
-  <data key="object">{"conditions": [], "file_links": [{"filename": "BBB01_CSR_I01.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203aae080931a559c99a7"}, {"filename": "BBB01_CSR_I02.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203b6e080931a559c99b0"}, {"filename": "BBB01_CSR_I03.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203c3e080931a559c99b9"}, {"filename": "BBB01_CSR_I04.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203d0e080931a559c99c2"}, {"filename": "BBB01_CSR_I05.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203dce080931a559c99cb"}, {"filename": "BBB01_IMCSR_I01.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20823e080931a559c9ae0"}, {"filename": "BBB01_IMCSR_I02.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20827e080931a559c9ae3"}, {"filename": "BBB01_IMCSR_I03.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2082ce080931a559c9ae9"}, {"filename": "BBB01_IMCSR_I04.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2082fe080931a559c9aec"}, {"filename": "BBB01_IMCSR_I05.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20833e080931a559c9aef"}], "name": "Keyence Profilometry Step 1", "notes": null, "parameters": [], "source": null, "spec": {"id": "d293c056-d94b-4e76-b4eb-25799b2ecc6c", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "3f7d3ca5-8ccd-4edf-8f8d-5717edc222be"}}</data>
-  <data key="source">Keyence Profilometry Step 1_process_run.json</data>
-</node>
-<node id="3D Indent Scan 1 [31a2, measurement_run]">
+<node id="Calibration (100 SR) Hardness Measurement [1b6d, measurement_run]">
   <data key="color">purple</data>
   <data key="shape">circle</data>
-  <data key="uuid">31a2dd11-0cb2-471b-a38d-62e6cb7a5b86</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">3D Indent Scan 1</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "3076891f-299f-4a8a-b66c-319917819674", "scope": "auto", "type": "link_by_uid"}, "name": "3D Indent Scan 1", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "d29d5832-cf0a-451f-af4b-7b8a2aa6e740", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "31a2dd11-0cb2-471b-a38d-62e6cb7a5b86"}}</data>
-  <data key="source">3D Indent Scan 1_measurement_run.json</data>
-</node>
-<node id="Scanned Sample 1 [3076, material_run]">
-  <data key="color">green</data>
-  <data key="shape">circle</data>
-  <data key="uuid">3076891f-299f-4a8a-b66c-319917819674</data>
-  <data key="type">material_run</data>
-  <data key="short_name">Scanned Sample 1</data>
-  <data key="object">{"file_links": [], "name": "Scanned Sample 1", "notes": null, "process": {"id": "3f7d3ca5-8ccd-4edf-8f8d-5717edc222be", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "d37c116e-78e2-4346-9fef-20f5701755b0", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "3076891f-299f-4a8a-b66c-319917819674"}}</data>
-  <data key="source">Scanned Sample 1_material_run.json</data>
-</node>
-<node id="(1 SR) Area Measurement [b4fd, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">b4fd6b4d-7231-4d2c-a3d6-5d97a9c17667</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">(1 SR) Area Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "f668eacf-10e7-4862-aeb2-bba4c445b561", "scope": "auto", "type": "link_by_uid"}, "name": "(1 SR) Area Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "d9ece424-cf25-4adb-a706-d039b1ae06d3", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "b4fd6b4d-7231-4d2c-a3d6-5d97a9c17667"}}</data>
-  <data key="source">(1 SR) Area Measurement_measurement_run.json</data>
-</node>
-<node id="(1 SR) Indented Sample [f668, material_run]">
-  <data key="color">green</data>
-  <data key="shape">circle</data>
-  <data key="uuid">f668eacf-10e7-4862-aeb2-bba4c445b561</data>
-  <data key="type">material_run</data>
-  <data key="short_name">(1 SR) Indented Sample</data>
-  <data key="object">{"file_links": [], "name": "(1 SR) Indented Sample", "notes": null, "process": {"id": "95865575-f7e3-475f-9dc1-72ef5ab0a6cb", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "107a58af-a8e3-4624-a276-20c93322fb12", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "f668eacf-10e7-4862-aeb2-bba4c445b561"}}</data>
-  <data key="source">(1 SR) Indented Sample_material_run.json</data>
-</node>
-<node id="Calibration (100 SR) Area Measurement [e4cb, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">e4cb0be7-84ce-46c3-a6e3-d35a3757fd87</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">Calibration (100 SR) Area Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "6fff9ae4-883a-4d2c-9e65-47af7c362221", "scope": "auto", "type": "link_by_uid"}, "name": "Calibration (100 SR) Area Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "f3d4ef9f-2eb3-40cd-917c-ac6e518cabf2", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "e4cb0be7-84ce-46c3-a6e3-d35a3757fd87"}}</data>
-  <data key="source">Calibration (100 SR) Area Measurement_measurement_run.json</data>
-</node>
-<node id="Calibration (100 SR) Indented Sample [6fff, material_run]">
-  <data key="color">green</data>
-  <data key="shape">circle</data>
-  <data key="uuid">6fff9ae4-883a-4d2c-9e65-47af7c362221</data>
-  <data key="type">material_run</data>
-  <data key="short_name">Calibration (100 SR) Indented Sample</data>
-  <data key="object">{"file_links": [], "name": "Calibration (100 SR) Indented Sample", "notes": null, "process": {"id": "f0f836af-34bf-47f5-b68c-1eee791c993d", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "432f5e48-592e-4386-9570-c4bbef3e4fda", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "6fff9ae4-883a-4d2c-9e65-47af7c362221"}}</data>
-  <data key="source">Calibration (100 SR) Indented Sample_material_run.json</data>
-</node>
-<node id="Arc Melting [a845, process_run]">
-  <data key="color">red</data>
-  <data key="shape">circle</data>
-  <data key="uuid">a84560b3-902b-4356-a98f-90a996b9536e</data>
-  <data key="type">process_run</data>
-  <data key="short_name">Arc Melting</data>
-  <data key="object">{"conditions": [{"file_links": [], "name": "Argon Pressure", "notes": null, "origin": "unknown", "template": {"id": "cb6464a4-33c7-448c-beb4-399a13c2723b", "scope": "auto", "type": "link_by_uid"}, "type": "condition", "value": {"nominal": 800.0, "type": "nominal_real", "units": "pascal"}}, {"file_links": [], "name": "Vacuum Before Melt", "notes": null, "origin": "unknown", "template": {"id": "f9aad673-882c-4339-8b2c-b7db50b95fbe", "scope": "auto", "type": "link_by_uid"}, "type": "condition", "value": {"nominal": 3e-05, "type": "nominal_real", "units": "pascal"}}], "file_links": [], "name": "Arc Melting", "notes": null, "parameters": [], "source": null, "spec": {"id": "00ffb3e3-6287-4ac2-a3e8-ef08f4912330", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "a84560b3-902b-4356-a98f-90a996b9536e"}}</data>
-  <data key="source">Arc Melting_process_run.json</data>
-</node>
-<node id="EDS Measured Composition [9517, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">9517ba58-0f36-4c6f-91d0-25dd57fbf7c7</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">EDS Measured Composition</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "db526935-1ca0-4c3c-984d-b00734605909", "scope": "auto", "type": "link_by_uid"}, "name": "EDS Measured Composition", "notes": null, "parameters": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 20.5, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 4.16, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cu", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 8.13, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 4.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 38.85, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 24.35, "type": "nominal_real", "units": "dimensionless"}}], "properties": [], "source": null, "spec": {"id": "649b5f05-47ba-45dd-8749-585f9e7ced76", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "9517ba58-0f36-4c6f-91d0-25dd57fbf7c7"}}</data>
-  <data key="source">EDS Measured Composition_measurement_run.json</data>
-</node>
-<node id="Sample from EBSD and EDS Mapping [db52, material_run]">
-  <data key="color">green</data>
-  <data key="shape">circle</data>
-  <data key="uuid">db526935-1ca0-4c3c-984d-b00734605909</data>
-  <data key="type">material_run</data>
-  <data key="short_name">Sample from EBSD and EDS Mapping</data>
-  <data key="object">{"file_links": [], "name": "Sample from EBSD and EDS Mapping", "notes": null, "process": {"id": "ba36466f-0afd-43cb-a7b4-52c0f5d7f3ac", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "e1eb8aff-9f70-404f-9c90-174163948a17", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "db526935-1ca0-4c3c-984d-b00734605909"}}</data>
-  <data key="source">Sample from EBSD and EDS Mapping_material_run.json</data>
-</node>
-<node id="(2 SR) Indented Sample [939b, material_run]">
-  <data key="color">green</data>
-  <data key="shape">circle</data>
-  <data key="uuid">939b8c13-5235-4a7d-8b64-edfcaa02727a</data>
-  <data key="type">material_run</data>
-  <data key="short_name">(2 SR) Indented Sample</data>
-  <data key="object">{"file_links": [], "name": "(2 SR) Indented Sample", "notes": null, "process": {"id": "89316d62-d799-49b5-9f55-b771023536b0", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "fec5e6b4-0617-435a-be98-b5e589e6e75a", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "939b8c13-5235-4a7d-8b64-edfcaa02727a"}}</data>
-  <data key="source">(2 SR) Indented Sample_material_run.json</data>
-</node>
-<node id="(2 SR) 5-Indent Experiment [8931, process_run]">
-  <data key="color">red</data>
-  <data key="shape">circle</data>
-  <data key="uuid">89316d62-d799-49b5-9f55-b771023536b0</data>
-  <data key="type">process_run</data>
-  <data key="short_name">(2 SR) 5-Indent Experiment</data>
-  <data key="object">{"conditions": [], "file_links": [{"filename": "BBB01_CSR_2.NMD (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20022e080931a559c9898"}, {"filename": "BBB01_CSR_2_Results.xlsx (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20027e080931a559c989e"}, {"filename": "BBB01_CSR_2_Test001.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20030e080931a559c98a4"}, {"filename": "BBB01_CSR_2_Test002.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20039e080931a559c98aa"}, {"filename": "BBB01_CSR_2_Test003.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20040e080931a559c98b4"}, {"filename": "BBB01_CSR_2_Test004.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2004de080931a559c98ba"}, {"filename": "BBB01_CSR_2_Test005.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20051e080931a559c98c0"}], "name": "(2 SR) 5-Indent Experiment", "notes": null, "parameters": [{"file_links": [], "name": "Strain Rate", "notes": null, "origin": "unknown", "template": null, "type": "parameter", "value": {"nominal": 2.0, "type": "nominal_real", "units": "millimeter / second"}}, {"file_links": [], "name": "Actuator Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "d234026c-704c-4852-bf07-e51f947cc3dd", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 10.546, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Column Mass", "notes": null, "origin": "unknown", "template": {"id": "d05a0ad0-91cb-4336-b1e7-2b82f113d6c2", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0090855, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Actuator Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "d05a0ad0-91cb-4336-b1e7-2b82f113d6c2", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.144, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Spring Stiffness", "notes": null, "origin": "unknown", "template": {"id": "6aa902b3-02f5-4f99-bcf4-0f3809abfeb4", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 448.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Frame Stiffness", "notes": null, "origin": "unknown", "template": {"id": "1ba8d8f5-b423-4602-b104-680eaeed4595", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 8000000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Pieze Load Cell Stiffness", "notes": null, "origin": "unknown", "template": {"id": "3b5b6d78-9d48-477e-8c8d-6318ce03a74b", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 14700000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Piezo Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "91354e27-554a-440c-aaf1-3818fec36da8", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "1b4ff07b-d638-4b8e-9761-927991de50f6", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 40.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Effective Mass", "notes": null, "origin": "unknown", "template": {"id": "d1ea7a08-45f4-4dac-af12-1670606ba9b2", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.00513, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Tip Area Function Coefficients", "notes": null, "origin": "unknown", "template": {"id": "92d0f6b6-14be-430b-ba86-a4ec32084bac", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "source": null, "spec": {"id": "1e5b6456-b7aa-4811-9811-de59514445b8", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "89316d62-d799-49b5-9f55-b771023536b0"}}</data>
-  <data key="source">(2 SR) 5-Indent Experiment_process_run.json</data>
-</node>
-<node id="2nd Phase EDS Measured Composition StdDev [bb1a, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">bb1a3b7a-95f4-4b03-9deb-53bb0d8ae328</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">2nd Phase EDS Measured Composition StdDev</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "db526935-1ca0-4c3c-984d-b00734605909", "scope": "auto", "type": "link_by_uid"}, "name": "2nd Phase EDS Measured Composition StdDev", "notes": null, "parameters": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cu", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "properties": [], "source": null, "spec": {"id": "b0784591-4d84-49b5-b072-f900b1da096c", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "bb1a3b7a-95f4-4b03-9deb-53bb0d8ae328"}}</data>
-  <data key="source">2nd Phase EDS Measured Composition StdDev_measurement_run.json</data>
-</node>
-<node id="(1 SR) Hardness Measurement [0065, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">0065e674-ffb5-4b12-bb2a-096bb81c4c34</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">(1 SR) Hardness Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "f668eacf-10e7-4862-aeb2-bba4c445b561", "scope": "auto", "type": "link_by_uid"}, "name": "(1 SR) Hardness Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "3d9d4c99-7615-4203-bbb1-56b80fb8b3b9", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "0065e674-ffb5-4b12-bb2a-096bb81c4c34"}}</data>
-  <data key="source">(1 SR) Hardness Measurement_measurement_run.json</data>
-</node>
-<node id="Ingot [cdac, ingredient_run]">
-  <data key="color">blue</data>
-  <data key="shape">circle</data>
-  <data key="uuid">cdac74df-3cf6-4ab0-91c5-d61d8432448e</data>
-  <data key="type">ingredient_run</data>
-  <data key="short_name">Ingot</data>
-  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": null, "name": "Ingot", "notes": null, "number_fraction": null, "process": {"id": "9a75f673-0d17-495d-a7e6-c55b5fe2146d", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "91deaaa1-b416-4727-883d-7331afef44bf", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "cdac74df-3cf6-4ab0-91c5-d61d8432448e"}, "volume_fraction": null}</data>
-  <data key="source">Ingot_ingredient_run.json</data>
-</node>
-<node id="Forging [9a75, process_run]">
-  <data key="color">red</data>
-  <data key="shape">circle</data>
-  <data key="uuid">9a75f673-0d17-495d-a7e6-c55b5fe2146d</data>
-  <data key="type">process_run</data>
-  <data key="short_name">Forging</data>
-  <data key="object">{"conditions": [], "file_links": [], "name": "Forging", "notes": null, "parameters": [], "source": null, "spec": {"id": "ec93d42e-e852-4d3e-97e7-8952cc8a9116", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "9a75f673-0d17-495d-a7e6-c55b5fe2146d"}}</data>
-  <data key="source">Forging_process_run.json</data>
-</node>
-<node id="(2 SR) Hardness Measurement [7abf, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">7abf4a4d-a1ec-4e7a-8600-e384295fffd2</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">(2 SR) Hardness Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "939b8c13-5235-4a7d-8b64-edfcaa02727a", "scope": "auto", "type": "link_by_uid"}, "name": "(2 SR) Hardness Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "11f776be-a76a-47d0-8380-59971b828ff5", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "7abf4a4d-a1ec-4e7a-8600-e384295fffd2"}}</data>
-  <data key="source">(2 SR) Hardness Measurement_measurement_run.json</data>
-</node>
-<node id="(1 SR) Load Measurement [13d1, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">13d1c222-6f1e-41f8-8486-496ea0d7acd3</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">(1 SR) Load Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "f668eacf-10e7-4862-aeb2-bba4c445b561", "scope": "auto", "type": "link_by_uid"}, "name": "(1 SR) Load Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "aa2d64a0-9628-4263-a0ee-b8de9949c315", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "13d1c222-6f1e-41f8-8486-496ea0d7acd3"}}</data>
-  <data key="source">(1 SR) Load Measurement_measurement_run.json</data>
-</node>
-<node id="Calibration (100 SR) Displacement Measurement [7c3f, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">7c3fa6f3-578e-47c6-94cf-cbbbf9887bf1</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">Calibration (100 SR) Displacement Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "6fff9ae4-883a-4d2c-9e65-47af7c362221", "scope": "auto", "type": "link_by_uid"}, "name": "Calibration (100 SR) Displacement Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "869f6330-39bd-4210-8dc7-f74f79a7c27b", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "7c3fa6f3-578e-47c6-94cf-cbbbf9887bf1"}}</data>
-  <data key="source">Calibration (100 SR) Displacement Measurement_measurement_run.json</data>
-</node>
-<node id="Homogenous Material [1b9c, material_run]">
-  <data key="color">green</data>
-  <data key="shape">circle</data>
-  <data key="uuid">1b9c5e6d-b931-42e7-9771-584c2578bb77</data>
-  <data key="type">material_run</data>
-  <data key="short_name">Homogenous Material</data>
-  <data key="object">{"file_links": [], "name": "Homogenous Material", "notes": null, "process": {"id": "b5a7f558-1263-4523-bf95-54681b23cb6a", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "29c1f11a-3fe9-40e1-ba64-77f6742236a5", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "1b9c5e6d-b931-42e7-9771-584c2578bb77"}}</data>
-  <data key="source">Homogenous Material_material_run.json</data>
-</node>
-<node id="Homogenization [b5a7, process_run]">
-  <data key="color">red</data>
-  <data key="shape">circle</data>
-  <data key="uuid">b5a7f558-1263-4523-bf95-54681b23cb6a</data>
-  <data key="type">process_run</data>
-  <data key="short_name">Homogenization</data>
-  <data key="object">{"conditions": [], "file_links": [], "name": "Homogenization", "notes": null, "parameters": [], "source": null, "spec": {"id": "17b4e282-c115-40ed-8082-eeab2ecc94bf", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "b5a7f558-1263-4523-bf95-54681b23cb6a"}}</data>
-  <data key="source">Homogenization_process_run.json</data>
-</node>
-<node id="Arc Melted Sample [8b8d, material_run]">
-  <data key="color">green</data>
-  <data key="shape">circle</data>
-  <data key="uuid">8b8d961c-5682-40b2-81ee-55184909a478</data>
-  <data key="type">material_run</data>
-  <data key="short_name">Arc Melted Sample</data>
-  <data key="object">{"file_links": [], "name": "Arc Melted Sample", "notes": null, "process": {"id": "a84560b3-902b-4356-a98f-90a996b9536e", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "675cce59-4679-4a67-b853-438d5d4639ae", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "8b8d961c-5682-40b2-81ee-55184909a478"}}</data>
-  <data key="source">Arc Melted Sample_material_run.json</data>
-</node>
-<node id="EBSD and EDS Mapping [ba36, process_run]">
-  <data key="color">red</data>
-  <data key="shape">circle</data>
-  <data key="uuid">ba36466f-0afd-43cb-a7b4-52c0f5d7f3ac</data>
-  <data key="type">process_run</data>
-  <data key="short_name">EBSD and EDS Mapping</data>
-  <data key="object">{"conditions": [], "file_links": [], "name": "EBSD and EDS Mapping", "notes": null, "parameters": [{"file_links": [], "name": "Beam Current", "notes": null, "origin": "unknown", "template": {"id": "780f9dc5-7b5f-458f-a0c6-cc0353ce528f", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": -1.0, "type": "nominal_real", "units": "nanoampere"}}, {"file_links": [], "name": "Beam Voltage", "notes": null, "origin": "unknown", "template": {"id": "fc1a04ff-0eb8-4e26-ba26-b80184f785f2", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 20.0, "type": "nominal_real", "units": "kilovolt"}}, {"file_links": [], "name": "Dwell Time", "notes": null, "origin": "unknown", "template": {"id": "b33d6209-2781-43d6-8e1b-8af0ecbec0bb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": -1.0, "type": "nominal_real", "units": "second"}}, {"file_links": [], "name": "Sample Tilt", "notes": null, "origin": "unknown", "template": {"id": "9e7d1dde-3294-4557-a328-e7889715b1ca", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": -1.0, "type": "nominal_real", "units": "degree"}}, {"file_links": [], "name": "Working Distance", "notes": null, "origin": "unknown", "template": {"id": "3de703b2-df05-4872-abdb-a80171b4ee6e", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": -1.0, "type": "nominal_real", "units": "millimeter"}}, {"file_links": [], "name": "Low Vacuum", "notes": null, "origin": "unknown", "template": {"id": "0078d4e1-4df4-4fd2-b16d-65b6c50515de", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"category": "None", "type": "nominal_categorical"}}], "source": null, "spec": {"id": "f46a23a0-cecd-4903-9452-7c309ed10b81", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "ba36466f-0afd-43cb-a7b4-52c0f5d7f3ac"}}</data>
-  <data key="source">EBSD and EDS Mapping_process_run.json</data>
-</node>
-<node id="(1 SR) 5-Indent Experiment [9586, process_run]">
-  <data key="color">red</data>
-  <data key="shape">circle</data>
-  <data key="uuid">95865575-f7e3-475f-9dc1-72ef5ab0a6cb</data>
-  <data key="type">process_run</data>
-  <data key="short_name">(1 SR) 5-Indent Experiment</data>
-  <data key="object">{"conditions": [], "file_links": [], "name": "(1 SR) 5-Indent Experiment", "notes": null, "parameters": [{"file_links": [], "name": "Strain Rate", "notes": null, "origin": "unknown", "template": null, "type": "parameter", "value": {"nominal": 1.0, "type": "nominal_real", "units": "millimeter / second"}}, {"file_links": [], "name": "Actuator Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "2c48b9d8-a7cb-4b19-b0dc-c01096192798", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 10.546, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Column Mass", "notes": null, "origin": "unknown", "template": {"id": "57718ac6-3b3b-4243-8218-4e165aea1d4d", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0090855, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Actuator Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "57718ac6-3b3b-4243-8218-4e165aea1d4d", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.144, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Spring Stiffness", "notes": null, "origin": "unknown", "template": {"id": "2f7c0a4f-c204-4391-a88c-5e1d7e6f2dd7", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 448.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Frame Stiffness", "notes": null, "origin": "unknown", "template": {"id": "fed67f69-bc3d-4c1b-85ff-472072ffb582", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 8000000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Pieze Load Cell Stiffness", "notes": null, "origin": "unknown", "template": {"id": "6f07e5d8-5c29-4100-8166-163dd028c7d3", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 14700000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Piezo Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "ef82b94a-2d4c-4936-b0b0-138e032ff1be", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "6098d29b-6b2d-4ba8-840c-234298766dc4", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 40.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Effective Mass", "notes": null, "origin": "unknown", "template": {"id": "13e0bff1-4320-43ba-9552-7898af079048", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.00513, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Tip Area Function Coefficients", "notes": null, "origin": "unknown", "template": {"id": "7afeb6e2-758d-4176-8f58-95792a9fe96c", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "source": null, "spec": {"id": "3833aacd-3aa4-4018-9473-fb01ee260a79", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "95865575-f7e3-475f-9dc1-72ef5ab0a6cb"}}</data>
-  <data key="source">(1 SR) 5-Indent Experiment_process_run.json</data>
-</node>
-<node id="Calibration (100 SR) Load Measurement [1db7, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">1db78d42-ee5c-42ad-99b9-0cbc22f4816a</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">Calibration (100 SR) Load Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "6fff9ae4-883a-4d2c-9e65-47af7c362221", "scope": "auto", "type": "link_by_uid"}, "name": "Calibration (100 SR) Load Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "d3e32d0c-3052-4ce3-9c75-ac9f89f6334c", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "1db78d42-ee5c-42ad-99b9-0cbc22f4816a"}}</data>
-  <data key="source">Calibration (100 SR) Load Measurement_measurement_run.json</data>
-</node>
-<node id="(2 SR) Displacement Measurement [87ca, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">87ca9ea5-3cad-4e88-9f74-bd27b58420ee</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">(2 SR) Displacement Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "939b8c13-5235-4a7d-8b64-edfcaa02727a", "scope": "auto", "type": "link_by_uid"}, "name": "(2 SR) Displacement Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "c3d42211-2f6f-49f6-859c-86e09b5edab0", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "87ca9ea5-3cad-4e88-9f74-bd27b58420ee"}}</data>
-  <data key="source">(2 SR) Displacement Measurement_measurement_run.json</data>
-</node>
-<node id="Homogenous Sample [e760, ingredient_run]">
-  <data key="color">blue</data>
-  <data key="shape">circle</data>
-  <data key="uuid">e76014c2-adf1-47c8-bcb7-4d621c448779</data>
-  <data key="type">ingredient_run</data>
-  <data key="short_name">Homogenous Sample</data>
-  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "1b9c5e6d-b931-42e7-9771-584c2578bb77", "scope": "auto", "type": "link_by_uid"}, "name": "Homogenous Sample", "notes": null, "number_fraction": null, "process": {"id": "a84560b3-902b-4356-a98f-90a996b9536e", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "faf13a74-e85e-4a58-9466-3ad3a8f8b7e2", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "e76014c2-adf1-47c8-bcb7-4d621c448779"}, "volume_fraction": null}</data>
-  <data key="source">Homogenous Sample_ingredient_run.json</data>
-</node>
-<node id="Weighed Mass [17fb, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">17fba2d3-9d77-4a03-bd9e-897cd52bbcbc</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">Weighed Mass</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "8b8d961c-5682-40b2-81ee-55184909a478", "scope": "auto", "type": "link_by_uid"}, "name": "Weighed Mass", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "cba3203f-599c-40a1-b3fb-e633fdd8b748", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 0.0, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "cba3203f-599c-40a1-b3fb-e633fdd8b748", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 8.8061, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "cba3203f-599c-40a1-b3fb-e633fdd8b748", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 1.2939, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "cba3203f-599c-40a1-b3fb-e633fdd8b748", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 2.7816, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "cba3203f-599c-40a1-b3fb-e633fdd8b748", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 1.3674790978732931, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "cba3203f-599c-40a1-b3fb-e633fdd8b748", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 13.1497, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "cba3203f-599c-40a1-b3fb-e633fdd8b748", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 7.6111, "type": "nominal_real", "units": "gram"}}], "source": null, "spec": {"id": "f1363a94-7621-4b42-a63b-d4e70ea9cac4", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "17fba2d3-9d77-4a03-bd9e-897cd52bbcbc"}}</data>
-  <data key="source">Weighed Mass_measurement_run.json</data>
-</node>
-<node id="(2 SR) Load Measurement [8dfa, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">8dfa132e-42e4-488a-9cc1-faa8155a7724</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">(2 SR) Load Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "939b8c13-5235-4a7d-8b64-edfcaa02727a", "scope": "auto", "type": "link_by_uid"}, "name": "(2 SR) Load Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "5dc80518-1cfa-4e8b-8ac5-d490ae0e4310", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "8dfa132e-42e4-488a-9cc1-faa8155a7724"}}</data>
-  <data key="source">(2 SR) Load Measurement_measurement_run.json</data>
-</node>
-<node id="(1 SR) Displacement Measurement [aade, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">aade850a-053b-43e8-900c-b491df3e22a7</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">(1 SR) Displacement Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "f668eacf-10e7-4862-aeb2-bba4c445b561", "scope": "auto", "type": "link_by_uid"}, "name": "(1 SR) Displacement Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "a2069e4f-d086-4254-940a-705e28bd6837", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "aade850a-053b-43e8-900c-b491df3e22a7"}}</data>
-  <data key="source">(1 SR) Displacement Measurement_measurement_run.json</data>
-</node>
-<node id="Posterior Dimension [e42b, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">e42b2baf-46cd-428f-bc43-1d3934b941a7</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">Posterior Dimension</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "06fcd05a-46db-4bc8-90cb-f240c73462f1", "scope": "auto", "type": "link_by_uid"}, "name": "Posterior Dimension", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Posterior Length", "notes": null, "origin": "unknown", "template": {"id": "1b8b9312-d64a-4e56-bcb1-c70d6d14b7cc", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 63.57, "type": "nominal_real", "units": "centimeter"}}, {"file_links": [], "name": "Posterior Thickness", "notes": null, "origin": "unknown", "template": {"id": "1b8b9312-d64a-4e56-bcb1-c70d6d14b7cc", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 4.92, "type": "nominal_real", "units": "centimeter"}}, {"file_links": [], "name": "Posterior Width", "notes": null, "origin": "unknown", "template": {"id": "1b8b9312-d64a-4e56-bcb1-c70d6d14b7cc", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 15.0, "type": "nominal_real", "units": "centimeter"}}], "source": null, "spec": {"id": "aa8f7aa3-2651-4aee-9e44-75d3a93ce42d", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "e42b2baf-46cd-428f-bc43-1d3934b941a7"}}</data>
-  <data key="source">Posterior Dimension_measurement_run.json</data>
-</node>
-<node id="Forged Ingot [06fc, material_run]">
-  <data key="color">green</data>
-  <data key="shape">circle</data>
-  <data key="uuid">06fcd05a-46db-4bc8-90cb-f240c73462f1</data>
-  <data key="type">material_run</data>
-  <data key="short_name">Forged Ingot</data>
-  <data key="object">{"file_links": [], "name": "Forged Ingot", "notes": null, "process": {"id": "9a75f673-0d17-495d-a7e6-c55b5fe2146d", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "2c6f395a-5674-4889-bcb4-c60ae1de84a0", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "06fcd05a-46db-4bc8-90cb-f240c73462f1"}}</data>
-  <data key="source">Forged Ingot_material_run.json</data>
-</node>
-<node id="Calibration (100 SR) Hardness Measurement [9ab6, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">9ab60c1b-057f-4952-b9a3-3acce9efea6f</data>
+  <data key="uuid">1b6dfea2-1fb7-4c07-8258-6c4fd9320ec7</data>
   <data key="type">measurement_run</data>
   <data key="short_name">Calibration (100 SR) Hardness Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "6fff9ae4-883a-4d2c-9e65-47af7c362221", "scope": "auto", "type": "link_by_uid"}, "name": "Calibration (100 SR) Hardness Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "2915c085-6eb1-489e-8c18-83a6ef6a70d4", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "9ab60c1b-057f-4952-b9a3-3acce9efea6f"}}</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "5f5bf4a7-e9d9-4bd0-b2f2-25acadc1ced9", "scope": "auto", "type": "link_by_uid"}, "name": "Calibration (100 SR) Hardness Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "c1d52bd4-2b9c-4334-9958-d9112b69fd31", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "1b6dfea2-1fb7-4c07-8258-6c4fd9320ec7"}}</data>
   <data key="source">Calibration (100 SR) Hardness Measurement_measurement_run.json</data>
 </node>
-<node id="Soak Time [0385, measurement_run]">
+<node id="Calibration (100 SR) Indented Sample [5f5b, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">5f5bf4a7-e9d9-4bd0-b2f2-25acadc1ced9</data>
+  <data key="type">material_run</data>
+  <data key="short_name">Calibration (100 SR) Indented Sample</data>
+  <data key="object">{"file_links": [], "name": "Calibration (100 SR) Indented Sample", "notes": null, "process": {"id": "7363b6a2-0381-4562-aa7c-7f749d357a11", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "aaa1575c-c3d6-4f7d-8dff-421471df515e", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "5f5bf4a7-e9d9-4bd0-b2f2-25acadc1ced9"}}</data>
+  <data key="source">Calibration (100 SR) Indented Sample_material_run.json</data>
+</node>
+<node id="Melting Temperature [e5aa, measurement_run]">
   <data key="color">purple</data>
   <data key="shape">circle</data>
-  <data key="uuid">0385fcac-592b-49d3-824f-c743dd342fe2</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">Soak Time</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "06fcd05a-46db-4bc8-90cb-f240c73462f1", "scope": "auto", "type": "link_by_uid"}, "name": "Soak Time", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Soak Time", "notes": null, "origin": "unknown", "template": {"id": "1b6316a5-27c7-4b26-bfbe-4d7d4c3564b0", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 0.0, "type": "nominal_real", "units": "minute"}}], "source": null, "spec": {"id": "add9d018-1508-46dc-b593-41482f2b38aa", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "0385fcac-592b-49d3-824f-c743dd342fe2"}}</data>
-  <data key="source">Soak Time_measurement_run.json</data>
-</node>
-<node id="Indented Sample (1 SR) [dc28, ingredient_run]">
-  <data key="color">blue</data>
-  <data key="shape">circle</data>
-  <data key="uuid">dc28667c-4051-4f7b-916c-dacaec161270</data>
-  <data key="type">ingredient_run</data>
-  <data key="short_name">Indented Sample (1 SR)</data>
-  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "f668eacf-10e7-4862-aeb2-bba4c445b561", "scope": "auto", "type": "link_by_uid"}, "name": "Indented Sample (1 SR)", "notes": null, "number_fraction": null, "process": {"id": "3f7d3ca5-8ccd-4edf-8f8d-5717edc222be", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "d4639ad7-8717-46b4-af13-e4dbd6bde080", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "dc28667c-4051-4f7b-916c-dacaec161270"}, "volume_fraction": null}</data>
-  <data key="source">Indented Sample (1 SR)_ingredient_run.json</data>
-</node>
-<node id="Attached Sample (1 SR) [618c, ingredient_run]">
-  <data key="color">blue</data>
-  <data key="shape">circle</data>
-  <data key="uuid">618ca79a-daf8-480d-b329-0a9749ce2640</data>
-  <data key="type">ingredient_run</data>
-  <data key="short_name">Attached Sample (1 SR)</data>
-  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "939b8c13-5235-4a7d-8b64-edfcaa02727a", "scope": "auto", "type": "link_by_uid"}, "name": "Attached Sample (1 SR)", "notes": null, "number_fraction": null, "process": {"id": "95865575-f7e3-475f-9dc1-72ef5ab0a6cb", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "a31e13a2-70c4-4f93-a2eb-86b97e30c800", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "618ca79a-daf8-480d-b329-0a9749ce2640"}, "volume_fraction": null}</data>
-  <data key="source">Attached Sample (1 SR)_ingredient_run.json</data>
-</node>
-<node id="Attached Sample (2 SR) [4256, ingredient_run]">
-  <data key="color">blue</data>
-  <data key="shape">circle</data>
-  <data key="uuid">4256ac33-914d-4874-b96f-4ffd509a63fa</data>
-  <data key="type">ingredient_run</data>
-  <data key="short_name">Attached Sample (2 SR)</data>
-  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "6fff9ae4-883a-4d2c-9e65-47af7c362221", "scope": "auto", "type": "link_by_uid"}, "name": "Attached Sample (2 SR)", "notes": null, "number_fraction": null, "process": {"id": "89316d62-d799-49b5-9f55-b771023536b0", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "6672d73d-1fce-4f72-ad8f-ffe8a89ca08c", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "4256ac33-914d-4874-b96f-4ffd509a63fa"}, "volume_fraction": null}</data>
-  <data key="source">Attached Sample (2 SR)_ingredient_run.json</data>
-</node>
-<node id="(2 SR) Area Measurement [a865, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">a865bfce-59e0-4fd5-8048-9b2b9619f88c</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">(2 SR) Area Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "939b8c13-5235-4a7d-8b64-edfcaa02727a", "scope": "auto", "type": "link_by_uid"}, "name": "(2 SR) Area Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "2bf328b9-f9ca-49b9-9aab-8556cc31c7c0", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "a865bfce-59e0-4fd5-8048-9b2b9619f88c"}}</data>
-  <data key="source">(2 SR) Area Measurement_measurement_run.json</data>
-</node>
-<node id="2nd Phase EDS Measured Composition [28c0, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">28c0a458-aeed-4e9e-8e9e-687f4d195e03</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">2nd Phase EDS Measured Composition</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "db526935-1ca0-4c3c-984d-b00734605909", "scope": "auto", "type": "link_by_uid"}, "name": "2nd Phase EDS Measured Composition", "notes": null, "parameters": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cu", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "a791a618-a6ac-40aa-b3e3-3b8c09d8deb1", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "properties": [], "source": null, "spec": {"id": "e41ae407-1cfa-40cc-a8e7-23165aab7011", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "28c0a458-aeed-4e9e-8e9e-687f4d195e03"}}</data>
-  <data key="source">2nd Phase EDS Measured Composition_measurement_run.json</data>
-</node>
-<node id="Temperature [5190, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">5190565d-bb25-4050-b70d-491624742ccb</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">Temperature</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "06fcd05a-46db-4bc8-90cb-f240c73462f1", "scope": "auto", "type": "link_by_uid"}, "name": "Temperature", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Temperature", "notes": null, "origin": "unknown", "template": {"id": "058038b4-0ca7-43e5-bcba-60c0b226497b", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 25.0, "type": "nominal_real", "units": "degree_Celsius"}}], "source": null, "spec": {"id": "ff28a680-cebf-4d48-a062-eafb12c73b7d", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "5190565d-bb25-4050-b70d-491624742ccb"}}</data>
-  <data key="source">Temperature_measurement_run.json</data>
-</node>
-<node id="Melting Temperature [dd41, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">dd41f870-a254-4bec-9ea4-9e0bf433e84e</data>
+  <data key="uuid">e5aa6f58-2cca-4998-9358-90aa1cddeb5e</data>
   <data key="type">measurement_run</data>
   <data key="short_name">Melting Temperature</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "8cbf1662-332c-4b60-9cfa-e99187338bc1", "scope": "auto", "type": "link_by_uid"}, "name": "Melting Temperature", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "8a10928f-9bc4-48b2-aa97-154507c26e70", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "dd41f870-a254-4bec-9ea4-9e0bf433e84e"}}</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "823ac8a8-1503-446e-a3a9-b704efb5bfa3", "scope": "auto", "type": "link_by_uid"}, "name": "Melting Temperature", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "a5a41abd-bed4-4a2e-9b90-d23b508343f0", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "e5aa6f58-2cca-4998-9358-90aa1cddeb5e"}}</data>
   <data key="source">Melting Temperature_measurement_run.json</data>
 </node>
-<node id="Sample [b2d1, ingredient_run]">
-  <data key="color">blue</data>
+<node id="Sample Attached with Crystal Bond [823a, material_run]">
+  <data key="color">green</data>
   <data key="shape">circle</data>
-  <data key="uuid">b2d186be-26b7-4c78-8b3c-39713c4ee6d1</data>
-  <data key="type">ingredient_run</data>
-  <data key="short_name">Sample</data>
-  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": null, "name": "Sample", "notes": null, "number_fraction": null, "process": {"id": "00249531-5bde-4451-9c75-c0fc911f3333", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "9f26dc53-c6ea-48fc-a147-c4012468d014", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "b2d186be-26b7-4c78-8b3c-39713c4ee6d1"}, "volume_fraction": null}</data>
-  <data key="source">Sample_ingredient_run.json</data>
+  <data key="uuid">823ac8a8-1503-446e-a3a9-b704efb5bfa3</data>
+  <data key="type">material_run</data>
+  <data key="short_name">Sample Attached with Crystal Bond</data>
+  <data key="object">{"file_links": [], "name": "Sample Attached with Crystal Bond", "notes": null, "process": {"id": "f0fc46c8-b656-4160-be1c-aa4ef7e5502f", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "556cb824-d386-4d0c-97ef-30274584d6ea", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "823ac8a8-1503-446e-a3a9-b704efb5bfa3"}}</data>
+  <data key="source">Sample Attached with Crystal Bond_material_run.json</data>
 </node>
-<node id="Time Spent Measurement [db06, measurement_run]">
+<node id="Prior Dimension [138a, measurement_run]">
   <data key="color">purple</data>
   <data key="shape">circle</data>
-  <data key="uuid">db06cdf1-3a37-4780-8274-15b89ff75449</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">Time Spent Measurement</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "1b9c5e6d-b931-42e7-9771-584c2578bb77", "scope": "auto", "type": "link_by_uid"}, "name": "Time Spent Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "6e236dee-e8ef-43b6-aeaf-2b005bab1e5c", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "db06cdf1-3a37-4780-8274-15b89ff75449"}}</data>
-  <data key="source">Time Spent Measurement_measurement_run.json</data>
-</node>
-<node id="EDS Measured Composition StdDev [3f12, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">3f12aa3f-19c0-45ec-8b4e-53769330e133</data>
-  <data key="type">measurement_run</data>
-  <data key="short_name">EDS Measured Composition StdDev</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "db526935-1ca0-4c3c-984d-b00734605909", "scope": "auto", "type": "link_by_uid"}, "name": "EDS Measured Composition StdDev", "notes": null, "parameters": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cu", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "8162c375-ba37-4858-bb15-6f3403efadff", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "properties": [], "source": null, "spec": {"id": "fd9c8d06-c6e7-4222-bd8b-5ed37564f595", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "3f12aa3f-19c0-45ec-8b4e-53769330e133"}}</data>
-  <data key="source">EDS Measured Composition StdDev_measurement_run.json</data>
-</node>
-<node id="Forged Sample [9c0b, ingredient_run]">
-  <data key="color">blue</data>
-  <data key="shape">circle</data>
-  <data key="uuid">9c0b6b0d-e2d3-4424-81d2-1c7997117384</data>
-  <data key="type">ingredient_run</data>
-  <data key="short_name">Forged Sample</data>
-  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "06fcd05a-46db-4bc8-90cb-f240c73462f1", "scope": "auto", "type": "link_by_uid"}, "name": "Forged Sample", "notes": null, "number_fraction": null, "process": {"id": "b5a7f558-1263-4523-bf95-54681b23cb6a", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "a2869505-fd88-4533-9f2b-8de8205770f4", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "9c0b6b0d-e2d3-4424-81d2-1c7997117384"}, "volume_fraction": null}</data>
-  <data key="source">Forged Sample_ingredient_run.json</data>
-</node>
-<node id="Prior Dimension [5658, measurement_run]">
-  <data key="color">purple</data>
-  <data key="shape">circle</data>
-  <data key="uuid">56580136-be05-4a05-b605-0984171063cc</data>
+  <data key="uuid">138aab0d-8c20-4b3f-890c-16a2eef76417</data>
   <data key="type">measurement_run</data>
   <data key="short_name">Prior Dimension</data>
-  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "06fcd05a-46db-4bc8-90cb-f240c73462f1", "scope": "auto", "type": "link_by_uid"}, "name": "Prior Dimension", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Prior Length", "notes": null, "origin": "unknown", "template": {"id": "1b8b9312-d64a-4e56-bcb1-c70d6d14b7cc", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 38.83, "type": "nominal_real", "units": "centimeter"}}, {"file_links": [], "name": "Prior Thickness", "notes": null, "origin": "unknown", "template": {"id": "1b8b9312-d64a-4e56-bcb1-c70d6d14b7cc", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 12.66, "type": "nominal_real", "units": "centimeter"}}, {"file_links": [], "name": "Prior Width", "notes": null, "origin": "unknown", "template": {"id": "1b8b9312-d64a-4e56-bcb1-c70d6d14b7cc", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 14.57, "type": "nominal_real", "units": "centimeter"}}], "source": null, "spec": {"id": "0f2b72f5-d7d0-4bb4-bfbc-78bd78af976a", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "56580136-be05-4a05-b605-0984171063cc"}}</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "2eb5699b-bf61-4692-b347-4f5766be9695", "scope": "auto", "type": "link_by_uid"}, "name": "Prior Dimension", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Prior Length", "notes": null, "origin": "unknown", "template": {"id": "27d5a0df-d262-4df8-ad90-e615b0c2d4f4", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 38.83, "type": "nominal_real", "units": "centimeter"}}, {"file_links": [], "name": "Prior Thickness", "notes": null, "origin": "unknown", "template": {"id": "27d5a0df-d262-4df8-ad90-e615b0c2d4f4", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 12.66, "type": "nominal_real", "units": "centimeter"}}, {"file_links": [], "name": "Prior Width", "notes": null, "origin": "unknown", "template": {"id": "27d5a0df-d262-4df8-ad90-e615b0c2d4f4", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 14.57, "type": "nominal_real", "units": "centimeter"}}], "source": null, "spec": {"id": "33de2813-b6a5-4dab-afa3-14ececaf0d8a", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "138aab0d-8c20-4b3f-890c-16a2eef76417"}}</data>
   <data key="source">Prior Dimension_measurement_run.json</data>
 </node>
-<edge source="Attached Sample (100 SR) [cfac, ingredient_run]" target="Calibration (100 SR) 5-Indent Experiment [f0f8, process_run]">
-  <data key="relationship">is used in</data>
+<node id="Forged Ingot [2eb5, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">2eb5699b-bf61-4692-b347-4f5766be9695</data>
+  <data key="type">material_run</data>
+  <data key="short_name">Forged Ingot</data>
+  <data key="object">{"file_links": [], "name": "Forged Ingot", "notes": null, "process": {"id": "7d6a9044-38fa-437d-b756-53bb594bd769", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "047b9ee9-3dbf-4de1-85f8-4e85094cb926", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "2eb5699b-bf61-4692-b347-4f5766be9695"}}</data>
+  <data key="source">Forged Ingot_material_run.json</data>
+</node>
+<node id="(1 SR) Load Measurement [6d8b, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">6d8b3b39-8356-4b7c-b881-fe7e46b1b8f6</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">(1 SR) Load Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "dab3aaaf-6b45-49c4-9ebf-b0c7aa3cae46", "scope": "auto", "type": "link_by_uid"}, "name": "(1 SR) Load Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "afbcddd7-de35-4bdc-b51d-90180ac90dc9", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "6d8b3b39-8356-4b7c-b881-fe7e46b1b8f6"}}</data>
+  <data key="source">(1 SR) Load Measurement_measurement_run.json</data>
+</node>
+<node id="(1 SR) Indented Sample [dab3, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">dab3aaaf-6b45-49c4-9ebf-b0c7aa3cae46</data>
+  <data key="type">material_run</data>
+  <data key="short_name">(1 SR) Indented Sample</data>
+  <data key="object">{"file_links": [], "name": "(1 SR) Indented Sample", "notes": null, "process": {"id": "a03c2f5b-a39e-478b-ab5a-79a72e241c19", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "9e9ad259-2654-4432-900c-69da97f00368", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "dab3aaaf-6b45-49c4-9ebf-b0c7aa3cae46"}}</data>
+  <data key="source">(1 SR) Indented Sample_material_run.json</data>
+</node>
+<node id="(2 SR) Displacement Measurement [00f7, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">00f73a34-c67f-4cfa-8a42-d1decd48908f</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">(2 SR) Displacement Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "198bf919-b366-49fb-8b64-19d2f714f92e", "scope": "auto", "type": "link_by_uid"}, "name": "(2 SR) Displacement Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "bee3d0e8-b2a2-48ce-ac85-a24daadb0417", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "00f73a34-c67f-4cfa-8a42-d1decd48908f"}}</data>
+  <data key="source">(2 SR) Displacement Measurement_measurement_run.json</data>
+</node>
+<node id="(2 SR) Indented Sample [198b, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">198bf919-b366-49fb-8b64-19d2f714f92e</data>
+  <data key="type">material_run</data>
+  <data key="short_name">(2 SR) Indented Sample</data>
+  <data key="object">{"file_links": [], "name": "(2 SR) Indented Sample", "notes": null, "process": {"id": "afce5c85-17ed-4ec5-b5f8-df4645d78b4f", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "32229837-9e6d-4e99-a260-03f276e1b435", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "198bf919-b366-49fb-8b64-19d2f714f92e"}}</data>
+  <data key="source">(2 SR) Indented Sample_material_run.json</data>
+</node>
+<node id="Homogenous Sample [8562, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">85627ca2-a3f4-438b-ba4c-9fbd2d55c6b2</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">Homogenous Sample</data>
+  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "e1780f3a-2cc6-43ca-9df5-bebe491ba40e", "scope": "auto", "type": "link_by_uid"}, "name": "Homogenous Sample", "notes": null, "number_fraction": null, "process": {"id": "4407d511-d694-437b-883a-cee39bea1f8a", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "c6178af1-c24d-416d-90f9-a5a9593cfb1b", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "85627ca2-a3f4-438b-ba4c-9fbd2d55c6b2"}, "volume_fraction": null}</data>
+  <data key="source">Homogenous Sample_ingredient_run.json</data>
+</node>
+<node id="Arc Melting [4407, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">4407d511-d694-437b-883a-cee39bea1f8a</data>
+  <data key="type">process_run</data>
+  <data key="short_name">Arc Melting</data>
+  <data key="object">{"conditions": [{"file_links": [], "name": "Argon Pressure", "notes": null, "origin": "unknown", "template": {"id": "3859b507-8de2-4f24-8d9b-69c1b3e0db17", "scope": "auto", "type": "link_by_uid"}, "type": "condition", "value": {"nominal": 800.0, "type": "nominal_real", "units": "pascal"}}, {"file_links": [], "name": "Vacuum Before Melt", "notes": null, "origin": "unknown", "template": {"id": "52ea615c-db65-43d1-887d-94980e2330df", "scope": "auto", "type": "link_by_uid"}, "type": "condition", "value": {"nominal": 3e-05, "type": "nominal_real", "units": "pascal"}}], "file_links": [], "name": "Arc Melting", "notes": null, "parameters": [], "source": null, "spec": {"id": "84d9ff3f-7d95-4b82-a88f-8c1c4e21039b", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "4407d511-d694-437b-883a-cee39bea1f8a"}}</data>
+  <data key="source">Arc Melting_process_run.json</data>
+</node>
+<node id="Homogenous Material [e178, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">e1780f3a-2cc6-43ca-9df5-bebe491ba40e</data>
+  <data key="type">material_run</data>
+  <data key="short_name">Homogenous Material</data>
+  <data key="object">{"file_links": [], "name": "Homogenous Material", "notes": null, "process": {"id": "4e16593c-0116-4f89-b487-fe40a62585ef", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "9f047647-15b7-4aa7-8792-72c75173ffc1", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "e1780f3a-2cc6-43ca-9df5-bebe491ba40e"}}</data>
+  <data key="source">Homogenous Material_material_run.json</data>
+</node>
+<node id="Weighed Mass [e7b5, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">e7b5621e-0966-4945-90f6-0b71d6209ada</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">Weighed Mass</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "860e6574-e6cf-47e8-9f9e-b2a9c4df756d", "scope": "auto", "type": "link_by_uid"}, "name": "Weighed Mass", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "c007c3c3-bd42-4ea7-b630-89351ec396a5", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 0.0, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "c007c3c3-bd42-4ea7-b630-89351ec396a5", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 8.8061, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "c007c3c3-bd42-4ea7-b630-89351ec396a5", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 1.2939, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "c007c3c3-bd42-4ea7-b630-89351ec396a5", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 2.7816, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "c007c3c3-bd42-4ea7-b630-89351ec396a5", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 1.3674790978732931, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "c007c3c3-bd42-4ea7-b630-89351ec396a5", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 13.1497, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "c007c3c3-bd42-4ea7-b630-89351ec396a5", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 7.6111, "type": "nominal_real", "units": "gram"}}], "source": null, "spec": {"id": "fbce3227-ea8e-4ce2-80ba-f231aec1bc4c", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "e7b5621e-0966-4945-90f6-0b71d6209ada"}}</data>
+  <data key="source">Weighed Mass_measurement_run.json</data>
+</node>
+<node id="Arc Melted Sample [860e, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">860e6574-e6cf-47e8-9f9e-b2a9c4df756d</data>
+  <data key="type">material_run</data>
+  <data key="short_name">Arc Melted Sample</data>
+  <data key="object">{"file_links": [], "name": "Arc Melted Sample", "notes": null, "process": {"id": "4407d511-d694-437b-883a-cee39bea1f8a", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "530bcbf4-866a-4b1d-a840-77897b475a1a", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "860e6574-e6cf-47e8-9f9e-b2a9c4df756d"}}</data>
+  <data key="source">Arc Melted Sample_material_run.json</data>
+</node>
+<node id="Sample [7130, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">7130af6b-ee12-48a0-99d8-a899acc63536</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">Sample</data>
+  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": null, "name": "Sample", "notes": null, "number_fraction": null, "process": {"id": "f0fc46c8-b656-4160-be1c-aa4ef7e5502f", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "441e2ba2-cfd3-4a4d-86fa-92df2e413e5f", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "7130af6b-ee12-48a0-99d8-a899acc63536"}, "volume_fraction": null}</data>
+  <data key="source">Sample_ingredient_run.json</data>
+</node>
+<node id="Melting Crystal Bond [f0fc, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">f0fc46c8-b656-4160-be1c-aa4ef7e5502f</data>
+  <data key="type">process_run</data>
+  <data key="short_name">Melting Crystal Bond</data>
+  <data key="object">{"conditions": [], "file_links": [], "name": "Melting Crystal Bond", "notes": null, "parameters": [], "source": null, "spec": {"id": "9e2ff1d6-29eb-462f-9fcd-b7564b54da15", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "f0fc46c8-b656-4160-be1c-aa4ef7e5502f"}}</data>
+  <data key="source">Melting Crystal Bond_process_run.json</data>
+</node>
+<node id="2nd Phase EDS Measured Composition [5f01, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">5f0162f9-43fe-4043-a9d0-3d40b766c4be</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">2nd Phase EDS Measured Composition</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "dd1cb795-33d7-4fec-9c8b-c1efec5ade96", "scope": "auto", "type": "link_by_uid"}, "name": "2nd Phase EDS Measured Composition", "notes": null, "parameters": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cu", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "properties": [], "source": null, "spec": {"id": "c26b12d6-8019-4b05-be43-f475d3aedf87", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "5f0162f9-43fe-4043-a9d0-3d40b766c4be"}}</data>
+  <data key="source">2nd Phase EDS Measured Composition_measurement_run.json</data>
+</node>
+<node id="Sample from EBSD and EDS Mapping [dd1c, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">dd1cb795-33d7-4fec-9c8b-c1efec5ade96</data>
+  <data key="type">material_run</data>
+  <data key="short_name">Sample from EBSD and EDS Mapping</data>
+  <data key="object">{"file_links": [], "name": "Sample from EBSD and EDS Mapping", "notes": null, "process": {"id": "f896cf74-a063-46ee-b6db-4aada1648edc", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "2c9c05c3-7d29-44d9-89e1-be5e87abf06c", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "dd1cb795-33d7-4fec-9c8b-c1efec5ade96"}}</data>
+  <data key="source">Sample from EBSD and EDS Mapping_material_run.json</data>
+</node>
+<node id="Forging [7d6a, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">7d6a9044-38fa-437d-b756-53bb594bd769</data>
+  <data key="type">process_run</data>
+  <data key="short_name">Forging</data>
+  <data key="object">{"conditions": [], "file_links": [], "name": "Forging", "notes": null, "parameters": [], "source": null, "spec": {"id": "1b3eeb3b-d584-4375-95bf-a6ff1ac0d831", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "7d6a9044-38fa-437d-b756-53bb594bd769"}}</data>
+  <data key="source">Forging_process_run.json</data>
+</node>
+<node id="Attached Sample (2 SR) [528f, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">528fe76e-9f77-4814-8352-898245af7661</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">Attached Sample (2 SR)</data>
+  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "5f5bf4a7-e9d9-4bd0-b2f2-25acadc1ced9", "scope": "auto", "type": "link_by_uid"}, "name": "Attached Sample (2 SR)", "notes": null, "number_fraction": null, "process": {"id": "afce5c85-17ed-4ec5-b5f8-df4645d78b4f", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "e3a10caf-51fa-42cb-88eb-8699766121cd", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "528fe76e-9f77-4814-8352-898245af7661"}, "volume_fraction": null}</data>
+  <data key="source">Attached Sample (2 SR)_ingredient_run.json</data>
+</node>
+<node id="(2 SR) 5-Indent Experiment [afce, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">afce5c85-17ed-4ec5-b5f8-df4645d78b4f</data>
+  <data key="type">process_run</data>
+  <data key="short_name">(2 SR) 5-Indent Experiment</data>
+  <data key="object">{"conditions": [], "file_links": [{"filename": "BBB01_CSR_2.NMD (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20022e080931a559c9898"}, {"filename": "BBB01_CSR_2_Results.xlsx (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20027e080931a559c989e"}, {"filename": "BBB01_CSR_2_Test001.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20030e080931a559c98a4"}, {"filename": "BBB01_CSR_2_Test002.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20039e080931a559c98aa"}, {"filename": "BBB01_CSR_2_Test003.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20040e080931a559c98b4"}, {"filename": "BBB01_CSR_2_Test004.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2004de080931a559c98ba"}, {"filename": "BBB01_CSR_2_Test005.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20051e080931a559c98c0"}], "name": "(2 SR) 5-Indent Experiment", "notes": null, "parameters": [{"file_links": [], "name": "Strain Rate", "notes": null, "origin": "unknown", "template": null, "type": "parameter", "value": {"nominal": 2.0, "type": "nominal_real", "units": "millimeter / second"}}, {"file_links": [], "name": "Actuator Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "99de2bc3-1832-4729-93db-04b4ec69a728", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 10.546, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Column Mass", "notes": null, "origin": "unknown", "template": {"id": "b2ce69bf-fdf9-4e30-84df-a3f87ae8c286", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0090855, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Actuator Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "b2ce69bf-fdf9-4e30-84df-a3f87ae8c286", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.144, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Spring Stiffness", "notes": null, "origin": "unknown", "template": {"id": "93bfc648-6232-4bc6-b7ba-432bcaf28053", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 448.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Frame Stiffness", "notes": null, "origin": "unknown", "template": {"id": "00e6d20b-559c-47db-89b8-5a5bd86cd507", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 8000000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Pieze Load Cell Stiffness", "notes": null, "origin": "unknown", "template": {"id": "72a8a06c-378a-4a1f-9897-afc143f1cdca", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 14700000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Piezo Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "8152c9b9-daaa-4ac3-8105-0bf065364f5a", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "2e97694c-747c-4412-9b2d-19c84ea6b735", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 40.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Effective Mass", "notes": null, "origin": "unknown", "template": {"id": "28c3def3-a03d-4532-a972-c979b64997b0", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.00513, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Tip Area Function Coefficients", "notes": null, "origin": "unknown", "template": {"id": "b5a33055-2eb1-43da-84c1-9af0e9908b31", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "source": null, "spec": {"id": "c0cb491e-8a3e-4cfc-86d0-ef6ab5968c14", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "afce5c85-17ed-4ec5-b5f8-df4645d78b4f"}}</data>
+  <data key="source">(2 SR) 5-Indent Experiment_process_run.json</data>
+</node>
+<node id="(1 SR) Displacement Measurement [3b80, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">3b80902c-8ec0-4877-9a0e-6237dcb4c5df</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">(1 SR) Displacement Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "dab3aaaf-6b45-49c4-9ebf-b0c7aa3cae46", "scope": "auto", "type": "link_by_uid"}, "name": "(1 SR) Displacement Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "07beb58a-558e-4aa7-8b81-02f20861c1d7", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "3b80902c-8ec0-4877-9a0e-6237dcb4c5df"}}</data>
+  <data key="source">(1 SR) Displacement Measurement_measurement_run.json</data>
+</node>
+<node id="Posterior Dimension [1075, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">10752629-502a-4094-9d5a-ef2d033bd4eb</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">Posterior Dimension</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "2eb5699b-bf61-4692-b347-4f5766be9695", "scope": "auto", "type": "link_by_uid"}, "name": "Posterior Dimension", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Posterior Length", "notes": null, "origin": "unknown", "template": {"id": "27d5a0df-d262-4df8-ad90-e615b0c2d4f4", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 63.57, "type": "nominal_real", "units": "centimeter"}}, {"file_links": [], "name": "Posterior Thickness", "notes": null, "origin": "unknown", "template": {"id": "27d5a0df-d262-4df8-ad90-e615b0c2d4f4", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 4.92, "type": "nominal_real", "units": "centimeter"}}, {"file_links": [], "name": "Posterior Width", "notes": null, "origin": "unknown", "template": {"id": "27d5a0df-d262-4df8-ad90-e615b0c2d4f4", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 15.0, "type": "nominal_real", "units": "centimeter"}}], "source": null, "spec": {"id": "540dbdef-21d1-40e1-9712-d666bc99dccc", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "10752629-502a-4094-9d5a-ef2d033bd4eb"}}</data>
+  <data key="source">Posterior Dimension_measurement_run.json</data>
+</node>
+<node id="Ingot [8058, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">80580181-5f23-4731-b184-f04f9fb93133</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">Ingot</data>
+  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": null, "name": "Ingot", "notes": null, "number_fraction": null, "process": {"id": "7d6a9044-38fa-437d-b756-53bb594bd769", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "1391e4cd-ceed-4629-8f49-a1730ca1c9e9", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "80580181-5f23-4731-b184-f04f9fb93133"}, "volume_fraction": null}</data>
+  <data key="source">Ingot_ingredient_run.json</data>
+</node>
+<node id="(1 SR) Area Measurement [0ba5, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">0ba54cba-d734-425a-b03d-fdcc343cfa94</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">(1 SR) Area Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "dab3aaaf-6b45-49c4-9ebf-b0c7aa3cae46", "scope": "auto", "type": "link_by_uid"}, "name": "(1 SR) Area Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "4f25d3c3-14ed-4d81-9ad6-353f2ea7d812", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "0ba54cba-d734-425a-b03d-fdcc343cfa94"}}</data>
+  <data key="source">(1 SR) Area Measurement_measurement_run.json</data>
+</node>
+<node id="Indented Sample (1 SR) [d3f5, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">d3f54d31-5429-4c6b-ba80-7af045600fa9</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">Indented Sample (1 SR)</data>
+  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "dab3aaaf-6b45-49c4-9ebf-b0c7aa3cae46", "scope": "auto", "type": "link_by_uid"}, "name": "Indented Sample (1 SR)", "notes": null, "number_fraction": null, "process": {"id": "d4a9285b-c9cc-4ae3-8542-34896674d1f6", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "648d9030-8572-4f63-a202-44826b26d921", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "d3f54d31-5429-4c6b-ba80-7af045600fa9"}, "volume_fraction": null}</data>
+  <data key="source">Indented Sample (1 SR)_ingredient_run.json</data>
+</node>
+<node id="Keyence Profilometry Step 1 [d4a9, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">d4a9285b-c9cc-4ae3-8542-34896674d1f6</data>
+  <data key="type">process_run</data>
+  <data key="short_name">Keyence Profilometry Step 1</data>
+  <data key="object">{"conditions": [], "file_links": [{"filename": "BBB01_CSR_I01.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203aae080931a559c99a7"}, {"filename": "BBB01_CSR_I02.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203b6e080931a559c99b0"}, {"filename": "BBB01_CSR_I03.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203c3e080931a559c99b9"}, {"filename": "BBB01_CSR_I04.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203d0e080931a559c99c2"}, {"filename": "BBB01_CSR_I05.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e203dce080931a559c99cb"}, {"filename": "BBB01_IMCSR_I01.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20823e080931a559c9ae0"}, {"filename": "BBB01_IMCSR_I02.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20827e080931a559c9ae3"}, {"filename": "BBB01_IMCSR_I03.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2082ce080931a559c9ae9"}, {"filename": "BBB01_IMCSR_I04.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2082fe080931a559c9aec"}, {"filename": "BBB01_IMCSR_I05.vk6 (Profilometry)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20833e080931a559c9aef"}], "name": "Keyence Profilometry Step 1", "notes": null, "parameters": [], "source": null, "spec": {"id": "67412387-719e-4829-8245-7e92628371a1", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "d4a9285b-c9cc-4ae3-8542-34896674d1f6"}}</data>
+  <data key="source">Keyence Profilometry Step 1_process_run.json</data>
+</node>
+<node id="Attached Sample (1 SR) [bcb7, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">bcb7bd5e-02cc-4ac6-a04c-e936248072f3</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">Attached Sample (1 SR)</data>
+  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "198bf919-b366-49fb-8b64-19d2f714f92e", "scope": "auto", "type": "link_by_uid"}, "name": "Attached Sample (1 SR)", "notes": null, "number_fraction": null, "process": {"id": "a03c2f5b-a39e-478b-ab5a-79a72e241c19", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "a0e23dd3-76dc-47bf-8826-298d1e034df8", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "bcb7bd5e-02cc-4ac6-a04c-e936248072f3"}, "volume_fraction": null}</data>
+  <data key="source">Attached Sample (1 SR)_ingredient_run.json</data>
+</node>
+<node id="(1 SR) 5-Indent Experiment [a03c, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">a03c2f5b-a39e-478b-ab5a-79a72e241c19</data>
+  <data key="type">process_run</data>
+  <data key="short_name">(1 SR) 5-Indent Experiment</data>
+  <data key="object">{"conditions": [], "file_links": [], "name": "(1 SR) 5-Indent Experiment", "notes": null, "parameters": [{"file_links": [], "name": "Strain Rate", "notes": null, "origin": "unknown", "template": null, "type": "parameter", "value": {"nominal": 1.0, "type": "nominal_real", "units": "millimeter / second"}}, {"file_links": [], "name": "Actuator Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "e86c597a-c6d9-4de0-92eb-7365ed22c1bd", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 10.546, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Column Mass", "notes": null, "origin": "unknown", "template": {"id": "513165a3-50f3-4727-ad04-2ba1c29f2184", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0090855, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Actuator Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "513165a3-50f3-4727-ad04-2ba1c29f2184", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.144, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Spring Stiffness", "notes": null, "origin": "unknown", "template": {"id": "125b58a6-112c-4cbd-aa3b-131bc0383d35", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 448.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Frame Stiffness", "notes": null, "origin": "unknown", "template": {"id": "c6399dba-b9b4-48fa-af94-8b680d046d93", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 8000000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Pieze Load Cell Stiffness", "notes": null, "origin": "unknown", "template": {"id": "3a9a783c-c16a-43fe-8b42-8e67f1da069c", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 14700000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Piezo Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "44b0f18c-e8ee-4d4b-bf4b-25d4090389b6", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "bc25653e-e9c4-4dbf-a74b-e0fd0bfc8e6e", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 40.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Effective Mass", "notes": null, "origin": "unknown", "template": {"id": "56f9cac5-6eef-4d26-bdc0-c3c02fdca3df", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.00513, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Tip Area Function Coefficients", "notes": null, "origin": "unknown", "template": {"id": "03ea5d93-b85d-4ae5-be2e-29b9b09c166c", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "source": null, "spec": {"id": "12a85b81-05a1-4be3-ac8a-7fd37ea94c13", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "a03c2f5b-a39e-478b-ab5a-79a72e241c19"}}</data>
+  <data key="source">(1 SR) 5-Indent Experiment_process_run.json</data>
+</node>
+<node id="(2 SR) Hardness Measurement [41d2, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">41d260ef-9b3b-4760-864c-49a6264a69e9</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">(2 SR) Hardness Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "198bf919-b366-49fb-8b64-19d2f714f92e", "scope": "auto", "type": "link_by_uid"}, "name": "(2 SR) Hardness Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "b763287a-5aa4-4e6b-87fc-e8248375f0de", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "41d260ef-9b3b-4760-864c-49a6264a69e9"}}</data>
+  <data key="source">(2 SR) Hardness Measurement_measurement_run.json</data>
+</node>
+<node id="(1 SR) Hardness Measurement [1f31, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">1f31e103-77d8-4dc5-949d-042a37acf9fa</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">(1 SR) Hardness Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "dab3aaaf-6b45-49c4-9ebf-b0c7aa3cae46", "scope": "auto", "type": "link_by_uid"}, "name": "(1 SR) Hardness Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "bd3a00f1-2228-4cf4-a684-1bdc33607874", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "1f31e103-77d8-4dc5-949d-042a37acf9fa"}}</data>
+  <data key="source">(1 SR) Hardness Measurement_measurement_run.json</data>
+</node>
+<node id="Temperature [c652, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">c652eee4-d6b2-4107-a1ff-3e4f04e77744</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">Temperature</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "2eb5699b-bf61-4692-b347-4f5766be9695", "scope": "auto", "type": "link_by_uid"}, "name": "Temperature", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Temperature", "notes": null, "origin": "unknown", "template": {"id": "51bcb492-0379-408c-8c5a-fcc42666b5fc", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 25.0, "type": "nominal_real", "units": "degree_Celsius"}}], "source": null, "spec": {"id": "70c6b76c-c3ce-4d34-b248-3cdcb1247d1d", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "c652eee4-d6b2-4107-a1ff-3e4f04e77744"}}</data>
+  <data key="source">Temperature_measurement_run.json</data>
+</node>
+<node id="Forged Sample [fee3, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">fee34ce8-0cc2-4404-92f5-ab122fbd6f11</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">Forged Sample</data>
+  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "2eb5699b-bf61-4692-b347-4f5766be9695", "scope": "auto", "type": "link_by_uid"}, "name": "Forged Sample", "notes": null, "number_fraction": null, "process": {"id": "4e16593c-0116-4f89-b487-fe40a62585ef", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "96e0fe97-1772-4a65-abd9-a68db3d2d85c", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "fee34ce8-0cc2-4404-92f5-ab122fbd6f11"}, "volume_fraction": null}</data>
+  <data key="source">Forged Sample_ingredient_run.json</data>
+</node>
+<node id="Homogenization [4e16, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">4e16593c-0116-4f89-b487-fe40a62585ef</data>
+  <data key="type">process_run</data>
+  <data key="short_name">Homogenization</data>
+  <data key="object">{"conditions": [], "file_links": [], "name": "Homogenization", "notes": null, "parameters": [], "source": null, "spec": {"id": "1f6aa573-7dd8-41d8-a4f6-745a9e3e5c55", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "4e16593c-0116-4f89-b487-fe40a62585ef"}}</data>
+  <data key="source">Homogenization_process_run.json</data>
+</node>
+<node id="EDS Measured Composition StdDev [1455, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">14556c56-6894-487e-a5d9-585748d9054a</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">EDS Measured Composition StdDev</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "dd1cb795-33d7-4fec-9c8b-c1efec5ade96", "scope": "auto", "type": "link_by_uid"}, "name": "EDS Measured Composition StdDev", "notes": null, "parameters": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cu", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "properties": [], "source": null, "spec": {"id": "0682f721-b5ee-4474-bc89-1ef2c95a385d", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "14556c56-6894-487e-a5d9-585748d9054a"}}</data>
+  <data key="source">EDS Measured Composition StdDev_measurement_run.json</data>
+</node>
+<node id="Soak Time [9e77, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">9e770513-8624-41e2-9733-e2a0d8be08e2</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">Soak Time</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "2eb5699b-bf61-4692-b347-4f5766be9695", "scope": "auto", "type": "link_by_uid"}, "name": "Soak Time", "notes": null, "parameters": [], "properties": [{"file_links": [], "name": "Soak Time", "notes": null, "origin": "unknown", "template": {"id": "ac15a6bc-76af-4448-b857-92c85095289e", "scope": "auto", "type": "link_by_uid"}, "type": "property", "value": {"nominal": 0.0, "type": "nominal_real", "units": "minute"}}], "source": null, "spec": {"id": "5d21d713-30ef-4445-b12f-114249d73de5", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "9e770513-8624-41e2-9733-e2a0d8be08e2"}}</data>
+  <data key="source">Soak Time_measurement_run.json</data>
+</node>
+<node id="Attached Sample (100 SR) [a4fa, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">a4fac642-e18f-415a-bb4d-402174e86e16</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">Attached Sample (100 SR)</data>
+  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": {"id": "823ac8a8-1503-446e-a3a9-b704efb5bfa3", "scope": "auto", "type": "link_by_uid"}, "name": "Attached Sample (100 SR)", "notes": null, "number_fraction": null, "process": {"id": "7363b6a2-0381-4562-aa7c-7f749d357a11", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "3ecad3b4-af0d-493f-87a0-454f2e0f91c1", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "a4fac642-e18f-415a-bb4d-402174e86e16"}, "volume_fraction": null}</data>
+  <data key="source">Attached Sample (100 SR)_ingredient_run.json</data>
+</node>
+<node id="Calibration (100 SR) 5-Indent Experiment [7363, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">7363b6a2-0381-4562-aa7c-7f749d357a11</data>
+  <data key="type">process_run</data>
+  <data key="short_name">Calibration (100 SR) 5-Indent Experiment</data>
+  <data key="object">{"conditions": [], "file_links": [{"filename": "BBB01_CSR_100.NMD (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2005ce080931a559c98c6"}, {"filename": "BBB01_CSR_100_Test001.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e200f0e080931a559c98e9"}, {"filename": "BBB01_CSR_100_Test001_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e200f2e080931a559c98ef"}, {"filename": "BBB01_CSR_100_Test002.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e20189e080931a559c9911"}, {"filename": "BBB01_CSR_100_Test002_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2018ae080931a559c9914"}, {"filename": "BBB01_CSR_100_Test003.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2023be080931a559c9938"}, {"filename": "BBB01_CSR_100_Test003_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2023ce080931a559c993b"}, {"filename": "BBB01_CSR_100_Test004.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e202efe080931a559c9971"}, {"filename": "BBB01_CSR_100_Test004_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e202f0e080931a559c9977"}, {"filename": "BBB01_CSR_100_Test005.zip (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2039ee080931a559c999b"}, {"filename": "BBB01_CSR_100_Test005_P-h_comparison.png (DMS)", "type": "file_link", "url": "https://data.htmdec.org/api/v1/item/66e2039fe080931a559c999e"}], "name": "Calibration (100 SR) 5-Indent Experiment", "notes": null, "parameters": [{"file_links": [], "name": "Strain Rate", "notes": null, "origin": "unknown", "template": null, "type": "parameter", "value": {"nominal": 100.0, "type": "nominal_real", "units": "millimeter / second"}}, {"file_links": [], "name": "Actuator Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "8c07791d-018c-48d4-b459-613aba8eaeb8", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 10.546, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Column Mass", "notes": null, "origin": "unknown", "template": {"id": "af37824d-86bb-4624-9a1a-858435c64e3d", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0090855, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Actuator Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "af37824d-86bb-4624-9a1a-858435c64e3d", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.144, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Actuator Spring Stiffness", "notes": null, "origin": "unknown", "template": {"id": "8ad4782c-94b5-4863-a506-1844ebe87b26", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 448.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Frame Stiffness", "notes": null, "origin": "unknown", "template": {"id": "6f1030a8-12ec-47d6-9f5f-f11f58c8550f", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 8000000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Pieze Load Cell Stiffness", "notes": null, "origin": "unknown", "template": {"id": "d8202b7b-97b0-4850-8a13-714857e24b84", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 14700000.0, "type": "nominal_real", "units": "newton / meter"}}, {"file_links": [], "name": "Piezo Calibration Coefficient", "notes": null, "origin": "unknown", "template": {"id": "275a104f-dc88-4b6c-b958-c004009116e4", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Damping Coefficient", "notes": null, "origin": "unknown", "template": {"id": "b80a77cc-237a-4cde-98e5-04fa7fee2a16", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 40.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Piezo Load Cell Effective Mass", "notes": null, "origin": "unknown", "template": {"id": "f50ce6cd-63d4-4d8a-a316-4e7e1a3d82fe", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.00513, "type": "nominal_real", "units": "gram"}}, {"file_links": [], "name": "Tip Area Function Coefficients", "notes": null, "origin": "unknown", "template": {"id": "eeba12ec-8097-4a78-b73a-6a4175dd24dd", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "source": null, "spec": {"id": "500965bf-db33-46a5-a232-134a0b8c926a", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "7363b6a2-0381-4562-aa7c-7f749d357a11"}}</data>
+  <data key="source">Calibration (100 SR) 5-Indent Experiment_process_run.json</data>
+</node>
+<node id="Calibration (100 SR) Area Measurement [d0b3, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">d0b391a8-01e2-4a58-a9e9-eb6ea412a7ce</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">Calibration (100 SR) Area Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "5f5bf4a7-e9d9-4bd0-b2f2-25acadc1ced9", "scope": "auto", "type": "link_by_uid"}, "name": "Calibration (100 SR) Area Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "d6866b68-e45a-45d0-a16a-fd49efd15142", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "d0b391a8-01e2-4a58-a9e9-eb6ea412a7ce"}}</data>
+  <data key="source">Calibration (100 SR) Area Measurement_measurement_run.json</data>
+</node>
+<node id="Calibration (100 SR) Displacement Measurement [3e48, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">3e484252-f3e5-47b0-84df-e2aeccf1388d</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">Calibration (100 SR) Displacement Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "5f5bf4a7-e9d9-4bd0-b2f2-25acadc1ced9", "scope": "auto", "type": "link_by_uid"}, "name": "Calibration (100 SR) Displacement Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "4c8af2a5-8603-4c70-a4e3-7f8bdecd5fa2", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "3e484252-f3e5-47b0-84df-e2aeccf1388d"}}</data>
+  <data key="source">Calibration (100 SR) Displacement Measurement_measurement_run.json</data>
+</node>
+<node id="Scanned Sample 1 [2cda, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">2cdac2ea-3cf3-4103-9a64-9ae82433badf</data>
+  <data key="type">material_run</data>
+  <data key="short_name">Scanned Sample 1</data>
+  <data key="object">{"file_links": [], "name": "Scanned Sample 1", "notes": null, "process": {"id": "d4a9285b-c9cc-4ae3-8542-34896674d1f6", "scope": "auto", "type": "link_by_uid"}, "sample_type": null, "spec": {"id": "76dfdfbb-d027-4c1b-a9d6-c07a38b32853", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "material_run", "uids": {"auto": "2cdac2ea-3cf3-4103-9a64-9ae82433badf"}}</data>
+  <data key="source">Scanned Sample 1_material_run.json</data>
+</node>
+<node id="Crystal Bond [2e4d, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">2e4d4f05-c34f-4666-b067-13d29f65dba5</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">Crystal Bond</data>
+  <data key="object">{"absolute_quantity": null, "file_links": [], "labels": [], "mass_fraction": null, "material": null, "name": "Crystal Bond", "notes": null, "number_fraction": null, "process": {"id": "f0fc46c8-b656-4160-be1c-aa4ef7e5502f", "scope": "auto", "type": "link_by_uid"}, "spec": {"id": "e2ca82ef-44f4-45ac-859e-ed7064fa0746", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "ingredient_run", "uids": {"auto": "2e4d4f05-c34f-4666-b067-13d29f65dba5"}, "volume_fraction": null}</data>
+  <data key="source">Crystal Bond_ingredient_run.json</data>
+</node>
+<node id="Time Spent Measurement [8112, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">81129228-262b-4aa1-9367-1bdfba5804d1</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">Time Spent Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "e1780f3a-2cc6-43ca-9df5-bebe491ba40e", "scope": "auto", "type": "link_by_uid"}, "name": "Time Spent Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "9c7cf05f-14a4-45c9-85bb-8d70e2192850", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "81129228-262b-4aa1-9367-1bdfba5804d1"}}</data>
+  <data key="source">Time Spent Measurement_measurement_run.json</data>
+</node>
+<node id="(2 SR) Area Measurement [3b7d, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">3b7d5f6e-245d-45cf-9480-f0e8471d22a9</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">(2 SR) Area Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "198bf919-b366-49fb-8b64-19d2f714f92e", "scope": "auto", "type": "link_by_uid"}, "name": "(2 SR) Area Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "86cf25b2-450f-47f2-988b-faf8fc4ecccb", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "3b7d5f6e-245d-45cf-9480-f0e8471d22a9"}}</data>
+  <data key="source">(2 SR) Area Measurement_measurement_run.json</data>
+</node>
+<node id="EBSD and EDS Mapping [f896, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">f896cf74-a063-46ee-b6db-4aada1648edc</data>
+  <data key="type">process_run</data>
+  <data key="short_name">EBSD and EDS Mapping</data>
+  <data key="object">{"conditions": [], "file_links": [], "name": "EBSD and EDS Mapping", "notes": null, "parameters": [{"file_links": [], "name": "Beam Current", "notes": null, "origin": "unknown", "template": {"id": "ff88ec6b-d751-4032-836b-1cae2ff8ab69", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": -1.0, "type": "nominal_real", "units": "nanoampere"}}, {"file_links": [], "name": "Beam Voltage", "notes": null, "origin": "unknown", "template": {"id": "c92277d3-3f15-41a1-b4f1-987de383b91a", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 20.0, "type": "nominal_real", "units": "kilovolt"}}, {"file_links": [], "name": "Dwell Time", "notes": null, "origin": "unknown", "template": {"id": "5756470c-4aba-4925-9826-8edaacffe378", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": -1.0, "type": "nominal_real", "units": "second"}}, {"file_links": [], "name": "Sample Tilt", "notes": null, "origin": "unknown", "template": {"id": "5c2dd0fc-4f9e-4199-9363-7b7f391af77c", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": -1.0, "type": "nominal_real", "units": "degree"}}, {"file_links": [], "name": "Working Distance", "notes": null, "origin": "unknown", "template": {"id": "f91a4cdb-56ad-4af2-ae8d-b1f0b56906fa", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": -1.0, "type": "nominal_real", "units": "millimeter"}}, {"file_links": [], "name": "Low Vacuum", "notes": null, "origin": "unknown", "template": {"id": "8b1a90c6-b3b9-4d83-a960-81ca25e4e320", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"category": "None", "type": "nominal_categorical"}}], "source": null, "spec": {"id": "a194d310-4880-47a3-afe9-6a20daf0ce42", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "process_run", "uids": {"auto": "f896cf74-a063-46ee-b6db-4aada1648edc"}}</data>
+  <data key="source">EBSD and EDS Mapping_process_run.json</data>
+</node>
+<node id="3D Indent Scan 1 [f86e, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">f86ed1c4-6894-4056-91b5-bce34dcdb7e2</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">3D Indent Scan 1</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "2cdac2ea-3cf3-4103-9a64-9ae82433badf", "scope": "auto", "type": "link_by_uid"}, "name": "3D Indent Scan 1", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "f24962cc-613e-4989-bc4e-9d785ec9fc10", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "f86ed1c4-6894-4056-91b5-bce34dcdb7e2"}}</data>
+  <data key="source">3D Indent Scan 1_measurement_run.json</data>
+</node>
+<node id="EDS Measured Composition [01c1, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">01c17c68-0e4f-4a98-9071-da1a043072b0</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">EDS Measured Composition</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "dd1cb795-33d7-4fec-9c8b-c1efec5ade96", "scope": "auto", "type": "link_by_uid"}, "name": "EDS Measured Composition", "notes": null, "parameters": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 20.5, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 4.16, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cu", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 8.13, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 4.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 38.85, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "f265ba36-d104-4986-b59f-44b2ba0edbeb", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 24.35, "type": "nominal_real", "units": "dimensionless"}}], "properties": [], "source": null, "spec": {"id": "9ef71d0d-b5b0-47e0-983c-26ad04bba51a", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "01c17c68-0e4f-4a98-9071-da1a043072b0"}}</data>
+  <data key="source">EDS Measured Composition_measurement_run.json</data>
+</node>
+<node id="Calibration (100 SR) Load Measurement [d183, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">d183d36e-e9e2-4785-bf56-f4c921a8fc4b</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">Calibration (100 SR) Load Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "5f5bf4a7-e9d9-4bd0-b2f2-25acadc1ced9", "scope": "auto", "type": "link_by_uid"}, "name": "Calibration (100 SR) Load Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "9e6427ca-f785-470f-9b60-3e8a3c1b6441", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "d183d36e-e9e2-4785-bf56-f4c921a8fc4b"}}</data>
+  <data key="source">Calibration (100 SR) Load Measurement_measurement_run.json</data>
+</node>
+<node id="(2 SR) Load Measurement [3869, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">38696568-efe3-4263-9dd5-855b3991f13e</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">(2 SR) Load Measurement</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "198bf919-b366-49fb-8b64-19d2f714f92e", "scope": "auto", "type": "link_by_uid"}, "name": "(2 SR) Load Measurement", "notes": null, "parameters": [], "properties": [], "source": null, "spec": {"id": "d47ece4e-f2fd-49bb-923d-89d0c3548fe0", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "38696568-efe3-4263-9dd5-855b3991f13e"}}</data>
+  <data key="source">(2 SR) Load Measurement_measurement_run.json</data>
+</node>
+<node id="2nd Phase EDS Measured Composition StdDev [fcd5, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">fcd57201-2ee9-452c-811f-0bea6aa8bd37</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">2nd Phase EDS Measured Composition StdDev</data>
+  <data key="object">{"conditions": [], "file_links": [], "material": {"id": "dd1cb795-33d7-4fec-9c8b-c1efec5ade96", "scope": "auto", "type": "link_by_uid"}, "name": "2nd Phase EDS Measured Composition StdDev", "notes": null, "parameters": [{"file_links": [], "name": "Al", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Co", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cr", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Cu", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Fe", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Mn", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "Ni", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}, {"file_links": [], "name": "V", "notes": null, "origin": "unknown", "template": {"id": "acd17646-3f32-4308-9a8b-02b03a356719", "scope": "auto", "type": "link_by_uid"}, "type": "parameter", "value": {"nominal": 0.0, "type": "nominal_real", "units": "dimensionless"}}], "properties": [], "source": null, "spec": {"id": "ff796c44-7e88-4462-b1ca-9ea44050b69a", "scope": "auto", "type": "link_by_uid"}, "tags": [], "type": "measurement_run", "uids": {"auto": "fcd57201-2ee9-452c-811f-0bea6aa8bd37"}}</data>
+  <data key="source">2nd Phase EDS Measured Composition StdDev_measurement_run.json</data>
+</node>
+<edge source="Calibration (100 SR) Indented Sample [5f5b, material_run]" target="Calibration (100 SR) Hardness Measurement [1b6d, measurement_run]">
+  <data key="relationship">is measured with</data>
 </edge>
-<edge source="Calibration (100 SR) 5-Indent Experiment [f0f8, process_run]" target="Calibration (100 SR) Indented Sample [6fff, material_run]">
-  <data key="relationship">creates</data>
-</edge>
-<edge source="Sample Attached with Crystal Bond [8cbf, material_run]" target="Attached Sample (100 SR) [cfac, ingredient_run]">
+<edge source="Calibration (100 SR) Indented Sample [5f5b, material_run]" target="Attached Sample (2 SR) [528f, ingredient_run]">
   <data key="relationship">becomes</data>
 </edge>
-<edge source="Sample Attached with Crystal Bond [8cbf, material_run]" target="Melting Temperature [dd41, measurement_run]">
+<edge source="Calibration (100 SR) Indented Sample [5f5b, material_run]" target="Calibration (100 SR) Area Measurement [d0b3, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="Crystal Bond [8bab, ingredient_run]" target="Melting Crystal Bond [0024, process_run]">
-  <data key="relationship">is used in</data>
-</edge>
-<edge source="Melting Crystal Bond [0024, process_run]" target="Sample Attached with Crystal Bond [8cbf, material_run]">
-  <data key="relationship">creates</data>
-</edge>
-<edge source="Keyence Profilometry Step 1 [3f7d, process_run]" target="Scanned Sample 1 [3076, material_run]">
-  <data key="relationship">creates</data>
-</edge>
-<edge source="Scanned Sample 1 [3076, material_run]" target="3D Indent Scan 1 [31a2, measurement_run]">
+<edge source="Calibration (100 SR) Indented Sample [5f5b, material_run]" target="Calibration (100 SR) Displacement Measurement [3e48, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="(1 SR) Indented Sample [f668, material_run]" target="(1 SR) Area Measurement [b4fd, measurement_run]">
+<edge source="Calibration (100 SR) Indented Sample [5f5b, material_run]" target="Calibration (100 SR) Load Measurement [d183, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="(1 SR) Indented Sample [f668, material_run]" target="(1 SR) Hardness Measurement [0065, measurement_run]">
+<edge source="Sample Attached with Crystal Bond [823a, material_run]" target="Melting Temperature [e5aa, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="(1 SR) Indented Sample [f668, material_run]" target="(1 SR) Load Measurement [13d1, measurement_run]">
-  <data key="relationship">is measured with</data>
-</edge>
-<edge source="(1 SR) Indented Sample [f668, material_run]" target="(1 SR) Displacement Measurement [aade, measurement_run]">
-  <data key="relationship">is measured with</data>
-</edge>
-<edge source="(1 SR) Indented Sample [f668, material_run]" target="Indented Sample (1 SR) [dc28, ingredient_run]">
+<edge source="Sample Attached with Crystal Bond [823a, material_run]" target="Attached Sample (100 SR) [a4fa, ingredient_run]">
   <data key="relationship">becomes</data>
 </edge>
-<edge source="Calibration (100 SR) Indented Sample [6fff, material_run]" target="Calibration (100 SR) Area Measurement [e4cb, measurement_run]">
+<edge source="Forged Ingot [2eb5, material_run]" target="Prior Dimension [138a, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="Calibration (100 SR) Indented Sample [6fff, material_run]" target="Calibration (100 SR) Displacement Measurement [7c3f, measurement_run]">
+<edge source="Forged Ingot [2eb5, material_run]" target="Posterior Dimension [1075, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="Calibration (100 SR) Indented Sample [6fff, material_run]" target="Calibration (100 SR) Load Measurement [1db7, measurement_run]">
+<edge source="Forged Ingot [2eb5, material_run]" target="Temperature [c652, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="Calibration (100 SR) Indented Sample [6fff, material_run]" target="Calibration (100 SR) Hardness Measurement [9ab6, measurement_run]">
-  <data key="relationship">is measured with</data>
-</edge>
-<edge source="Calibration (100 SR) Indented Sample [6fff, material_run]" target="Attached Sample (2 SR) [4256, ingredient_run]">
+<edge source="Forged Ingot [2eb5, material_run]" target="Forged Sample [fee3, ingredient_run]">
   <data key="relationship">becomes</data>
 </edge>
-<edge source="Arc Melting [a845, process_run]" target="Arc Melted Sample [8b8d, material_run]">
-  <data key="relationship">creates</data>
-</edge>
-<edge source="Sample from EBSD and EDS Mapping [db52, material_run]" target="EDS Measured Composition [9517, measurement_run]">
+<edge source="Forged Ingot [2eb5, material_run]" target="Soak Time [9e77, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="Sample from EBSD and EDS Mapping [db52, material_run]" target="2nd Phase EDS Measured Composition StdDev [bb1a, measurement_run]">
+<edge source="(1 SR) Indented Sample [dab3, material_run]" target="(1 SR) Load Measurement [6d8b, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="Sample from EBSD and EDS Mapping [db52, material_run]" target="2nd Phase EDS Measured Composition [28c0, measurement_run]">
+<edge source="(1 SR) Indented Sample [dab3, material_run]" target="(1 SR) Displacement Measurement [3b80, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="Sample from EBSD and EDS Mapping [db52, material_run]" target="EDS Measured Composition StdDev [3f12, measurement_run]">
+<edge source="(1 SR) Indented Sample [dab3, material_run]" target="(1 SR) Area Measurement [0ba5, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="(2 SR) Indented Sample [939b, material_run]" target="(2 SR) Hardness Measurement [7abf, measurement_run]">
-  <data key="relationship">is measured with</data>
-</edge>
-<edge source="(2 SR) Indented Sample [939b, material_run]" target="(2 SR) Displacement Measurement [87ca, measurement_run]">
-  <data key="relationship">is measured with</data>
-</edge>
-<edge source="(2 SR) Indented Sample [939b, material_run]" target="(2 SR) Load Measurement [8dfa, measurement_run]">
-  <data key="relationship">is measured with</data>
-</edge>
-<edge source="(2 SR) Indented Sample [939b, material_run]" target="Attached Sample (1 SR) [618c, ingredient_run]">
+<edge source="(1 SR) Indented Sample [dab3, material_run]" target="Indented Sample (1 SR) [d3f5, ingredient_run]">
   <data key="relationship">becomes</data>
 </edge>
-<edge source="(2 SR) Indented Sample [939b, material_run]" target="(2 SR) Area Measurement [a865, measurement_run]">
+<edge source="(1 SR) Indented Sample [dab3, material_run]" target="(1 SR) Hardness Measurement [1f31, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="(2 SR) 5-Indent Experiment [8931, process_run]" target="(2 SR) Indented Sample [939b, material_run]">
-  <data key="relationship">creates</data>
+<edge source="(2 SR) Indented Sample [198b, material_run]" target="(2 SR) Displacement Measurement [00f7, measurement_run]">
+  <data key="relationship">is measured with</data>
 </edge>
-<edge source="Ingot [cdac, ingredient_run]" target="Forging [9a75, process_run]">
-  <data key="relationship">is used in</data>
-</edge>
-<edge source="Forging [9a75, process_run]" target="Forged Ingot [06fc, material_run]">
-  <data key="relationship">creates</data>
-</edge>
-<edge source="Homogenous Material [1b9c, material_run]" target="Homogenous Sample [e760, ingredient_run]">
+<edge source="(2 SR) Indented Sample [198b, material_run]" target="Attached Sample (1 SR) [bcb7, ingredient_run]">
   <data key="relationship">becomes</data>
 </edge>
-<edge source="Homogenous Material [1b9c, material_run]" target="Time Spent Measurement [db06, measurement_run]">
+<edge source="(2 SR) Indented Sample [198b, material_run]" target="(2 SR) Hardness Measurement [41d2, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="Homogenization [b5a7, process_run]" target="Homogenous Material [1b9c, material_run]">
-  <data key="relationship">creates</data>
-</edge>
-<edge source="Arc Melted Sample [8b8d, material_run]" target="Weighed Mass [17fb, measurement_run]">
+<edge source="(2 SR) Indented Sample [198b, material_run]" target="(2 SR) Area Measurement [3b7d, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="EBSD and EDS Mapping [ba36, process_run]" target="Sample from EBSD and EDS Mapping [db52, material_run]">
-  <data key="relationship">creates</data>
+<edge source="(2 SR) Indented Sample [198b, material_run]" target="(2 SR) Load Measurement [3869, measurement_run]">
+  <data key="relationship">is measured with</data>
 </edge>
-<edge source="(1 SR) 5-Indent Experiment [9586, process_run]" target="(1 SR) Indented Sample [f668, material_run]">
-  <data key="relationship">creates</data>
-</edge>
-<edge source="Homogenous Sample [e760, ingredient_run]" target="Arc Melting [a845, process_run]">
+<edge source="Homogenous Sample [8562, ingredient_run]" target="Arc Melting [4407, process_run]">
   <data key="relationship">is used in</data>
 </edge>
-<edge source="Forged Ingot [06fc, material_run]" target="Posterior Dimension [e42b, measurement_run]">
-  <data key="relationship">is measured with</data>
+<edge source="Arc Melting [4407, process_run]" target="Arc Melted Sample [860e, material_run]">
+  <data key="relationship">creates</data>
 </edge>
-<edge source="Forged Ingot [06fc, material_run]" target="Soak Time [0385, measurement_run]">
-  <data key="relationship">is measured with</data>
-</edge>
-<edge source="Forged Ingot [06fc, material_run]" target="Temperature [5190, measurement_run]">
-  <data key="relationship">is measured with</data>
-</edge>
-<edge source="Forged Ingot [06fc, material_run]" target="Forged Sample [9c0b, ingredient_run]">
+<edge source="Homogenous Material [e178, material_run]" target="Homogenous Sample [8562, ingredient_run]">
   <data key="relationship">becomes</data>
 </edge>
-<edge source="Forged Ingot [06fc, material_run]" target="Prior Dimension [5658, measurement_run]">
+<edge source="Homogenous Material [e178, material_run]" target="Time Spent Measurement [8112, measurement_run]">
   <data key="relationship">is measured with</data>
 </edge>
-<edge source="Indented Sample (1 SR) [dc28, ingredient_run]" target="Keyence Profilometry Step 1 [3f7d, process_run]">
+<edge source="Arc Melted Sample [860e, material_run]" target="Weighed Mass [e7b5, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="Sample [7130, ingredient_run]" target="Melting Crystal Bond [f0fc, process_run]">
   <data key="relationship">is used in</data>
 </edge>
-<edge source="Attached Sample (1 SR) [618c, ingredient_run]" target="(1 SR) 5-Indent Experiment [9586, process_run]">
+<edge source="Melting Crystal Bond [f0fc, process_run]" target="Sample Attached with Crystal Bond [823a, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="Sample from EBSD and EDS Mapping [dd1c, material_run]" target="2nd Phase EDS Measured Composition [5f01, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="Sample from EBSD and EDS Mapping [dd1c, material_run]" target="EDS Measured Composition StdDev [1455, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="Sample from EBSD and EDS Mapping [dd1c, material_run]" target="EDS Measured Composition [01c1, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="Sample from EBSD and EDS Mapping [dd1c, material_run]" target="2nd Phase EDS Measured Composition StdDev [fcd5, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="Forging [7d6a, process_run]" target="Forged Ingot [2eb5, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="Attached Sample (2 SR) [528f, ingredient_run]" target="(2 SR) 5-Indent Experiment [afce, process_run]">
   <data key="relationship">is used in</data>
 </edge>
-<edge source="Attached Sample (2 SR) [4256, ingredient_run]" target="(2 SR) 5-Indent Experiment [8931, process_run]">
+<edge source="(2 SR) 5-Indent Experiment [afce, process_run]" target="(2 SR) Indented Sample [198b, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="Ingot [8058, ingredient_run]" target="Forging [7d6a, process_run]">
   <data key="relationship">is used in</data>
 </edge>
-<edge source="Sample [b2d1, ingredient_run]" target="Melting Crystal Bond [0024, process_run]">
+<edge source="Indented Sample (1 SR) [d3f5, ingredient_run]" target="Keyence Profilometry Step 1 [d4a9, process_run]">
   <data key="relationship">is used in</data>
 </edge>
-<edge source="Forged Sample [9c0b, ingredient_run]" target="Homogenization [b5a7, process_run]">
+<edge source="Keyence Profilometry Step 1 [d4a9, process_run]" target="Scanned Sample 1 [2cda, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="Attached Sample (1 SR) [bcb7, ingredient_run]" target="(1 SR) 5-Indent Experiment [a03c, process_run]">
   <data key="relationship">is used in</data>
+</edge>
+<edge source="(1 SR) 5-Indent Experiment [a03c, process_run]" target="(1 SR) Indented Sample [dab3, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="Forged Sample [fee3, ingredient_run]" target="Homogenization [4e16, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="Homogenization [4e16, process_run]" target="Homogenous Material [e178, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="Attached Sample (100 SR) [a4fa, ingredient_run]" target="Calibration (100 SR) 5-Indent Experiment [7363, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="Calibration (100 SR) 5-Indent Experiment [7363, process_run]" target="Calibration (100 SR) Indented Sample [5f5b, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="Scanned Sample 1 [2cda, material_run]" target="3D Indent Scan 1 [f86e, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="Crystal Bond [2e4d, ingredient_run]" target="Melting Crystal Bond [f0fc, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="EBSD and EDS Mapping [f896, process_run]" target="Sample from EBSD and EDS Mapping [dd1c, material_run]">
+  <data key="relationship">creates</data>
 </edge>
 </graph></graphml>
