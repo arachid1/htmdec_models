@@ -1,0 +1,76 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "material": {
+    "id": "0a58ecc7-23e4-4d96-9f7e-ce5dbf819b68",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "name": "Posterior Dimension",
+  "notes": null,
+  "parameters": [],
+  "properties": [
+    {
+      "file_links": [],
+      "name": "Posterior Length",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "32661b5d-77d9-445a-9f26-afdcafb37666",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 63.57,
+        "type": "nominal_real",
+        "units": "centimeter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Posterior Thickness",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "32661b5d-77d9-445a-9f26-afdcafb37666",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 4.92,
+        "type": "nominal_real",
+        "units": "centimeter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Posterior Width",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "32661b5d-77d9-445a-9f26-afdcafb37666",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 15.0,
+        "type": "nominal_real",
+        "units": "centimeter"
+      }
+    }
+  ],
+  "source": null,
+  "spec": {
+    "id": "412a5417-8b4f-4c9e-ac81-6f99ab5a477c",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "measurement_run",
+  "uids": {
+    "auto": "4319ea9e-f2cd-4691-96e4-cef866cdf0cf"
+  }
+}

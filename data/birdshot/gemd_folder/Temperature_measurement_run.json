@@ -1,0 +1,42 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "material": {
+    "id": "0a58ecc7-23e4-4d96-9f7e-ce5dbf819b68",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "name": "Temperature",
+  "notes": null,
+  "parameters": [],
+  "properties": [
+    {
+      "file_links": [],
+      "name": "Temperature",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "feb8f5e1-fe56-422e-977a-9235f0a15565",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 25.0,
+        "type": "nominal_real",
+        "units": "degree_Celsius"
+      }
+    }
+  ],
+  "source": null,
+  "spec": {
+    "id": "a6d99fed-4288-44d9-ae32-c0db22f44936",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "measurement_run",
+  "uids": {
+    "auto": "5f5c0667-ac98-41f9-b2d9-a3f2290114f8"
+  }
+}

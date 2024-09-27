@@ -1,0 +1,76 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "material": {
+    "id": "0a58ecc7-23e4-4d96-9f7e-ce5dbf819b68",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "name": "Prior Dimension",
+  "notes": null,
+  "parameters": [],
+  "properties": [
+    {
+      "file_links": [],
+      "name": "Prior Length",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "32661b5d-77d9-445a-9f26-afdcafb37666",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 38.83,
+        "type": "nominal_real",
+        "units": "centimeter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Prior Thickness",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "32661b5d-77d9-445a-9f26-afdcafb37666",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 12.66,
+        "type": "nominal_real",
+        "units": "centimeter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Prior Width",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "32661b5d-77d9-445a-9f26-afdcafb37666",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 14.57,
+        "type": "nominal_real",
+        "units": "centimeter"
+      }
+    }
+  ],
+  "source": null,
+  "spec": {
+    "id": "62e24557-51c0-4201-bc06-e61abd15e496",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "measurement_run",
+  "uids": {
+    "auto": "dcbd4e04-4e68-43c4-b9a0-17b87dbc7e0a"
+  }
+}
