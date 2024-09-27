@@ -1,0 +1,258 @@
+{
+  "conditions": [],
+  "file_links": [
+    {
+      "filename": "BBB01_CSR_100.NMD (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e2005ce080931a559c98c6"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test001.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e200f0e080931a559c98e9"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test001_P-h_comparison.png (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e200f2e080931a559c98ef"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test002.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e20189e080931a559c9911"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test002_P-h_comparison.png (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e2018ae080931a559c9914"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test003.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e2023be080931a559c9938"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test003_P-h_comparison.png (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e2023ce080931a559c993b"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test004.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e202efe080931a559c9971"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test004_P-h_comparison.png (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e202f0e080931a559c9977"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test005.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e2039ee080931a559c999b"
+    },
+    {
+      "filename": "BBB01_CSR_100_Test005_P-h_comparison.png (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e2039fe080931a559c999e"
+    }
+  ],
+  "name": "Calibration (100 SR) 5-Indent Experiment",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Strain Rate",
+      "notes": null,
+      "origin": "unknown",
+      "template": null,
+      "type": "parameter",
+      "value": {
+        "nominal": 100.0,
+        "type": "nominal_real",
+        "units": "millimeter / second"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Actuator Calibration Coefficient",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "30a8698c-121e-42d4-b9fa-a502796b554d",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 10.546,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Actuator Column Mass",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "3c1b3ae7-4c6f-411d-a5fd-f78cd5c81b51",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0090855,
+        "type": "nominal_real",
+        "units": "gram"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Actuator Damping Coefficient",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "3c1b3ae7-4c6f-411d-a5fd-f78cd5c81b51",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.144,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Actuator Spring Stiffness",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "cf97fdfa-1a1c-4f51-9274-71cefafe4eb4",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 448.0,
+        "type": "nominal_real",
+        "units": "newton / meter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Frame Stiffness",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "c759967a-c48b-4ca0-9b18-211ccca3520d",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 8000000.0,
+        "type": "nominal_real",
+        "units": "newton / meter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Pieze Load Cell Stiffness",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "8c2f6d5c-a915-4284-8670-a3c55a2bed2c",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 14700000.0,
+        "type": "nominal_real",
+        "units": "newton / meter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Piezo Calibration Coefficient",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "bb18447e-d1e1-4a8a-99a1-f96bae515bc9",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Piezo Load Cell Damping Coefficient",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "57ef6383-4b92-4bd8-9e35-e19b98bc7925",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 40.0,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Piezo Load Cell Effective Mass",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "48c0d4f2-a0e3-4212-865c-e5e7bdf87f7e",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.00513,
+        "type": "nominal_real",
+        "units": "gram"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Tip Area Function Coefficients",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "50559cff-e361-4286-83f8-4e21d305ae3c",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    }
+  ],
+  "source": null,
+  "spec": {
+    "id": "f863f056-8147-4060-99a4-84a0cba6462d",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "process_run",
+  "uids": {
+    "auto": "1699c8cd-2100-4510-90b3-da02e81f6e44"
+  }
+}

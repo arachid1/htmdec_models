@@ -1,5 +1,5 @@
 from openmsimodel.interactive.gemd_modeller import GEMDModeller
-from gemd import MaterialTemplate, ProcessTemplate, MeasurementTemplate, ParameterTemplate, ConditionTemplate, MaterialRun, MaterialSpec, RealBounds, CategoricalBounds, Parameter, NominalReal, FileLink
+from gemd import MaterialTemplate, ProcessTemplate, MeasurementTemplate, ParameterTemplate, ConditionTemplate, MaterialRun, MaterialSpec, RealBounds, CategoricalBounds, Parameter, NominalReal, FileLink, NominalCategorical
 from openmsimodel.structures.materials_sequence import MaterialsSequence
 from openmsimodel.science_kit.science_kit import ScienceKit
 from openmsimodel.science_kit.science_kit import ScienceKit
@@ -16,8 +16,6 @@ from girder_client import GirderClient
 
 client = GirderClient(apiUrl='https://data.htmdec.org/api/v1')
 client.authenticate(apiKey='MFfpVN81hmOaUV7cTGsovnzdr0iB87ygR0RxkDYA')
-
-science_kit = ScienceKit()
 
 # Function to get subfolders of a folder using the Girder API
 def get_subfolders(parent_folder_id):
@@ -59,6 +57,8 @@ def find_folder_by_path(root_folder_id, folder_path):
     return current_folder_id  # Return the ID of the final folder if found
 
 def ni_model(file_name, file_path, component):
+
+    science_kit = ScienceKit()
 
     file_id = component['file_id_regex_pattern']
     match = re.search(file_id[0], file_path)
@@ -406,6 +406,7 @@ def ni_model(file_name, file_path, component):
 
 
 def eds_model(file_name, file_path, component):
+    science_kit = ScienceKit()
     file_id = component['file_id_regex_pattern']
     match = re.search(file_id[0], file_path)
 
@@ -428,16 +429,24 @@ def eds_model(file_name, file_path, component):
         # Ingredients (e.g., the material being analyzed)
         sample_ingredient = Ingredient("Sample")
 
-        # Create process template for EBSD and EDS Mapping
+        # Define individual Parameter Templates for the EBSD and EDS Mapping process
+        beam_current_template = ParameterTemplate(name="Beam Current", bounds=RealBounds(-1, 100, "nanoampere"))
+        beam_voltage_template = ParameterTemplate(name="Beam Voltage", bounds=RealBounds(0, 30, "kilovolt"))
+        dwell_time_template = ParameterTemplate(name="Dwell Time", bounds=RealBounds(-1, 10, "seconds"))
+        sample_tilt_template = ParameterTemplate(name="Sample Tilt", bounds=RealBounds(-1, 90, "degrees"))
+        working_distance_template = ParameterTemplate(name="Working Distance", bounds=RealBounds(-1, 20, "millimeter"))
+        low_vacuum_template = ParameterTemplate(name="Low Vacuum", bounds=CategoricalBounds(["None", "Low", "Medium", "High"]))
+
+        # Create process template for EBSD and EDS Mapping using the individual parameter templates
         ebsd_eds_mapping_process_template = ProcessTemplate(
             name="EBSD and EDS Mapping",
             parameters=[
-                ParameterTemplate(name="Beam Current", bounds=RealBounds(-1, 100, "nanoampere")),
-                ParameterTemplate(name="Beam Voltage", bounds=RealBounds(0, 30, "kilovolt")),
-                ParameterTemplate(name="Dwell Time", bounds=RealBounds(-1, 10, "seconds")),
-                ParameterTemplate(name="Sample Tilt", bounds=RealBounds(-1, 90, "degrees")),
-                ParameterTemplate(name="Working Distance", bounds=RealBounds(-1, 20, "millimeter")),
-                ParameterTemplate(name="Low Vacuum", bounds=CategoricalBounds(["None", "Low", "Medium", "High"]))
+                beam_current_template,
+                beam_voltage_template,
+                dwell_time_template,
+                sample_tilt_template,
+                working_distance_template,
+                low_vacuum_template
             ]
         )
 
@@ -449,12 +458,12 @@ def eds_model(file_name, file_path, component):
 
         # Fill EBSD and EDS Mapping process with values from the form
         ebsd_eds_mapping_process.update_parameters(
-            Parameter('Beam Current', NominalReal(data['EBSD and EDS Mapping']['Beam Current'], 'nanoampere'), template=ebsd_eds_mapping_process_template.parameters[0]),
-            Parameter('Beam Voltage', NominalReal(data['EBSD and EDS Mapping']['Beam Voltage'], 'kilovolt'), template=ebsd_eds_mapping_process_template.parameters[1]),
-            Parameter('Dwell Time', NominalReal(data['EBSD and EDS Mapping']['Dwell Time'], 'seconds'), template=ebsd_eds_mapping_process_template.parameters[2]),
-            Parameter('Sample Tilt', NominalReal(data['EBSD and EDS Mapping']['Sample Tilt'], 'degrees'), template=ebsd_eds_mapping_process_template.parameters[3]),
-            Parameter('Working Distance', NominalReal(data['EBSD and EDS Mapping']['Working Distance'], 'millimeter'), template=ebsd_eds_mapping_process_template.parameters[4]),
-            Parameter('Low Vacuum', CategoricalValue(data['EBSD and EDS Mapping']['Low Vacuum']), template=ebsd_eds_mapping_process_template.parameters[5])
+            Parameter('Beam Current', value=NominalReal(data['EBSD and EDS Mapping']['Beam Current'], 'nanoampere'), template=beam_current_template),
+            Parameter('Beam Voltage', value=NominalReal(data['EBSD and EDS Mapping']['Beam Voltage'], 'kilovolt'), template=beam_voltage_template),
+            Parameter('Dwell Time', value=NominalReal(data['EBSD and EDS Mapping']['Dwell Time'], 'seconds'), template=dwell_time_template),
+            Parameter('Sample Tilt', value=NominalReal(data['EBSD and EDS Mapping']['Sample Tilt'], 'degrees'), template=sample_tilt_template),
+            Parameter('Working Distance', value=NominalReal(data['EBSD and EDS Mapping']['Working Distance'], 'millimeter'), template=working_distance_template),
+            Parameter('Low Vacuum', value=NominalCategorical(data['EBSD and EDS Mapping']['Low Vacuum']), template=low_vacuum_template), which='run'
         )
 
         # Create Material for the EBSD and EDS Mapping sample
@@ -463,69 +472,79 @@ def eds_model(file_name, file_path, component):
         # Create Measurement templates for EDS Measured Composition and StdDev
         eds_composition_measurement_template = MeasurementTemplate("EDS Measured Composition")
         eds_stddev_measurement_template = MeasurementTemplate("EDS Measured Composition StdDev")
+        composition_parameter_template = ParameterTemplate('Composition', bounds=RealBounds(0, 100, ""))
+        composition_std_parameter_template = ParameterTemplate('Composition Standard Deviation', bounds=RealBounds(0, 1, ""))
 
-        # Create Measurements for EDS composition results (primary phase)
+        # # Create Measurements for EDS composition results (primary phase)
         eds_measured_composition = Measurement(
             name="EDS Measured Composition",
-            template=eds_composition_measurement_template,
-            parameters=[
-                Parameter('Al', NominalReal(data['Results']['Measured Composition (%)']['Al'], '%'), template=eds_composition_measurement_template),
-                Parameter('Co', NominalReal(data['Results']['Measured Composition (%)']['Co'], '%'), template=eds_composition_measurement_template),
-                Parameter('Cr', NominalReal(data['Results']['Measured Composition (%)']['Cr'], '%'), template=eds_composition_measurement_template),
-                Parameter('Cu', NominalReal(data['Results']['Measured Composition (%)']['Cu'], '%'), template=eds_composition_measurement_template),
-                Parameter('Fe', NominalReal(data['Results']['Measured Composition (%)']['Fe'], '%'), template=eds_composition_measurement_template),
-                Parameter('Mn', NominalReal(data['Results']['Measured Composition (%)']['Mn'], '%'), template=eds_composition_measurement_template),
-                Parameter('Ni', NominalReal(data['Results']['Measured Composition (%)']['Ni'], '%'), template=eds_composition_measurement_template),
-                Parameter('V', NominalReal(data['Results']['Measured Composition (%)']['V'], '%'), template=eds_composition_measurement_template)
-            ]
+            template=eds_composition_measurement_template
         )
 
-        # Create Standard Deviation Measurements for the primary phase EDS composition
+        eds_measured_composition.update_parameters(
+            Parameter('Al', value=NominalReal(data['Results']['Measured Composition (%)']['Al'], ''), template=composition_parameter_template),
+            Parameter('Co', value=NominalReal(data['Results']['Measured Composition (%)']['Co'], ''), template=composition_parameter_template),
+            Parameter('Cr', value=NominalReal(data['Results']['Measured Composition (%)']['Cr'], ''), template=composition_parameter_template),
+            Parameter('Cu', value=NominalReal(data['Results']['Measured Composition (%)']['Cu'], ''), template=composition_parameter_template),
+            Parameter('Fe', value=NominalReal(data['Results']['Measured Composition (%)']['Fe'], ''), template=composition_parameter_template),
+            Parameter('Mn', value=NominalReal(data['Results']['Measured Composition (%)']['Mn'], ''), template=composition_parameter_template),
+            Parameter('Ni', value=NominalReal(data['Results']['Measured Composition (%)']['Ni'], ''), template=composition_parameter_template),
+            Parameter('V', value=NominalReal(data['Results']['Measured Composition (%)']['V'], ''), template=composition_parameter_template),
+            which='run'
+        )
+
+        # # Create Standard Deviation Measurements for the primary phase EDS composition
         eds_measured_composition_stddev = Measurement(
             name="EDS Measured Composition StdDev",
-            template=eds_stddev_measurement_template,
-            parameters=[
-                Parameter('Al', NominalReal(data['Results']['Measured Composition StdDev (%)']['Al'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Co', NominalReal(data['Results']['Measured Composition StdDev (%)']['Co'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Cr', NominalReal(data['Results']['Measured Composition StdDev (%)']['Cr'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Cu', NominalReal(data['Results']['Measured Composition StdDev (%)']['Cu'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Fe', NominalReal(data['Results']['Measured Composition StdDev (%)']['Fe'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Mn', NominalReal(data['Results']['Measured Composition StdDev (%)']['Mn'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Ni', NominalReal(data['Results']['Measured Composition StdDev (%)']['Ni'], '%'), template=eds_stddev_measurement_template),
-                Parameter('V', NominalReal(data['Results']['Measured Composition StdDev (%)']['V'], '%'), template=eds_stddev_measurement_template)
-            ]
+            template=eds_stddev_measurement_template
         )
 
-        # Create Measurements for 2nd Phase EDS composition results
+        eds_measured_composition_stddev.update_parameters(
+            Parameter('Al', value=NominalReal(data['Results']['Measured Composition StdDev (%)']['Al'], ''), template=composition_std_parameter_template),
+            Parameter('Co', value=NominalReal(data['Results']['Measured Composition StdDev (%)']['Co'], ''), template=composition_std_parameter_template),
+            Parameter('Cr', value=NominalReal(data['Results']['Measured Composition StdDev (%)']['Cr'], ''), template=composition_std_parameter_template),
+            Parameter('Cu', value=NominalReal(data['Results']['Measured Composition StdDev (%)']['Cu'], ''), template=composition_std_parameter_template),
+            Parameter('Fe', value=NominalReal(data['Results']['Measured Composition StdDev (%)']['Fe'], ''), template=composition_std_parameter_template),
+            Parameter('Mn', value=NominalReal(data['Results']['Measured Composition StdDev (%)']['Mn'], ''), template=composition_std_parameter_template),
+            Parameter('Ni', value=NominalReal(data['Results']['Measured Composition StdDev (%)']['Ni'], ''), template=composition_std_parameter_template),
+            Parameter('V', value=NominalReal(data['Results']['Measured Composition StdDev (%)']['V'], ''), template=composition_std_parameter_template),
+            which='run'
+        )
+
+        # # Create Measurements for 2nd Phase EDS composition results
         eds_2nd_phase_measured_composition = Measurement(
             name="2nd Phase EDS Measured Composition",
             template=eds_composition_measurement_template,  # Reuse the same template
-            parameters=[
-                Parameter('Al', NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Al'], '%'), template=eds_composition_measurement_template),
-                Parameter('Co', NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Co'], '%'), template=eds_composition_measurement_template),
-                Parameter('Cr', NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Cr'], '%'), template=eds_composition_measurement_template),
-                Parameter('Cu', NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Cu'], '%'), template=eds_composition_measurement_template),
-                Parameter('Fe', NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Fe'], '%'), template=eds_composition_measurement_template),
-                Parameter('Mn', NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Mn'], '%'), template=eds_composition_measurement_template),
-                Parameter('Ni', NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Ni'], '%'), template=eds_composition_measurement_template),
-                Parameter('V', NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['V'], '%'), template=eds_composition_measurement_template)
-            ]
         )
 
-        # Create Standard Deviation Measurements for the 2nd Phase EDS composition
+        eds_2nd_phase_measured_composition.update_parameters(
+            Parameter('Al', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Al'], ''), template=composition_parameter_template),
+            Parameter('Co', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Co'], ''), template=composition_parameter_template),
+            Parameter('Cr', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Cr'], ''), template=composition_parameter_template),
+            Parameter('Cu', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Cu'], ''), template=composition_parameter_template),
+            Parameter('Fe', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Fe'], ''), template=composition_parameter_template),
+            Parameter('Mn', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Mn'], ''), template=composition_parameter_template),
+            Parameter('Ni', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['Ni'], ''), template=composition_parameter_template),
+            Parameter('V', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition (%)']['V'], ''), template=composition_parameter_template),
+            which='run'
+        )
+
+        # # Create Standard Deviation Measurements for the 2nd Phase EDS composition
         eds_2nd_phase_measured_composition_stddev = Measurement(
             name="2nd Phase EDS Measured Composition StdDev",
             template=eds_stddev_measurement_template,  # Reuse the same template for standard deviation
-            parameters=[
-                Parameter('Al', NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Al'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Co', NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Co'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Cr', NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Cr'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Cu', NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Cu'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Fe', NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Fe'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Mn', NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Mn'], '%'), template=eds_stddev_measurement_template),
-                Parameter('Ni', NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Ni'], '%'), template=eds_stddev_measurement_template),
-                Parameter('V', NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['V'], '%'), template=eds_stddev_measurement_template)
-            ]
+
+        )
+        eds_2nd_phase_measured_composition_stddev.update_parameters(
+            Parameter('Al', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Al'], ''), template=composition_std_parameter_template),
+            Parameter('Co', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Co'], ''), template=composition_std_parameter_template),
+            Parameter('Cr', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Cr'], ''), template=composition_std_parameter_template),
+            Parameter('Cu', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Cu'], ''), template=composition_std_parameter_template),
+            Parameter('Fe', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Fe'], ''), template=composition_std_parameter_template),
+            Parameter('Mn', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Mn'], ''), template=composition_std_parameter_template),
+            Parameter('Ni', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['Ni'], ''), template=composition_std_parameter_template),
+            Parameter('V', value=NominalReal(data['Results']['2nd Phase EDS Measured Composition StdDev (%)']['V'], ''), template=composition_std_parameter_template),
+            which='run'
         )
 
         # Create the overall sequence for EBSD and EDS Mapping Experiment
@@ -549,7 +568,7 @@ def eds_model(file_name, file_path, component):
         return ebsd_eds_mapping_sequence
     
     ebsd_eds_mapping_sequence = make_ebsd_eds_mapping_sequence(ebsd_eds_data)
-    return ebsd_eds_mapping_sequence
+    return science_kit.assets()
 
 class BIRDSHOTModeller(GEMDModeller):
 

@@ -1,0 +1,30 @@
+{
+  "allowed_labels": [],
+  "allowed_names": [],
+  "conditions": [],
+  "description": null,
+  "name": "Profilometry Process",
+  "parameters": [
+    [
+      {
+        "id": "4b218a8c-310f-4d62-9ab0-56b25fd52373",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      null
+    ],
+    [
+      {
+        "id": "ec95fb6f-1ae7-4f7f-943d-fe030e0820d1",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      null
+    ]
+  ],
+  "tags": [],
+  "type": "process_template",
+  "uids": {
+    "auto": "dda8c40b-140c-4e6a-8283-2c608acd3ebe"
+  }
+}

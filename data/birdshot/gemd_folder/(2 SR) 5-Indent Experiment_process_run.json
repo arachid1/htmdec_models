@@ -1,0 +1,238 @@
+{
+  "conditions": [],
+  "file_links": [
+    {
+      "filename": "BBB01_CSR_2.NMD (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e20022e080931a559c9898"
+    },
+    {
+      "filename": "BBB01_CSR_2_Results.xlsx (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e20027e080931a559c989e"
+    },
+    {
+      "filename": "BBB01_CSR_2_Test001.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e20030e080931a559c98a4"
+    },
+    {
+      "filename": "BBB01_CSR_2_Test002.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e20039e080931a559c98aa"
+    },
+    {
+      "filename": "BBB01_CSR_2_Test003.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e20040e080931a559c98b4"
+    },
+    {
+      "filename": "BBB01_CSR_2_Test004.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e2004de080931a559c98ba"
+    },
+    {
+      "filename": "BBB01_CSR_2_Test005.zip (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66e20051e080931a559c98c0"
+    }
+  ],
+  "name": "(2 SR) 5-Indent Experiment",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Strain Rate",
+      "notes": null,
+      "origin": "unknown",
+      "template": null,
+      "type": "parameter",
+      "value": {
+        "nominal": 2.0,
+        "type": "nominal_real",
+        "units": "millimeter / second"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Actuator Calibration Coefficient",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "fc1632ec-4a00-4993-948a-98ecc98973ac",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 10.546,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Actuator Column Mass",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "c49b1633-f34c-4805-b274-c37445045112",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0090855,
+        "type": "nominal_real",
+        "units": "gram"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Actuator Damping Coefficient",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "c49b1633-f34c-4805-b274-c37445045112",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.144,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Actuator Spring Stiffness",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "53098865-c844-46c6-ade0-e65f70676ee8",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 448.0,
+        "type": "nominal_real",
+        "units": "newton / meter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Frame Stiffness",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "d173ec41-1578-41a6-b5d6-b1bb52b2f960",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 8000000.0,
+        "type": "nominal_real",
+        "units": "newton / meter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Pieze Load Cell Stiffness",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "c3da0818-9134-4689-9b9b-d1a0e7243d3a",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 14700000.0,
+        "type": "nominal_real",
+        "units": "newton / meter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Piezo Calibration Coefficient",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "47697241-afcd-4258-bad5-a448c4f707f9",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Piezo Load Cell Damping Coefficient",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "c685c8b0-46c5-470f-90aa-d4905bba35a9",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 40.0,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Piezo Load Cell Effective Mass",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "1d6eb788-4172-404d-b624-0ef736025dcc",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.00513,
+        "type": "nominal_real",
+        "units": "gram"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Tip Area Function Coefficients",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "b7f3b73f-d65b-4db9-af5b-ae058583258c",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    }
+  ],
+  "source": null,
+  "spec": {
+    "id": "d0664898-0e2f-4c81-9dd8-0166d46485cc",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "process_run",
+  "uids": {
+    "auto": "b834c471-8907-48f2-a343-995c3ca27edb"
+  }
+}
