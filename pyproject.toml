@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "build>=1.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "htmdec_models"
+version = "0.1.0"
+description = "Deployer of GEMD data models pertaining to HTMDEC"
+readme = "README.md"
+authors = [{ name = "Ali Rachidi", email = "arachid1@jhu.edu" }]
+maintainers = [{ name = "Ali Rachidi", email = "arachid1@jhu.edu" }]
+classifiers = []
+license = { text = "MIT license" }
+dependencies = ["openmsimodel@git+https://github.com/openmsi/openmsimodel.git#egg=main", "numpy==1.19.5", "watchdog", "girder_client"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }

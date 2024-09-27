@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: htmdec_models
+Version: 0.1.0
+Summary: Deployer of GEMD data models pertaining to HTMDEC
+Author-email: Ali Rachidi <arachid1@jhu.edu>
+Maintainer-email: Ali Rachidi <arachid1@jhu.edu>
+License: MIT license
+Description-Content-Type: text/markdown
+Requires-Dist: openmsimodel@ git+https://github.com/openmsi/openmsimodel.git#egg=main
+Requires-Dist: numpy==1.19.5
+Requires-Dist: watchdog
+Requires-Dist: girder_client
+
+# htmdec_models
