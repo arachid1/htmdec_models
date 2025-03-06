@@ -33,420 +33,6 @@ import re
 import os
 
 
-def ni_model(file_name, file_path, component):
-
-    science_kit = ScienceKit()
-
-    file_id = component["file_id_regex_pattern"]
-    match = re.search(file_id[0], file_path)
-
-    if not match:
-        print("No pattern found.")
-        return
-
-    raw_data_forms = self.client.get(
-        "entry/search",
-        parameters={"query": f"^{match.group()[:3]}.._VAM-.", "limit": 1000},
-    )
-    for form in raw_data_forms:
-        if (
-            "NI-HSR" in form["data"]["targetPath"]
-            and match.group() in form["data"]["targetPath"]
-        ):
-            ni_data = form["data"]
-
-    ni_folder_id = self.find_folder_by_path(
-        self.girder_root_folder_id, ni_data["targetPath"]
-    )
-
-    dms_ni_folder_items = self.client.get(
-        f"/item",
-        parameters={
-            "folderId": ni_folder_id,
-        },
-    )
-
-    ######
-    sample_material_template = MaterialTemplate("Sample")
-    temperature_measurement_template = MeasurementTemplate("Temperature")
-    crystal_bond_ingredient = Ingredient("Crystal Bond")
-    sample_ingredient = Ingredient("Sample")
-
-    melting_process = Process(
-        "Melting Crystal Bond",
-        template=ProcessTemplate(
-            "Melting",
-            parameters=ParameterTemplate(
-                name="Temperature",
-                bounds=RealBounds(
-                    50, 200, "Celsius"
-                ),  # Assuming melting happens between 50°C to 200°C
-            ),
-        ),
-    )
-
-    # Define the resulting material (sample attached with crystal bond)
-    attached_sample_material = Material(
-        "Sample Attached with Crystal Bond", template=sample_material_template
-    )
-
-    # Define a measurement, for example, the temperature during melting
-    melting_temperature_measurement = Measurement(
-        "Melting Temperature", template=temperature_measurement_template
-    )
-
-    # Define the melting sequence using MaterialsSequence
-    melting_sequence = MaterialsSequence(
-        name="Melting Crystal Bond to Attach Sample",
-        science_kit=science_kit,
-        material=attached_sample_material,
-        ingredients=[crystal_bond_ingredient, sample_ingredient],
-        process=melting_process,
-        measurements=[melting_temperature_measurement],
-    )
-
-    # Link internal elements within the sequence
-    melting_sequence.link_within()
-
-    #####
-    def make_constant_sr_nanoindentation_experiment(name, strain_rate, ingredient_name):
-        nanoindentation_sample_ingredient = Ingredient(ingredient_name)
-
-        tip_area_coefficient_template = ParameterTemplate(
-            name="Tip Area Function Coefficient", bounds=RealBounds(0, 100, "")
-        )
-        strain_rate_template = ParameterTemplate(
-            name="Strain Rate", bounds=RealBounds(0, 100, "mm/s")
-        )
-
-        actuator_calibration_coefficient_template = ParameterTemplate(
-            name="Actuator Calibration Coefficient", bounds=RealBounds(0, 100, "")
-        )
-
-        actuator_column_mass_template = ParameterTemplate(
-            name="Actuator Column Mass", bounds=RealBounds(0, 5, "g")
-        )
-
-        actuator_spring_stiffness_template = ParameterTemplate(
-            name="Actuator Spring Stiffness", bounds=RealBounds(0, 1000, "N/m")
-        )
-
-        frame_stiffness_template = ParameterTemplate(
-            name="Frame Stiffness", bounds=RealBounds(0, 5000000, "N/m")
-        )
-
-        piezo_load_cell_stiffness_template = ParameterTemplate(
-            name="Piezo Load Cell Stiffness", bounds=RealBounds(0, 500000, "N/m")
-        )
-
-        piezo_calibration_coefficient_template = ParameterTemplate(
-            name="Piezo Calibration Coefficient", bounds=RealBounds(0, 100, "")
-        )
-
-        piezo_load_cell_damping_coefficient_template = ParameterTemplate(
-            name="Piezo Load Cell Damping Coefficient", bounds=RealBounds(0, 100, "")
-        )
-
-        piezo_load_cell_effective_mass_template = ParameterTemplate(
-            name="Piezo Load Cell Effective Mass", bounds=RealBounds(0, 5, "g")
-        )
-
-        nanoindentation_process = Process(
-            f"{name} 5-Indent Experiment",
-            template=ProcessTemplate(
-                "Nanoindentation Process",
-                parameters=[
-                    strain_rate_template,
-                    actuator_calibration_coefficient_template,
-                    actuator_column_mass_template,
-                    actuator_spring_stiffness_template,
-                    frame_stiffness_template,
-                    piezo_load_cell_stiffness_template,
-                    piezo_calibration_coefficient_template,
-                    piezo_load_cell_damping_coefficient_template,
-                    piezo_load_cell_effective_mass_template,
-                    tip_area_coefficient_template,
-                ],
-            ),
-        )
-
-        nanoindentation_process.update_parameters(
-            (Parameter("Strain Rate", value=NominalReal(strain_rate, "mm/s"))),
-            which="both",
-        )
-        for parameter_name in ni_data["Analysis Parameters"].keys():
-            unit = "dimensionless"
-
-            if "Coefficient" in parameter_name:
-                if parameter_name == "Tip Area Function Coefficients":
-                    for coefficient_name in ni_data["Analysis Parameters"][
-                        parameter_name
-                    ].keys():
-                        percentage = ni_data["Analysis Parameters"][parameter_name][
-                            coefficient_name
-                        ]
-                        param = Parameter(
-                            parameter_name,
-                            value=NominalReal(percentage, unit),
-                            template=tip_area_coefficient_template,
-                        )
-                        nanoindentation_process.update_parameters((param), which="both")
-                    continue
-                elif parameter_name == "Actuator Calibration Coefficient":
-                    template = actuator_calibration_coefficient_template
-                elif parameter_name == "Piezo Calibration Coefficient":
-                    template = piezo_calibration_coefficient_template
-                elif parameter_name == "Piezo Load Cell Damping Coefficient":
-                    template = piezo_load_cell_damping_coefficient_template
-
-            elif "Stiffness" in parameter_name:
-                unit = "N/m"
-                if parameter_name == "Actuator Spring Stiffness":
-                    template = actuator_spring_stiffness_template
-                elif parameter_name == "Frame Stiffness":
-                    template = frame_stiffness_template
-                elif parameter_name == "Pieze Load Cell Stiffness":
-                    template = piezo_load_cell_stiffness_template
-            elif "Mass" in parameter_name:
-                unit = "g"
-                if parameter_name == "Actuator Column Mass":
-                    template = actuator_column_mass_template
-                elif parameter_name == "Piezo Load Cell Effective Mass":
-                    template = piezo_load_cell_effective_mass_template
-
-            # value = NominalReal(ni_data['Analysis Parameters'][parameter_name], unit)
-            param = Parameter(
-                parameter_name,
-                value=NominalReal(ni_data["Analysis Parameters"][parameter_name], unit),
-                template=template,
-            )
-
-            nanoindentation_process.update_parameters((param), which="both")
-
-        indented_sample_material = Material(
-            f"{name} Indented Sample", template=sample_material_template
-        )
-
-        depth_measurement = Measurement(
-            name=f"{name} Displacement Measurement",
-            template=MeasurementTemplate(
-                name="Depth",
-                parameters=ParameterTemplate(
-                    name="Depth", bounds=RealBounds(0, 10000, "nm")
-                ),
-            ),
-        )
-
-        force_measurement = Measurement(
-            name=f"{name} Load Measurement",
-            template=MeasurementTemplate(
-                name="Force",
-                parameters=ParameterTemplate(
-                    name="Force", bounds=RealBounds(0, 500, "micronewton")
-                ),
-            ),
-        )
-
-        hardness_measurement = Measurement(
-            name=f"{name} Hardness Measurement",
-            template=MeasurementTemplate(
-                name="Hardness",
-                parameters=ParameterTemplate(
-                    name="Hardness", bounds=RealBounds(-500, 500, "GPa")
-                ),
-            ),
-        )
-
-        area_measurement = Measurement(
-            name=f"{name} Area Measurement",
-            template=MeasurementTemplate(
-                name="Area",
-                parameters=ParameterTemplate(
-                    name="Area", bounds=RealBounds(-500, 500, "nm^2")
-                ),
-            ),
-        )
-
-        # Define the nanoindentation sequence, linking it to the sample and adding measurements
-        nanoindentation_sequence = MaterialsSequence(
-            name=f"{name} Nanoindentation Experiment on Bonded Sample",
-            science_kit=science_kit,  # Reference to the overall experimental kit you're using
-            ingredients=[nanoindentation_sample_ingredient],
-            material=indented_sample_material,  # The material being tested (attached sample)
-            process=nanoindentation_process,  # The nanoindentation process
-            measurements=[
-                depth_measurement,
-                force_measurement,
-                hardness_measurement,
-                area_measurement,
-            ],  # Measure depth and force during the process
-        )
-
-        nanoindentation_sequence.link_within()
-
-        return nanoindentation_sequence
-
-    sr_value = "100"
-    ingredient_name = f"Attached Sample ({sr_value} SR)"
-    nanoindentation_calibration_sequence = make_constant_sr_nanoindentation_experiment(
-        f"Calibration ({sr_value} SR)", strain_rate=100, ingredient_name=ingredient_name
-    )
-    nanoindentation_calibration_sequence.link_prior(
-        melting_sequence, ingredient_name_to_link=ingredient_name
-    )
-    csr_files = [
-        (item["name"], item["_id"])
-        for item in dms_ni_folder_items
-        if "_CSR_{}".format(sr_value) in item["name"] and (not (".vk6" in item["name"]))
-    ]
-    for csr_file in csr_files:
-        nanoindentation_calibration_sequence.process.update_filelinks(
-            FileLink(
-                f"{csr_file[0]} (DMS)",
-                url=f"https://data.htmdec.org/api/v1/item/{csr_file[1]}",
-            ),
-            which="run",
-        )
-
-    sr_value = "2"
-    ingredient_name = f"Attached Sample ({sr_value} SR)"
-    nanoindentation_1_sequence = make_constant_sr_nanoindentation_experiment(
-        f"({sr_value} SR)", strain_rate=2, ingredient_name=ingredient_name
-    )
-    nanoindentation_1_sequence.link_prior(
-        nanoindentation_calibration_sequence, ingredient_name_to_link=ingredient_name
-    )
-    csr_files = [
-        (item["name"], item["_id"])
-        for item in dms_ni_folder_items
-        if "_CSR_{}".format(sr_value) in item["name"] and (not (".vk6" in item["name"]))
-    ]
-    for csr_file in csr_files:
-        nanoindentation_1_sequence.process.update_filelinks(
-            FileLink(
-                f"{csr_file[0]} (DMS)",
-                url=f"https://data.htmdec.org/api/v1/item/{csr_file[1]}",
-            ),
-            which="run",
-        )
-
-    sr_value = "1"
-    ingredient_name = f"Attached Sample ({sr_value} SR)"
-    nanoindentation_2_sequence = make_constant_sr_nanoindentation_experiment(
-        f"({sr_value} SR)", strain_rate=1, ingredient_name=ingredient_name
-    )
-    nanoindentation_2_sequence.link_prior(
-        nanoindentation_1_sequence, ingredient_name_to_link=ingredient_name
-    )
-    csr_files = [
-        (item["name"], item["_id"])
-        for item in dms_ni_folder_items
-        if (
-            ("_CSR_{}".format(sr_value) in item["name"])
-            and (not (".vk6" in item["name"]))
-            and (not ("_CSR_100" in item["name"]))
-        )
-    ]
-    for csr_file in csr_files:
-        nanoindentation_2_sequence.process.update_filelinks(
-            FileLink(
-                f"{csr_file[0]} (DMS)",
-                url=f"https://data.htmdec.org/api/v1/item/{csr_file[1]}",
-            ),
-            which="run",
-        )
-
-    area_cag_files = [
-        item["name"]
-        for item in dms_ni_folder_items
-        if item["name"].endswith("_area.cag")
-    ]
-
-    ######
-    def make_profilometry_experiment(name, ingredient_name):
-        """
-        Create a MaterialsSequence for Profilometry using the Keyence Microscope
-        to capture images and measurements of the indents.
-        """
-        profilometry_sample_ingredient = Ingredient(ingredient_name)
-
-        # Define the parameter templates for profilometry
-        projected_contact_area_template = ParameterTemplate(
-            name="Projected Contact Area", bounds=RealBounds(0, 1000, "µm²")
-        )
-
-        pile_up_ratio_template = ParameterTemplate(
-            name="Pile-up Ratio", bounds=RealBounds(0, 1, "dimensionless")
-        )
-
-        # Define the profilometry process
-        profilometry_process = Process(
-            f"Keyence Profilometry Step {name}",
-            template=ProcessTemplate(
-                "Profilometry Process",
-                parameters=[projected_contact_area_template, pile_up_ratio_template],
-            ),
-        )
-
-        # Create a measurement for 3D scans
-        scan_measurement = Measurement(
-            name=f"3D Indent Scan {name}",
-            template=MeasurementTemplate(
-                name="Indent Scan",
-                parameters=ParameterTemplate(
-                    name="Indent Depth",
-                    bounds=RealBounds(0, 10000, "nm"),  # Measurement of indent depth
-                ),
-            ),
-        )
-
-        # Define the resulting material (the scanned sample)
-        scanned_sample_material = Material(
-            f"Scanned Sample {name}", template=sample_material_template
-        )
-
-        # Define the profilometry sequence using MaterialsSequence
-        profilometry_sequence = MaterialsSequence(
-            name=f"Profilometry {name} on Indented Sample",
-            science_kit=science_kit,
-            material=scanned_sample_material,
-            ingredients=[profilometry_sample_ingredient],
-            process=profilometry_process,
-            measurements=[scan_measurement],  # Measure the indent scans
-        )
-
-        # Link internal elements within the sequence
-        profilometry_sequence.link_within()
-
-        return profilometry_sequence
-
-    # Example usage:
-    # Profilometry step after the nanoindentation experiment
-    ingredient_name = f"Indented Sample ({sr_value} SR)"
-    profilometry_sequence = make_profilometry_experiment(f"1", ingredient_name)
-    profilometry_sequence.link_prior(
-        nanoindentation_2_sequence, ingredient_name_to_link=ingredient_name
-    )
-
-    # Now, map the .vk6 file associated with the profilometry scan to the sequence
-    vk6_files = [
-        (item["name"], item["_id"])
-        for item in dms_ni_folder_items
-        if item["name"].endswith(".vk6")
-    ]
-
-    for vk6_file in vk6_files:
-        profilometry_sequence.process.update_filelinks(
-            FileLink(
-                f"{vk6_file[0]} (Profilometry)",
-                url=f"https://data.htmdec.org/api/v1/item/{vk6_file[1]}",
-            ),
-            which="run",
-        )
-
-    return science_kit.assets()
-
-
 class BIRDSHOTModeller(GEMDModeller):
 
     def __init__(
@@ -471,14 +57,14 @@ class BIRDSHOTModeller(GEMDModeller):
             girder_root_folder_id,
             instantiate_build,
         )
-        self.add_automatable_component(
-            lambda s: "NI-HSR" in s and (not ("." in s)),
-            (r"\b[A-Z]{3}[0-9]{2}\b", True),
-            [],
-            lambda file_name, file_path, component: ni_model(
-                file_name, file_path, component
-            ),
-        )
+        # self.add_automatable_component(
+        #     lambda s: "NI-HSR" in s and (not ("." in s)),
+        #     (r"\b[A-Z]{3}[0-9]{2}\b", True),
+        #     [],
+        #     lambda file_name, file_path, component: ni_model(
+        #         file_name, file_path, component
+        #     ),
+        # )
         self.add_automatable_component(
             lambda s: "EDS" in s and (not ("." in s)),
             (r"\b[A-Z]{3}[0-9]{2}\b", True),
@@ -491,16 +77,18 @@ class BIRDSHOTModeller(GEMDModeller):
             lambda s: "Syn" in s and (not ("." in s)),
             (r"\b[A-Z]{3}[0-9]{2}\b", True),
             [],
-            lambda file_name, file_path, component: synthesis_model(
+            lambda file_name, file_path, component: self.synthesis_model(
                 file_name, file_path, component
             ),
         )
         self.start_folder_monitoring()
 
     def synthesis_model(self, file_name, file_path, component):
+
         science_kit = ScienceKit()
         match = re.search(component["file_id_regex_pattern"][0], file_path)
 
+        file_id = match.group()
         if not match:
             print("No pattern found.")
             return
@@ -516,12 +104,28 @@ class BIRDSHOTModeller(GEMDModeller):
                 and match.group() in form["data"]["targetPath"]
             ):
                 synthesis_data.update(form["data"])
+                file_id = form["data"]["sampleId"]
+
+        synthesis_folder_id = self.find_folder_by_path(
+            self.girder_root_folder_id, form["data"]["targetPath"]
+        )
+
+        dms_syn_folder_items = self.client.get(
+            f"/item",
+            parameters={
+                "folderId": synthesis_folder_id,
+            },
+        )
+
+        files = [(item["name"], item["_id"]) for item in dms_syn_folder_items]
 
         def make_forging_sequence(data):
-            ingot_ingredient = Ingredient("Ingot")
+            ingot_ingredient = Ingredient(f"{file_id} Ingot")
 
             forging_process_template = ProcessTemplate("Forging")
-            forging_process = Process("Forging", template=forging_process_template)
+            forging_process = Process(
+                f"{file_id} Forging", template=forging_process_template
+            )
 
             soak_time_property_template = PropertyTemplate(
                 "Soak Time", bounds=RealBounds(0, 30, "minute")
@@ -535,7 +139,7 @@ class BIRDSHOTModeller(GEMDModeller):
             )
 
             forged_ingot_material = Material(
-                "Forged Ingot", template=ingot_material_template
+                f"{file_id} Forged Ingot", template=ingot_material_template
             )
 
             # TODO: change to a measurement
@@ -547,69 +151,153 @@ class BIRDSHOTModeller(GEMDModeller):
                 "Dimensions", properties=dimension_property_template
             )
             dimensions_before_measurement = Measurement(
-                "Prior Dimension", template=dimension_measurement_template
+                f"{file_id} Prior Dimension", template=dimension_measurement_template
             )
-            dimensions_before_measurement.update_properties(  # TODO: add thickness reduction
-                Property(
-                    "Prior Length",
-                    value=NominalReal(
-                        synthesis_data["Forging"]["Ingot Dimensions Before"]["Length"],
-                        "cm",
-                    ),
-                    template=dimension_property_template,
-                ),
-                Property(
-                    "Prior Thickness",
-                    value=NominalReal(
-                        synthesis_data["Forging"]["Ingot Dimensions Before"][
-                            "Thickness"
-                        ],
-                        "cm",
-                    ),
-                    template=dimension_property_template,
-                ),
-                Property(
-                    "Prior Width",
-                    value=NominalReal(
-                        synthesis_data["Forging"]["Ingot Dimensions Before"]["Width"],
-                        "cm",
-                    ),
-                    template=dimension_property_template,
-                ),
-                which="run",
-            )
+
+            if "Forging" in data:
+                try:
+                    dimensions_before_measurement.update_properties(  # TODO: add thickness reduction
+                        Property(
+                            "Prior Length",
+                            value=NominalReal(
+                                data["Forging"]["Ingot Dimensions Before"]["Length"],
+                                "cm",
+                            ),
+                            template=dimension_property_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    dimensions_before_measurement.update_properties(  # TODO: add thickness reduction
+                        Property(
+                            "Prior Thickness",
+                            value=NominalReal(
+                                synthesis_data["Forging"]["Ingot Dimensions Before"][
+                                    "Thickness"
+                                ],
+                                "cm",
+                            ),
+                            template=dimension_property_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    dimensions_before_measurement.update_properties(  # TODO: add thickness reduction
+                        Property(
+                            "Prior Width",
+                            value=NominalReal(
+                                synthesis_data["Forging"]["Ingot Dimensions Before"][
+                                    "Width"
+                                ],
+                                "cm",
+                            ),
+                            template=dimension_property_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                # dimensions_before_measurement.update_properties(  # TODO: add thickness reduction
+                #     Property(
+                #     "Prior Length",
+                #     value=NominalReal(
+                #         data["Forging"]["Ingot Dimensions Before"]["Length"],
+                #         "cm",
+                #     ),
+                #     template=dimension_property_template,
+                # ),
+                # Property(
+                #     "Prior Thickness",
+                #     value=NominalReal(
+                #         synthesis_data["Forging"]["Ingot Dimensions Before"][
+                #             "Thickness"
+                #         ],
+                #         "cm",
+                #     ),
+                #     template=dimension_property_template,
+                # ),
+                #     Property(
+                #         "Prior Width",
+                #         value=NominalReal(
+                #             synthesis_data["Forging"]["Ingot Dimensions Before"][
+                #                 "Width"
+                #             ],
+                #             "cm",
+                #         ),
+                #         template=dimension_property_template,
+                #     ),
+                #     which="run",
+                # )
             dimensions_after_measurement = Measurement(
-                "Posterior Dimension", template=dimension_measurement_template
+                f"{file_id} Posterior Dimension",
+                template=dimension_measurement_template,
             )
-            dimensions_after_measurement.update_properties(  # TODO: add thickness reduction
-                Property(
-                    "Posterior Length",
-                    value=NominalReal(
-                        synthesis_data["Forging"]["Ingot Dimensions After"]["Length"],
-                        "cm",
-                    ),
-                    template=dimension_property_template,
-                ),
-                Property(
-                    "Posterior Thickness",
-                    value=NominalReal(
-                        synthesis_data["Forging"]["Ingot Dimensions After"][
-                            "Thickness"
-                        ],
-                        "cm",
-                    ),
-                    template=dimension_property_template,
-                ),
-                Property(
-                    "Posterior Width",
-                    value=NominalReal(
-                        synthesis_data["Forging"]["Ingot Dimensions After"]["Width"],
-                        "cm",
-                    ),
-                    template=dimension_property_template,
-                ),
-                which="run",
-            )
+            if "Forging" in synthesis_data:
+                try:
+                    dimensions_after_measurement.update_properties(  # TODO: add thickness reduction
+                        Property(
+                            "Posterior Length",
+                            value=NominalReal(
+                                synthesis_data["Forging"]["Ingot Dimensions After"][
+                                    "Length"
+                                ],
+                                "cm",
+                            ),
+                            template=dimension_property_template,
+                        ),
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    dimensions_after_measurement.update_properties(  # TODO: add thickness reduction
+                        Property(
+                            "Posterior Length",
+                            value=NominalReal(
+                                synthesis_data["Forging"]["Ingot Dimensions After"][
+                                    "Length"
+                                ],
+                                "cm",
+                            ),
+                            template=dimension_property_template,
+                        ),
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    dimensions_after_measurement.update_properties(  # TODO: add thickness reduction
+                        Property(
+                            "Posterior Thickness",
+                            value=NominalReal(
+                                synthesis_data["Forging"]["Ingot Dimensions After"][
+                                    "Thickness"
+                                ],
+                                "cm",
+                            ),
+                            template=dimension_property_template,
+                        ),
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    dimensions_after_measurement.update_properties(  # TODO: add thickness reduction
+                        Property(
+                            "Posterior Width",
+                            value=NominalReal(
+                                synthesis_data["Forging"]["Ingot Dimensions After"][
+                                    "Width"
+                                ],
+                                "cm",
+                            ),
+                            template=dimension_property_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
 
             soak_time_property_template = PropertyTemplate(
                 "Soak Time", bounds=RealBounds(0, 30, "minute")
@@ -618,19 +306,24 @@ class BIRDSHOTModeller(GEMDModeller):
                 "Soak Time", properties=soak_time_property_template
             )
             soak_time_measurement = Measurement(
-                "Soak Time", template=soak_time_measurement_template
+                f"{file_id} Soak Time", template=soak_time_measurement_template
             )
 
-            soak_time_measurement.update_properties(  # TODO: update_properties causes clash and shouldnt be called
-                Property(
-                    "Soak Time",
-                    value=NominalReal(
-                        data["Forging"]["Ingot Condition"]["Soak Time"], "minute"
-                    ),
-                    template=soak_time_property_template,
-                ),
-                which="run",
-            )
+            if "Forging" in data:
+                try:
+                    soak_time_measurement.update_properties(  # TODO: update_properties causes clash and shouldnt be called
+                        Property(
+                            "Soak Time",
+                            value=NominalReal(
+                                data["Forging"]["Ingot Condition"]["Soak Time"],
+                                "minute",
+                            ),
+                            template=soak_time_property_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
 
             temperature_property_template = PropertyTemplate(
                 "Temperature", bounds=RealBounds(0, 30, "celsius")
@@ -639,19 +332,26 @@ class BIRDSHOTModeller(GEMDModeller):
                 "Temperature", properties=temperature_property_template
             )
             temperature_measurement = Measurement(
-                "Temperature", template=temperature_measurement_template
+                f"{file_id} Temperature", template=temperature_measurement_template
             )
 
-            temperature_measurement.update_properties(  # TODO: update_properties causes clash and shouldnt be called
-                Property(
-                    "Temperature",
-                    value=NominalReal(
-                        data["Forging"]["Ingot Condition"]["Temperature"], "celsius"
-                    ),
-                    template=temperature_property_template,
-                ),
-                which="run",
-            )
+            if "Forging" in data:
+                try:
+                    temperature_measurement.update_properties(  # TODO: update_properties causes clash and shouldnt be called
+                        Property(
+                            "Temperature",
+                            value=NominalReal(
+                                synthesis_data["Forging"]["Ingot Condition"][
+                                    "Temperature"
+                                ],
+                                "celsius",
+                            ),
+                            template=temperature_property_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
 
             forging_sequence = MaterialsSequence(
                 name="Ingot Forging Sequence",
@@ -717,64 +417,125 @@ class BIRDSHOTModeller(GEMDModeller):
 
             # Create Homogenization process
             homogenization_process = Process(
-                name="Homogenization", template=homogenization_process_template
+                name=f"{file_id} Homogenization",
+                template=homogenization_process_template,
             )
 
             # Update the parameters with values from the provided data
-            homogenization_process.update_parameters(
-                Parameter(
-                    "Atmosphere",
-                    value=NominalCategorical(
-                        data["Homogenization"]["Thermal Conditions"]["Atmosphere"]
-                    ),
-                    template=atmosphere_template,
-                ),
-                Parameter(
-                    "Cooling Rate",
-                    value=NominalCategorical(
-                        data["Homogenization"]["Thermal Conditions"]["Cooling Rate"]
-                    ),
-                    template=cooling_rate_template,
-                ),
-                Parameter(
-                    "Duration",
-                    value=NominalReal(
-                        data["Homogenization"]["Thermal Conditions"]["Duration"],
-                        "hours",
-                    ),
-                    template=duration_template,
-                ),
-                Parameter(
-                    "Pressure",
-                    value=NominalReal(
-                        data["Homogenization"]["Thermal Conditions"]["Pressure"], "Pa"
-                    ),
-                    template=pressure_template,
-                ),
-                Parameter(
-                    "Temperature",
-                    value=NominalReal(
-                        data["Homogenization"]["Thermal Conditions"]["Temperature"],
-                        "Celsius",
-                    ),
-                    template=temperature_template,
-                ),
-            )
-
-            # Add purging sequence pressures
-            for step, pressure in data["Homogenization"][
-                "Purging Sequence Pressure"
-            ].items():
-                homogenization_process.update_parameters(
-                    Parameter(
-                        f"Purging Sequence Pressure {step}",
-                        value=NominalReal(pressure, "Pa"),
-                        template=purging_pressure_template,
+            if "Homogenization" in data:
+                try:
+                    homogenization_process.update_parameters(
+                        Parameter(
+                            "Atmosphere",
+                            value=NominalCategorical(
+                                data["Homogenization"]["Thermal Conditions"][
+                                    "Atmosphere"
+                                ]
+                            ),
+                            template=atmosphere_template,
+                        ),
+                        which="run",
                     )
-                )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    homogenization_process.update_parameters(
+                        Parameter(
+                            "Cooling Rate",
+                            value=NominalCategorical(
+                                data["Homogenization"]["Thermal Conditions"][
+                                    "Cooling Rate"
+                                ]
+                            ),
+                            template=cooling_rate_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    homogenization_process.update_parameters(
+                        Parameter(
+                            "Duration",
+                            value=NominalReal(
+                                data["Homogenization"]["Thermal Conditions"][
+                                    "Duration"
+                                ],
+                                "hours",
+                            ),
+                            template=duration_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    homogenization_process.update_parameters(
+                        Parameter(
+                            "Pressure",
+                            value=NominalReal(
+                                data["Homogenization"]["Thermal Conditions"][
+                                    "Pressure"
+                                ],
+                                "Pa",
+                            ),
+                            template=pressure_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    homogenization_process.update_parameters(
+                        Parameter(
+                            "Pressure",
+                            value=NominalReal(
+                                data["Homogenization"]["Thermal Conditions"][
+                                    "Pressure"
+                                ],
+                                "Pa",
+                            ),
+                            template=pressure_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+                try:
+                    homogenization_process.update_parameters(
+                        Parameter(
+                            "Temperature",
+                            value=NominalReal(
+                                data["Homogenization"]["Thermal Conditions"][
+                                    "Temperature"
+                                ],
+                                "Celsius",
+                            ),
+                            template=temperature_template,
+                        ),
+                        which="run",
+                    )
+                except Exception as e:
+                    print(f"Error processing attribute: {e}. Skipping...")
+
+                # Add purging sequence pressures
+                if "Purging Sequence Pressure" in data["Homogenization"]:
+                    for step, pressure in data["Homogenization"][
+                        "Purging Sequence Pressure"
+                    ].items():
+                        try:
+                            homogenization_process.update_parameters(
+                                Parameter(
+                                    f"Purging Sequence Pressure {step}",
+                                    value=NominalReal(pressure, "Pa"),
+                                    template=purging_pressure_template,
+                                )
+                            )
+                        except Exception as e:
+                            print(f"Error processing attribute: {e}. Skipping...")
 
             homogenenous_material = Material(
-                "Homogenous Material", template=MaterialTemplate("Sample")
+                f"{file_id} Homogenous Material", template=MaterialTemplate("Sample")
             )
 
             time_parameter_template = ParameterTemplate(
@@ -786,16 +547,20 @@ class BIRDSHOTModeller(GEMDModeller):
             )
 
             time_spent_measurement = Measurement(
-                name="Time Spent Measurement", template=time_spent_measurement_template
+                name=f"{file_id} Time Spent Measurement",
+                template=time_spent_measurement_template,
             )
 
-            time_spent_measurement.update_parameters(
-                Parameter(
-                    "Time",
-                    value=NominalReal(5, "hours"),
-                    template=time_parameter_template,
+            try:
+                time_spent_measurement.update_parameters(
+                    Parameter(
+                        "Time",
+                        value=NominalReal(5, "hours"),
+                        template=time_parameter_template,
+                    )
                 )
-            )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
 
             homogenization_sequence = MaterialsSequence(
                 name="Homogenization Process",
@@ -809,7 +574,7 @@ class BIRDSHOTModeller(GEMDModeller):
             homogenization_sequence.link_within()
             return homogenization_sequence
 
-        ingredient_name = "Forged Sample"
+        ingredient_name = f"{file_id} Forged Sample"
         homogenization_sequence = make_homogenization_sequence(
             synthesis_data, ingredient_name
         )
@@ -832,26 +597,45 @@ class BIRDSHOTModeller(GEMDModeller):
                 conditions=[argon_pressure_template, vacuum_before_melt_template],
             )
             arc_melting_process = Process(
-                name="Arc Melting", template=arc_melting_process_template
+                name=f"{file_id} Arc Melting", template=arc_melting_process_template
             )
-            arc_melting_process.update_conditions(
-                Condition(
-                    "Argon Pressure",
-                    value=NominalReal(
-                        data["Arc Melting"]["VAM Details"]["Argon Pressure"], "pascal"
+            for file in files:
+                arc_melting_process.update_filelinks(
+                    FileLink(
+                        f"{file[0]} (DMS)",
+                        url=f"https://data.htmdec.org/api/v1/item/{file[1]}",
                     ),
-                    template=argon_pressure_template,
-                ),
-                Condition(
-                    "Vacuum Before Melt",
-                    value=NominalReal(
-                        data["Arc Melting"]["VAM Details"]["Vacuum Before Melt"],
-                        "pascal",
+                    which="run",
+                )
+
+            try:
+                arc_melting_process.update_conditions(
+                    Condition(
+                        "Argon Pressure",
+                        value=NominalReal(
+                            data["Arc Melting"]["VAM Details"]["Argon Pressure"],
+                            "pascal",
+                        ),
+                        template=argon_pressure_template,
                     ),
-                    template=vacuum_before_melt_template,
-                ),
-                which="run",
-            )
+                    which="run",
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                arc_melting_process.update_conditions(
+                    Condition(
+                        "Vacuum Before Melt",
+                        value=NominalReal(
+                            data["Arc Melting"]["VAM Details"]["Vacuum Before Melt"],
+                            "pascal",
+                        ),
+                        template=vacuum_before_melt_template,
+                    ),
+                    which="run",
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
 
             mass_property_template = PropertyTemplate(
                 name="Mass in grams",
@@ -861,141 +645,266 @@ class BIRDSHOTModeller(GEMDModeller):
                 "Sample", properties=mass_property_template
             )
             arc_melted_material = Material(
-                name="Arc Melted Sample", template=sample_material_template
+                name=f"{file_id} Arc Melted Sample", template=sample_material_template
             )
 
-            arc_melted_material.update_properties_and_conditions(  # TODO: update_properties causes clash and shouldnt be called
-                PropertyAndConditions(
-                    property=Property(
-                        "Target Al Mass",
-                        value=NominalReal(
-                            data["Material Preparation"]["Target Mass"]["Al"], "gram"
+            try:
+                arc_melted_material.update_properties_and_conditions(  # TODO: update_properties causes clash and shouldnt be called
+                    PropertyAndConditions(
+                        property=Property(
+                            "Target Al Mass",
+                            value=NominalReal(
+                                data["Material Preparation"]["Target Mass"]["Al"],
+                                "gram",
+                            ),
+                            template=mass_property_template,
                         ),
-                        template=mass_property_template,
+                        conditions=[],
                     ),
-                    conditions=[],
-                ),
-                PropertyAndConditions(
-                    property=Property(
-                        "Target Co Mass",
-                        value=NominalReal(
-                            data["Material Preparation"]["Target Mass"]["Co"], "gram"
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                arc_melted_material.update_properties_and_conditions(  # TODO: update_properties causes clash and shouldnt be called
+                    PropertyAndConditions(
+                        property=Property(
+                            "Target Co Mass",
+                            value=NominalReal(
+                                data["Material Preparation"]["Target Mass"]["Co"],
+                                "gram",
+                            ),
+                            template=mass_property_template,
                         ),
-                        template=mass_property_template,
+                        conditions=[],
                     ),
-                    conditions=[],
-                ),
-                PropertyAndConditions(
-                    property=Property(
-                        "Target Cr Mass",
-                        value=NominalReal(
-                            data["Material Preparation"]["Target Mass"]["Cr"], "gram"
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                arc_melted_material.update_properties_and_conditions(  # TODO: update_properties causes clash and shouldnt be called
+                    PropertyAndConditions(
+                        property=Property(
+                            "Target Cr Mass",
+                            value=NominalReal(
+                                data["Material Preparation"]["Target Mass"]["Cr"],
+                                "gram",
+                            ),
+                            template=mass_property_template,
                         ),
-                        template=mass_property_template,
+                        conditions=[],
                     ),
-                    conditions=[],
-                ),
-                PropertyAndConditions(
-                    property=Property(
-                        "Target Fe Mass",
-                        value=NominalReal(
-                            data["Material Preparation"]["Target Mass"]["Fe"], "gram"
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                arc_melted_material.update_properties_and_conditions(  # TODO: update_properties causes clash and shouldnt be called
+                    PropertyAndConditions(
+                        property=Property(
+                            "Target Fe Mass",
+                            value=NominalReal(
+                                data["Material Preparation"]["Target Mass"]["Fe"],
+                                "gram",
+                            ),
+                            template=mass_property_template,
                         ),
-                        template=mass_property_template,
+                        conditions=[],
                     ),
-                    conditions=[],
-                ),
-                PropertyAndConditions(
-                    property=Property(
-                        "Target Mn Mass",
-                        value=NominalReal(
-                            data["Material Preparation"]["Target Mass"]["Mn"], "gram"
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                arc_melted_material.update_properties_and_conditions(  # TODO: update_properties causes clash and shouldnt be called
+                    PropertyAndConditions(
+                        property=Property(
+                            "Target Mn Mass",
+                            value=NominalReal(
+                                data["Material Preparation"]["Target Mass"]["Mn"],
+                                "gram",
+                            ),
+                            template=mass_property_template,
                         ),
-                        template=mass_property_template,
+                        conditions=[],
                     ),
-                    conditions=[],
-                ),
-                PropertyAndConditions(
-                    property=Property(
-                        "Target Ni Mass",
-                        value=NominalReal(
-                            data["Material Preparation"]["Target Mass"]["Ni"], "gram"
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                arc_melted_material.update_properties_and_conditions(  # TODO: update_properties causes clash and shouldnt be called
+                    PropertyAndConditions(
+                        property=Property(
+                            "Target Ni Mass",
+                            value=NominalReal(
+                                data["Material Preparation"]["Target Mass"]["Ni"],
+                                "gram",
+                            ),
+                            template=mass_property_template,
                         ),
-                        template=mass_property_template,
+                        conditions=[],
                     ),
-                    conditions=[],
-                ),
-                PropertyAndConditions(
-                    property=Property(
-                        "Target V Mass",
-                        value=NominalReal(
-                            data["Material Preparation"]["Target Mass"]["V"], "gram"
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                arc_melted_material.update_properties_and_conditions(  # TODO: update_properties causes clash and shouldnt be called
+                    PropertyAndConditions(
+                        property=Property(
+                            "Target V Mass",
+                            value=NominalReal(
+                                data["Material Preparation"]["Target Mass"]["V"], "gram"
+                            ),
+                            template=mass_property_template,
                         ),
-                        template=mass_property_template,
+                        conditions=[],
                     ),
-                    conditions=[],
-                ),
-                which="spec",
-            )
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
 
             # Create a measurement for the weighed mass
             weighed_mass_measurement_template = MeasurementTemplate(name="Weighing")
             weighed_mass_measurement = Measurement(
-                name="Weighed Mass", template=weighed_mass_measurement_template
+                name=f"{file_id} Weighed Mass",
+                template=weighed_mass_measurement_template,
             )
 
-            weighed_mass_measurement.update_properties(
-                Property(
-                    "Al",
-                    value=NominalReal(
-                        data["Material Preparation"]["Weighed Mass"]["Al"], "gram"
+            try:
+                weighed_mass_measurement.update_properties(
+                    Property(
+                        "Al",
+                        value=NominalReal(
+                            data["Material Preparation"]["Weighed Mass"]["Al"], "gram"
+                        ),
+                        template=mass_property_template,
                     ),
-                    template=mass_property_template,
-                ),
-                Property(
-                    "Co",
-                    value=NominalReal(
-                        data["Material Preparation"]["Weighed Mass"]["Co"], "gram"
+                    which="run",
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                weighed_mass_measurement.update_properties(
+                    Property(
+                        "Co",
+                        value=NominalReal(
+                            data["Material Preparation"]["Weighed Mass"]["Co"], "gram"
+                        ),
+                        template=mass_property_template,
                     ),
-                    template=mass_property_template,
-                ),
-                Property(
-                    "Cr",
-                    value=NominalReal(
-                        data["Material Preparation"]["Weighed Mass"]["Cr"], "gram"
+                    which="run",
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                weighed_mass_measurement.update_properties(
+                    Property(
+                        "Cr",
+                        value=NominalReal(
+                            data["Material Preparation"]["Weighed Mass"]["Cr"], "gram"
+                        ),
+                        template=mass_property_template,
                     ),
-                    template=mass_property_template,
-                ),
-                Property(
-                    "Fe",
-                    value=NominalReal(
-                        data["Material Preparation"]["Weighed Mass"]["Fe"], "gram"
+                    which="run",
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                weighed_mass_measurement.update_properties(
+                    Property(
+                        "Fe",
+                        value=NominalReal(
+                            data["Material Preparation"]["Weighed Mass"]["Fe"], "gram"
+                        ),
+                        template=mass_property_template,
                     ),
-                    template=mass_property_template,
-                ),
-                Property(
-                    "Mn",
-                    value=NominalReal(
-                        data["Material Preparation"]["Weighed Mass"]["Mn"], "gram"
+                    which="run",
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                weighed_mass_measurement.update_properties(
+                    Property(
+                        "Mn",
+                        value=NominalReal(
+                            data["Material Preparation"]["Weighed Mass"]["Mn"], "gram"
+                        ),
+                        template=mass_property_template,
                     ),
-                    template=mass_property_template,
-                ),
-                Property(
-                    "Ni",
-                    value=NominalReal(
-                        data["Material Preparation"]["Weighed Mass"]["Ni"], "gram"
+                    which="run",
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                weighed_mass_measurement.update_properties(
+                    Property(
+                        "Ni",
+                        value=NominalReal(
+                            data["Material Preparation"]["Weighed Mass"]["Ni"], "gram"
+                        ),
+                        template=mass_property_template,
                     ),
-                    template=mass_property_template,
-                ),
-                Property(
-                    "V",
-                    value=NominalReal(
-                        data["Material Preparation"]["Weighed Mass"]["V"], "gram"
+                    which="run",
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+            try:
+                weighed_mass_measurement.update_properties(
+                    Property(
+                        "V",
+                        value=NominalReal(
+                            data["Material Preparation"]["Weighed Mass"]["V"], "gram"
+                        ),
+                        template=mass_property_template,
                     ),
-                    template=mass_property_template,
-                ),
-                which="run",
-            )
+                    which="run",
+                )
+            except Exception as e:
+                print(f"Error processing attribute: {e}. Skipping...")
+
+            # weighed_mass_measurement.update_properties(
+            # Property(
+            #     "Al",
+            #     value=NominalReal(
+            #         data["Material Preparation"]["Weighed Mass"]["Al"], "gram"
+            #     ),
+            #     template=mass_property_template,
+            # ),
+            # Property(
+            #     "Co",
+            #     value=NominalReal(
+            #         data["Material Preparation"]["Weighed Mass"]["Co"], "gram"
+            #     ),
+            #     template=mass_property_template,
+            # ),
+            # Property(
+            #     "Cr",
+            #     value=NominalReal(
+            #         data["Material Preparation"]["Weighed Mass"]["Cr"], "gram"
+            #     ),
+            #     template=mass_property_template,
+            # ),
+            # Property(
+            #     "Fe",
+            #     value=NominalReal(
+            #         data["Material Preparation"]["Weighed Mass"]["Fe"], "gram"
+            #     ),
+            #     template=mass_property_template,
+            # ),
+            # Property(
+            #     "Mn",
+            #     value=NominalReal(
+            #         data["Material Preparation"]["Weighed Mass"]["Mn"], "gram"
+            #     ),
+            #     template=mass_property_template,
+            # ),
+            # Property(
+            #     "Ni",
+            #     value=NominalReal(
+            #         data["Material Preparation"]["Weighed Mass"]["Ni"], "gram"
+            #     ),
+            #     template=mass_property_template,
+            # ),
+
+            # which="run",
+            # )
 
             # Create the MaterialsSequence for Arc Melting
             arc_melting_sequence = MaterialsSequence(
@@ -1010,7 +919,7 @@ class BIRDSHOTModeller(GEMDModeller):
             arc_melting_sequence.link_within()
             return arc_melting_sequence
 
-        ingredient_name = "Homogenous Sample"
+        ingredient_name = f"{file_id} Homogenous Sample"
         arc_melting_sequence = make_arc_melting_sequence(
             synthesis_data, ingredient_name
         )
@@ -1024,11 +933,11 @@ class BIRDSHOTModeller(GEMDModeller):
         science_kit = ScienceKit()
         match = re.search(component["file_id_regex_pattern"][0], file_path)
 
-        file_id = match.group()
-
         if not match:
             print("No pattern found.")
             return
+
+        file_id = match.group()
 
         raw_data_forms = self.client.get(
             "entry/search",
