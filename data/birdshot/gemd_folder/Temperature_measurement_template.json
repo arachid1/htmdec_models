@@ -3,10 +3,19 @@
   "description": null,
   "name": "Temperature",
   "parameters": [],
-  "properties": [],
+  "properties": [
+    [
+      {
+        "id": "4c4fdac2-a7fb-4600-96a9-541477409e15",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      null
+    ]
+  ],
   "tags": [],
   "type": "measurement_template",
   "uids": {
-    "auto": "572635eb-667c-4edf-925a-49d1665feecd"
+    "auto": "9c98ef6f-5802-4b4c-8bf5-2d53b0528072"
   }
 }
