@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="relationship" for="edge" attr.name="relationship" attr.type="string" />
+  <key id="source" for="node" attr.name="source" attr.type="string" />
+  <key id="short_name" for="node" attr.name="short_name" attr.type="string" />
+  <key id="type" for="node" attr.name="type" attr.type="string" />
+  <key id="uuid" for="node" attr.name="uuid" attr.type="string" />
+  <key id="shape" for="node" attr.name="shape" attr.type="string" />
+  <key id="color" for="node" attr.name="color" attr.type="string" />
+  <key id="name" for="graph" attr.name="name" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="Thin Sample [72d7, material_run]">
+      <data key="color">green</data>
+      <data key="shape">circle</data>
+      <data key="uuid">72d71513-4d30-4ae0-86d5-487eb5fb9479</data>
+      <data key="type">material_run</data>
+      <data key="short_name">Thin Sample</data>
+      <data key="source">Thin Sample_material_run.json</data>
+    </node>
+    <node id="Thining [ee6a, process_run]">
+      <data key="color">red</data>
+      <data key="shape">circle</data>
+      <data key="uuid">ee6a4f34-579d-4ecc-9115-6215317ed4c3</data>
+      <data key="type">process_run</data>
+      <data key="short_name">Thining</data>
+      <data key="source">Thining_process_run.json</data>
+    </node>
+    <node id="Electrical Discharge Machining [344e, measurement_run]">
+      <data key="color">purple</data>
+      <data key="shape">circle</data>
+      <data key="uuid">344eadea-8bed-49d9-a229-2f7eecee1dad</data>
+      <data key="type">measurement_run</data>
+      <data key="short_name">Electrical Discharge Machining</data>
+      <data key="source">Electrical Discharge Machining_measurement_run.json</data>
+    </node>
+    <node id="Polished Thin Sample [fe72, material_run]">
+      <data key="color">green</data>
+      <data key="shape">circle</data>
+      <data key="uuid">fe7208b3-dee8-415c-a1dc-7aa2ac00a62b</data>
+      <data key="type">material_run</data>
+      <data key="short_name">Polished Thin Sample</data>
+      <data key="source">Polished Thin Sample_material_run.json</data>
+    </node>
+    <node id="Polishing [b25f, process_run]">
+      <data key="color">red</data>
+      <data key="shape">circle</data>
+      <data key="uuid">b25fe7f9-1ced-4275-8e04-5b2e2c7d1ea6</data>
+      <data key="type">process_run</data>
+      <data key="short_name">Polishing</data>
+      <data key="source">Polishing_process_run.json</data>
+    </node>
+    <node id="Peprocessing [d17c, process_run]">
+      <data key="color">red</data>
+      <data key="shape">circle</data>
+      <data key="uuid">d17cc38e-2150-4f93-b2a1-f15c51c8eb9f</data>
+      <data key="type">process_run</data>
+      <data key="short_name">Peprocessing</data>
+      <data key="source">Peprocessing_process_run.json</data>
+    </node>
+    <node id="Single Shot Test [d299, measurement_run]">
+      <data key="color">purple</data>
+      <data key="shape">circle</data>
+      <data key="uuid">d2993d0b-e6da-412f-a3bf-2a9f3ac55a25</data>
+      <data key="type">measurement_run</data>
+      <data key="short_name">Single Shot Test</data>
+      <data key="source">Single Shot Test_measurement_run.json</data>
+    </node>
+    <node id="Sample [b5c9, material_run]">
+      <data key="color">green</data>
+      <data key="shape">circle</data>
+      <data key="uuid">b5c95fa8-4315-40fe-a611-9638196edf1a</data>
+      <data key="type">material_run</data>
+      <data key="short_name">Sample</data>
+      <data key="source">Sample_material_run.json</data>
+    </node>
+    <node id="Sample [d334, ingredient_run]">
+      <data key="color">blue</data>
+      <data key="shape">circle</data>
+      <data key="uuid">d3349f4c-ec8d-4afc-aa2b-f7d8abdf69b9</data>
+      <data key="type">ingredient_run</data>
+      <data key="short_name">Sample</data>
+      <data key="source">Sample_ingredient_run.json</data>
+    </node>
+    <node id="Unprocessed Sample [fc00, ingredient_run]">
+      <data key="color">blue</data>
+      <data key="shape">circle</data>
+      <data key="uuid">fc00d288-4e67-4e74-b35b-7b08239a1b99</data>
+      <data key="type">ingredient_run</data>
+      <data key="short_name">Unprocessed Sample</data>
+      <data key="source">Unprocessed Sample_ingredient_run.json</data>
+    </node>
+    <node id="Thin Sample [de1c, ingredient_run]">
+      <data key="color">blue</data>
+      <data key="shape">circle</data>
+      <data key="uuid">de1ce269-483c-42b0-9865-5743136a451d</data>
+      <data key="type">ingredient_run</data>
+      <data key="short_name">Thin Sample</data>
+      <data key="source">Thin Sample_ingredient_run.json</data>
+    </node>
+    <node id="Vibrometry [8f3d, measurement_run]">
+      <data key="color">purple</data>
+      <data key="shape">circle</data>
+      <data key="uuid">8f3dddb1-1b96-43a5-b0e8-f8daa5812383</data>
+      <data key="type">measurement_run</data>
+      <data key="short_name">Vibrometry</data>
+      <data key="source">Vibrometry_measurement_run.json</data>
+    </node>
+    <edge source="Thin Sample [72d7, material_run]" target="Thin Sample [de1c, ingredient_run]">
+      <data key="relationship">becomes</data>
+    </edge>
+    <edge source="Thining [ee6a, process_run]" target="Thin Sample [72d7, material_run]">
+      <data key="relationship">creates</data>
+    </edge>
+    <edge source="Polished Thin Sample [fe72, material_run]" target="Electrical Discharge Machining [344e, measurement_run]">
+      <data key="relationship">is measured with</data>
+    </edge>
+    <edge source="Polished Thin Sample [fe72, material_run]" target="Single Shot Test [d299, measurement_run]">
+      <data key="relationship">is measured with</data>
+    </edge>
+    <edge source="Polished Thin Sample [fe72, material_run]" target="Vibrometry [8f3d, measurement_run]">
+      <data key="relationship">is measured with</data>
+    </edge>
+    <edge source="Polishing [b25f, process_run]" target="Polished Thin Sample [fe72, material_run]">
+      <data key="relationship">creates</data>
+    </edge>
+    <edge source="Peprocessing [d17c, process_run]" target="Sample [b5c9, material_run]">
+      <data key="relationship">creates</data>
+    </edge>
+    <edge source="Sample [b5c9, material_run]" target="Sample [d334, ingredient_run]">
+      <data key="relationship">becomes</data>
+    </edge>
+    <edge source="Sample [d334, ingredient_run]" target="Thining [ee6a, process_run]">
+      <data key="relationship">is used in</data>
+    </edge>
+    <edge source="Unprocessed Sample [fc00, ingredient_run]" target="Peprocessing [d17c, process_run]">
+      <data key="relationship">is used in</data>
+    </edge>
+    <edge source="Thin Sample [de1c, ingredient_run]" target="Polishing [b25f, process_run]">
+      <data key="relationship">is used in</data>
+    </edge>
+    <data key="name">Laser_shock</data>
+  </graph>
+</graphml>

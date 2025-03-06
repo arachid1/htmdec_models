@@ -1,17 +1,29 @@
 [build-system]
-requires = ["setuptools>=61.0", "build>=1.2.1"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
-[project]
+[tool.poetry]
 name = "htmdec_models"
 version = "0.1.0"
 description = "Deployer of GEMD data models pertaining to HTMDEC"
 readme = "README.md"
-authors = [{ name = "Ali Rachidi", email = "arachid1@jhu.edu" }]
-maintainers = [{ name = "Ali Rachidi", email = "arachid1@jhu.edu" }]
-classifiers = []
-license = { text = "MIT license" }
-dependencies = ["openmsimodel@git+https://github.com/openmsi/openmsimodel.git#egg=main", "numpy==1.19.5", "watchdog", "girder_client"]
+authors = ["Ali Rachidi <arachid1@jhu.edu>"]
+license = "MIT"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+packages = [{ include = "*", from = "src" }] 
 
-[tool.setuptools]
-package-dir = { "" = "src" }
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"  
+openmsimodel = "0.2.0.dev1"
+numpy = "1.21"
+watchdog = "*"
+girder_client = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+
