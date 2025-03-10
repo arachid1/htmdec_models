@@ -1,0 +1,161 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "material": {
+    "id": "0cba7d60-ed16-4f9e-ac21-ce77067247df",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "name": "AAA02_VAM-B EDS Measured Composition StdDev",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Al",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "930f1d50-0cbb-4984-943b-1ab8bbe4e457",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Co",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "930f1d50-0cbb-4984-943b-1ab8bbe4e457",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 5.2,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Cr",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "930f1d50-0cbb-4984-943b-1ab8bbe4e457",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 43.9,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Cu",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "930f1d50-0cbb-4984-943b-1ab8bbe4e457",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Fe",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "930f1d50-0cbb-4984-943b-1ab8bbe4e457",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 30.2,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Mn",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "930f1d50-0cbb-4984-943b-1ab8bbe4e457",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Ni",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "930f1d50-0cbb-4984-943b-1ab8bbe4e457",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 10.4,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "V",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "930f1d50-0cbb-4984-943b-1ab8bbe4e457",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 10.4,
+        "type": "nominal_real",
+        "units": "dimensionless"
+      }
+    }
+  ],
+  "properties": [],
+  "source": null,
+  "spec": {
+    "id": "a1f90ce0-6c7f-40fc-a5a0-8acc2e3306e5",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "measurement_run",
+  "uids": {
+    "auto": "f6da5701-7c95-473d-a7f9-49b3c99f2351"
+  }
+}

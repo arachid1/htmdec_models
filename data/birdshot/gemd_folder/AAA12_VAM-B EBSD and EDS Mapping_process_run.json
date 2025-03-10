@@ -1,0 +1,109 @@
+{
+  "conditions": [],
+  "file_links": [
+    {
+      "filename": "eds-details.json (DMS)",
+      "type": "file_link",
+      "url": "https://data.htmdec.org/api/v1/item/66310edf1b56c53abc7e1562"
+    }
+  ],
+  "name": "AAA12_VAM-B EBSD and EDS Mapping",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Beam Current",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "d02ffddc-f046-48ae-82e2-6b18808f5513",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 26.0,
+        "type": "nominal_real",
+        "units": "nanoampere"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Beam Voltage",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "5b05c36b-a9f2-47bd-b2b2-1923fd58c0bb",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 20.0,
+        "type": "nominal_real",
+        "units": "kilovolt"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Sample Tilt",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "6229395f-0d63-42ca-a239-ce0ace30fc23",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 70.0,
+        "type": "nominal_real",
+        "units": "degree"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Working Distance",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "e4810547-fb39-4f9c-be63-c527ec6a9f0c",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 9.0,
+        "type": "nominal_real",
+        "units": "millimeter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Low Vacuum",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "33a4499b-24a0-45f5-987f-d5b54965a55c",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "category": "None",
+        "type": "nominal_categorical"
+      }
+    }
+  ],
+  "source": null,
+  "spec": {
+    "id": "1eaf6164-1b6c-4f80-8e85-b7c9913445d2",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "process_run",
+  "uids": {
+    "auto": "57f2caba-fb39-473c-b529-c29fa91c3c97"
+  }
+}

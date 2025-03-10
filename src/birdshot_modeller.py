@@ -57,14 +57,14 @@ class BIRDSHOTModeller(GEMDModeller):
             girder_root_folder_id,
             instantiate_build,
         )
-        # self.add_automatable_component(
-        #     lambda s: "NI-HSR" in s and (not ("." in s)),
-        #     (r"\b[A-Z]{3}[0-9]{2}\b", True),
-        #     [],
-        #     lambda file_name, file_path, component: ni_model(
-        #         file_name, file_path, component
-        #     ),
-        # )
+        self.add_automatable_component(
+            lambda s: "NI-HSR" in s and (not ("." in s)),
+            (r"\b[A-Z]{3}[0-9]{2}\b", True),
+            [],
+            lambda file_name, file_path, component: ni_model(
+                file_name, file_path, component
+            ),
+        )
         self.add_automatable_component(
             lambda s: "EDS" in s and (not ("." in s)),
             (r"\b[A-Z]{3}[0-9]{2}\b", True),
