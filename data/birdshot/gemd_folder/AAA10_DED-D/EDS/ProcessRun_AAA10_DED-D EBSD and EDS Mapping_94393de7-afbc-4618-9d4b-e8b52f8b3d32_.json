@@ -1,0 +1,103 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "AAA10_DED-D EBSD and EDS Mapping",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Beam Current",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "fc004fe0-098f-45bf-aaa6-7c05ff163303",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 26.0,
+            "type": "nominal_real",
+            "units": "nanoampere"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Beam Voltage",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "eaeb9373-10c9-4e4c-8e6a-d65c13ac8e79",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 20.0,
+            "type": "nominal_real",
+            "units": "kilovolt"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Sample Tilt",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "a6c44651-399b-409c-8bf6-6cc093ef7c1d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 60.0,
+            "type": "nominal_real",
+            "units": "degree"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Working Distance",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "72183a8e-ef56-49e1-9276-a8cc83d45df9",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 18.1,
+            "type": "nominal_real",
+            "units": "millimeter"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Low Vacuum",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "5cd38593-63a9-4f2f-81a2-1dab0de217f6",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "25",
+            "type": "nominal_categorical"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "03d6decc-5b0f-481f-b21c-f99d7c451ade",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "94393de7-afbc-4618-9d4b-e8b52f8b3d32"
+   }
+}

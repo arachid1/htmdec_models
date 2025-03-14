@@ -1,0 +1,342 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "AAC16_VAM-A SRJT Test",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Target Load",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "aa480937-328c-4b90-988d-c228cac8963d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 1000.0,
+            "type": "nominal_real",
+            "units": "millinewton"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Depth",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ffafdcc0-b057-4455-935f-6ec55cd59525",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 3000.0,
+            "type": "nominal_real",
+            "units": "nanometer"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target CSM Frequency",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "14dc10e3-fc45-4a8f-a8cd-167a76327f0d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 100.0,
+            "type": "nominal_real",
+            "units": "hertz"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Surface Approach Velocity",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "6465dd82-8cc4-424b-ab9c-83c7e9eb0a8a",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 150.0,
+            "type": "nominal_real",
+            "units": "nanometer / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Dynamic Displacement",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "f8eaa4d4-bf29-425c-9c9f-c1fa7bee79fa",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 2.0,
+            "type": "nominal_real",
+            "units": "nanometer"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Hold Max Load Time",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "84b11bae-93a2-4df6-b1bb-a1b9ed6d15dc",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Surface Approach Distance",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "91d17f30-8751-4532-9122-0f19d086b21e",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 2000.0,
+            "type": "nominal_real",
+            "units": "nanometer"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Final Load",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e77a5856-520b-40ee-99ba-63d02b8fc498",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 740.0,
+            "type": "nominal_real",
+            "units": "millinewton"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Initial Depth",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ffafdcc0-b057-4455-935f-6ec55cd59525",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 600.0,
+            "type": "nominal_real",
+            "units": "nanometer"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Final Depth",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ffafdcc0-b057-4455-935f-6ec55cd59525",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 3400.0,
+            "type": "nominal_real",
+            "units": "nanometer"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Depth: Jump 1",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ffafdcc0-b057-4455-935f-6ec55cd59525",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 1000.0,
+            "type": "nominal_real",
+            "units": "nanometer"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Depth: Jump 2",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ffafdcc0-b057-4455-935f-6ec55cd59525",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 1500.0,
+            "type": "nominal_real",
+            "units": "nanometer"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Depth: Jump 3",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ffafdcc0-b057-4455-935f-6ec55cd59525",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 2000.0,
+            "type": "nominal_real",
+            "units": "nanometer"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Depth: Jump 4",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ffafdcc0-b057-4455-935f-6ec55cd59525",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 2500.0,
+            "type": "nominal_real",
+            "units": "nanometer"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Initial Target Strain Rate",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "14285e4b-38bd-455a-84a9-ff9f8e23ad6b",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.2,
+            "type": "nominal_real",
+            "units": "1 / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Strain Rate: Jump 1",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "14285e4b-38bd-455a-84a9-ff9f8e23ad6b",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.02,
+            "type": "nominal_real",
+            "units": "1 / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Strain Rate: Jump 2",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "14285e4b-38bd-455a-84a9-ff9f8e23ad6b",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.2,
+            "type": "nominal_real",
+            "units": "1 / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Strain Rate: Jump 3",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "14285e4b-38bd-455a-84a9-ff9f8e23ad6b",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.002,
+            "type": "nominal_real",
+            "units": "1 / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Strain Rate: Jump 4",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "14285e4b-38bd-455a-84a9-ff9f8e23ad6b",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.2,
+            "type": "nominal_real",
+            "units": "1 / second"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "90df9039-3dd8-408f-9d8f-9316ffe21a0f",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "0a1c565d-22d0-49fb-bd5d-6736bf6e833a"
+   }
+}

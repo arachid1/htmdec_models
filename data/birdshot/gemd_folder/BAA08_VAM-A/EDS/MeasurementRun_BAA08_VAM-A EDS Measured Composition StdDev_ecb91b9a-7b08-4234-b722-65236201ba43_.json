@@ -1,0 +1,161 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "7744f8f4-bb4a-40ab-8c21-312f889957c8",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "BAA08_VAM-A EDS Measured Composition StdDev",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Al",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ccb5d53c-c017-4159-834e-012524ca76ef",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Co",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ccb5d53c-c017-4159-834e-012524ca76ef",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 23.819333333333336,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Cr",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ccb5d53c-c017-4159-834e-012524ca76ef",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 8.275333333333332,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Cu",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ccb5d53c-c017-4159-834e-012524ca76ef",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Fe",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ccb5d53c-c017-4159-834e-012524ca76ef",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 12.164,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Mn",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ccb5d53c-c017-4159-834e-012524ca76ef",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 16.287333333333336,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Ni",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ccb5d53c-c017-4159-834e-012524ca76ef",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 31.49466666666666,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "V",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ccb5d53c-c017-4159-834e-012524ca76ef",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 8.190666666666667,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      }
+   ],
+   "properties": [],
+   "source": null,
+   "spec": {
+      "id": "3708550d-7338-463e-866a-2b854011a22f",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "ecb91b9a-7b08-4234-b722-65236201ba43"
+   }
+}

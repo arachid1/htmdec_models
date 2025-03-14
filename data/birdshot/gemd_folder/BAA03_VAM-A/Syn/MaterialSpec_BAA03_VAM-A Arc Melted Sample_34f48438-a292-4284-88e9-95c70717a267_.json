@@ -1,0 +1,169 @@
+{
+   "file_links": [],
+   "name": "BAA03_VAM-A Arc Melted Sample",
+   "notes": null,
+   "process": {
+      "id": "8f901270-dfb2-4d71-8f17-83862988147e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Target Al Mass",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f2f27780-6f61-4b46-81fa-488483f84470",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 0.6702783122190488,
+               "type": "nominal_real",
+               "units": "gram"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Target Co Mass",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f2f27780-6f61-4b46-81fa-488483f84470",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 4.392081147786555,
+               "type": "nominal_real",
+               "units": "gram"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Target Cr Mass",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f2f27780-6f61-4b46-81fa-488483f84470",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 2.583389222242861,
+               "type": "nominal_real",
+               "units": "gram"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Target Fe Mass",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f2f27780-6f61-4b46-81fa-488483f84470",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 5.549238158867783,
+               "type": "nominal_real",
+               "units": "gram"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Target Mn Mass",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f2f27780-6f61-4b46-81fa-488483f84470",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 2.729555429956829,
+               "type": "nominal_real",
+               "units": "gram"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Target Ni Mass",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f2f27780-6f61-4b46-81fa-488483f84470",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 17.496838837157686,
+               "type": "nominal_real",
+               "units": "gram"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Target V Mass",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "f2f27780-6f61-4b46-81fa-488483f84470",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 0.0,
+               "type": "nominal_real",
+               "units": "gram"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "a2353a10-99ec-462d-b224-a85af11af945",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "34f48438-a292-4284-88e9-95c70717a267"
+   }
+}

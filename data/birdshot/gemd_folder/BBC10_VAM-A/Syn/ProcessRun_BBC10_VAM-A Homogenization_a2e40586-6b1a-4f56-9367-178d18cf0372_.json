@@ -1,0 +1,85 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "BBC10_VAM-A Homogenization",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Atmosphere",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "965d6ac5-aa57-4da2-ac7a-3377e92bb24d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "Ar",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Cooling Rate",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "0ffa3ee1-3fdc-4e31-ab15-13cd78e08b78",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "category": "FC",
+            "type": "nominal_categorical"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Duration",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "ce210b31-b31b-4c42-a762-5356c857ddd1",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 24.0,
+            "type": "nominal_real",
+            "units": "hour"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Temperature",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c475ce30-dffa-482a-85cf-e4aaad17b8cf",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 1150.0,
+            "type": "nominal_real",
+            "units": "degree_Celsius"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "9486b763-4542-4791-8fd9-519a923a7d87",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "a2e40586-6b1a-4f56-9367-178d18cf0372"
+   }
+}

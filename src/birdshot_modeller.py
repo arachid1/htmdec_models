@@ -67,6 +67,17 @@ class BIRDSHOTAutomatableComponentTree(AutomatableComponentTree):
                 )
                 _all.extend(ni_hsr_kit.assets())
                 del ni_hsr_kit
+            if "SRJT" in self.file_mappings:
+                srjt_kit = self.file_mappings["SRJT"].output
+                srjt_kit_first_sequence = list(srjt_kit.structures.values())[0]
+                srjt_kit.link_prior(
+                    synthesis_kit,
+                    ingredient_name_to_link=srjt_kit_first_sequence.element_assets[
+                        0
+                    ].name,
+                )
+                _all.extend(srjt_kit.assets())
+                del srjt_kit
             _all.extend(synthesis_kit.assets())
         return _all
 
@@ -95,43 +106,304 @@ class BIRDSHOTModeller(GEMDModeller):
             girder_root_folder_id,
             instantiate_build,
         )
+        # self.add_automatable_component(
+        #     "Tensile",
+        #     lambda file_name, file_path: "Tensile" in file_path,
+        #     (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
+        #     lambda file_name, file_path, component, form: self.tensile_model(
+        #         file_name, file_path, component, form
+        #     ),
+        # )
         self.add_automatable_component(
-            "Tensile",
-            lambda file_name, file_path: "Tensile" in file_path,
+            "SRJT",
+            lambda file_name, file_path: "SRJT" in file_path,
             (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
-            lambda file_name, file_path, component, form: self.tensile_model(
+            lambda file_name, file_path, component, form: self.srjt_model(
                 file_name, file_path, component, form
             ),
         )
-        # self.add_automatable_component(
-        #     "NI-HSR",
-        #     lambda file_name, file_path: "NI-HSR" in file_path
-        #     and (not ("." in file_path)),
-        #     (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
-        #     lambda file_name, file_path, component, form: self.hsr_ni_model(
-        #         file_name, file_path, component, form
-        #     ),
-        # )
-        # self.add_automatable_component(
-        #     "EDS",
-        #     lambda file_name, file_path: "EDS" in file_path
-        #     and (not ("." in file_path)),
-        #     (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
-        #     lambda file_name, file_path, component, form: self.eds_model(
-        #         file_name, file_path, component, form
-        #     ),
-        # )
-        # self.add_automatable_component(
-        #     "Syn",
-        #     lambda file_name, file_path: "Syn" in file_path
-        #     and (not ("." in file_path)),
-        #     (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
-        #     lambda file_name, file_path, component, form: self.synthesis_model(
-        #         file_name, file_path, component, form
-        #     ),
-        # )
+        self.add_automatable_component(
+            "NI-HSR",
+            lambda file_name, file_path: "NI-HSR" in file_path
+            and (not ("." in file_path)),
+            (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
+            lambda file_name, file_path, component, form: self.hsr_ni_model(
+                file_name, file_path, component, form
+            ),
+        )
+        self.add_automatable_component(
+            "EDS",
+            lambda file_name, file_path: "EDS" in file_path
+            and (not ("." in file_path)),
+            (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
+            lambda file_name, file_path, component, form: self.eds_model(
+                file_name, file_path, component, form
+            ),
+        )
+        self.add_automatable_component(
+            "Syn",
+            lambda file_name, file_path: "Syn" in file_path
+            and (not ("." in file_path)),
+            (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
+            lambda file_name, file_path, component, form: self.synthesis_model(
+                file_name, file_path, component, form
+            ),
+        )
         self.tree_class = BIRDSHOTAutomatableComponentTree
         self.start_monitoring()
+
+    def srjt_model(self, file_name, file_path, component, form):
+        science_kit = ScienceKit()
+        srjt_data = form["data"]
+        file_id = form["data"]["sampleId"]
+
+        # Shared templates for Depth and Strain Rate parameters
+        depth_parameter_template = ParameterTemplate(
+            "Depth", bounds=RealBounds(0, 5000, "nm")
+        )
+        strain_rate_parameter_template = ParameterTemplate(
+            "Strain Rate", bounds=RealBounds(0, 10, "1/s")
+        )
+
+        # Individual templates for other parameters
+        target_load_parameter_template = ParameterTemplate(
+            "Target Load", bounds=RealBounds(0, 20000, "mN")
+        )
+        target_csm_frequency_template = ParameterTemplate(
+            "Target CSM Frequency", bounds=RealBounds(0, 1000, "Hz")
+        )
+        surface_approach_velocity_template = ParameterTemplate(
+            "Surface Approach Velocity", bounds=RealBounds(0, 500, "nm/s")
+        )
+        target_dynamic_displacement_template = ParameterTemplate(
+            "Target Dynamic Displacement", bounds=RealBounds(0, 100, "nm")
+        )
+        hold_max_load_time_template = ParameterTemplate(
+            "Hold Max Load Time", bounds=RealBounds(0, 10, "seconds")
+        )
+        surface_approach_distance_template = ParameterTemplate(
+            "Surface Approach Distance", bounds=RealBounds(0, 5000, "nm")
+        )
+        data_acquisition_rate_template = ParameterTemplate(
+            "Data Acquisition Rate", bounds=RealBounds(0, 1000, "Hz")
+        )
+        depth_to_start_averages_template = ParameterTemplate(
+            "Depth to Start Averages", bounds=RealBounds(0, 5000, "nm")
+        )
+        depth_to_end_averages_template = ParameterTemplate(
+            "Depth to End Averages", bounds=RealBounds(0, 5000, "nm")
+        )
+        lower_mask_template = ParameterTemplate(
+            "Lower Mask", bounds=RealBounds(0, 1000, "nm")
+        )
+        upper_mask_template = ParameterTemplate(
+            "Upper Mask", bounds=RealBounds(0, 1000, "nm")
+        )
+        final_load_template = ParameterTemplate(
+            "Final Load", bounds=RealBounds(0, 2000, "mN")
+        )
+
+        def make_sample_preparation_sequence():
+            """Creates a Sample Preparation sequence for SRJT."""
+            sample_ingredient = Ingredient(f"{file_id} Sample for SRJT")
+
+            sample_prep_process_template = ProcessTemplate("SRJT Sample Preparation")
+            sample_prep_process = Process(
+                f"{file_id} Sample Preparation Process",
+                template=sample_prep_process_template,
+            )
+
+            prepared_sample_template = MaterialTemplate("SRJT Sample")
+            prepared_sample = Material(
+                f"{file_id} Prepared Sample", template=prepared_sample_template
+            )
+
+            # Create an empty sample preparation sequence
+            sample_preparation_sequence = MaterialsSequence(
+                name="Sample Preparation Sequence",
+                science_kit=science_kit,
+                ingredients=[sample_ingredient],
+                process=sample_prep_process,
+                material=prepared_sample,
+                measurements=[],
+            )
+
+            # Link internal structure
+            sample_preparation_sequence.link_within()
+
+            return sample_preparation_sequence
+
+        sample_preparation_sequence = make_sample_preparation_sequence()
+
+        def make_srjt_sequence(name):
+            """Creates the SRJT test sequence using metadata from Machine & Test Parameters."""
+
+            srjt_sample_ingredient = Ingredient(name)
+
+            # Extract metadata
+            machine_settings = srjt_data["Machine Settings"]
+            test_parameters = srjt_data["Test Parameters"]
+
+            # Initialize process template
+            srjt_process_template = ProcessTemplate(
+                "SRJT Test",
+                parameters=[
+                    target_load_parameter_template,
+                    depth_parameter_template,  # Shared template for all depths
+                    strain_rate_parameter_template,  # Shared template for all strain rates
+                    target_csm_frequency_template,
+                    surface_approach_velocity_template,
+                    target_dynamic_displacement_template,
+                    hold_max_load_time_template,
+                    surface_approach_distance_template,
+                    data_acquisition_rate_template,
+                    depth_to_start_averages_template,
+                    depth_to_end_averages_template,
+                    lower_mask_template,
+                    upper_mask_template,
+                    final_load_template,
+                ],
+            )
+
+            srjt_process = Process(
+                f"{file_id} SRJT Test", template=srjt_process_template
+            )
+
+            # Update parameters
+            srjt_process.update_parameters(
+                Parameter(
+                    "Target Load",
+                    value=NominalReal(machine_settings["Target Load"], "mN"),
+                    template=target_load_parameter_template,
+                ),
+                which="run",
+            )
+
+            srjt_process.update_parameters(
+                Parameter(
+                    "Target Depth",
+                    value=NominalReal(machine_settings["Target Depth"], "nm"),
+                    template=depth_parameter_template,
+                ),
+                which="run",
+            )
+
+            srjt_process.update_parameters(
+                Parameter(
+                    "Target CSM Frequency",
+                    value=NominalReal(machine_settings["Target CSM Frequency"], "Hz"),
+                    template=target_csm_frequency_template,
+                ),
+                which="run",
+            )
+
+            srjt_process.update_parameters(
+                Parameter(
+                    "Surface Approach Velocity",
+                    value=NominalReal(
+                        machine_settings["Surface Approach Velocity"], "nm/s"
+                    ),
+                    template=surface_approach_velocity_template,
+                ),
+                which="run",
+            )
+
+            srjt_process.update_parameters(
+                Parameter(
+                    "Target Dynamic Displacement",
+                    value=NominalReal(
+                        machine_settings["Target Dynamic Displacement"], "nm"
+                    ),
+                    template=target_dynamic_displacement_template,
+                ),
+                which="run",
+            )
+
+            srjt_process.update_parameters(
+                Parameter(
+                    "Hold Max Load Time",
+                    value=NominalReal(
+                        machine_settings["Hold Max Load Time"], "seconds"
+                    ),
+                    template=hold_max_load_time_template,
+                ),
+                which="run",
+            )
+
+            srjt_process.update_parameters(
+                Parameter(
+                    "Surface Approach Distance",
+                    value=NominalReal(
+                        machine_settings["Surface Approach Distance"], "nm"
+                    ),
+                    template=surface_approach_distance_template,
+                ),
+                which="run",
+            )
+
+            srjt_process.update_parameters(
+                Parameter(
+                    "Final Load",
+                    value=NominalReal(test_parameters["Final Load"], "mN"),
+                    template=final_load_template,
+                ),
+                which="run",
+            )
+
+            # Depth parameters (same template)
+            for key in [
+                "Initial Depth",
+                "Final Depth",
+                "Target Depth: Jump 1",
+                "Target Depth: Jump 2",
+                "Target Depth: Jump 3",
+                "Target Depth: Jump 4",
+            ]:
+                srjt_process.update_parameters(
+                    Parameter(
+                        key,
+                        value=NominalReal(test_parameters[key], "nm"),
+                        template=depth_parameter_template,  # Shared template
+                    ),
+                    which="run",
+                )
+
+            # Strain rate parameters (same template)
+            for key in [
+                "Initial Target Strain Rate",
+                "Target Strain Rate: Jump 1",
+                "Target Strain Rate: Jump 2",
+                "Target Strain Rate: Jump 3",
+                "Target Strain Rate: Jump 4",
+            ]:
+                srjt_process.update_parameters(
+                    Parameter(
+                        key,
+                        value=NominalReal(test_parameters[key], "1/s"),
+                        template=strain_rate_parameter_template,  # Shared template
+                    ),
+                    which="run",
+                )
+
+            srjt_sequence = MaterialsSequence(
+                name="SRJT Test Sequence",
+                science_kit=science_kit,
+                ingredients=[srjt_sample_ingredient],
+                process=srjt_process,
+                measurements=[],
+            )
+
+            # Link internal structure
+            srjt_sequence.link_within()
+
+            return srjt_sequence
+
+        ing_name = f"{file_id} Prepared Sample for SRJT"
+        srjt_sequence = make_srjt_sequence(ing_name)
+        srjt_sequence.link_prior(
+            sample_preparation_sequence, ingredient_name_to_link=ing_name
+        )
+        return science_kit
 
     def tensile_model(self, file_name, file_path, component, form):
         science_kit = ScienceKit()

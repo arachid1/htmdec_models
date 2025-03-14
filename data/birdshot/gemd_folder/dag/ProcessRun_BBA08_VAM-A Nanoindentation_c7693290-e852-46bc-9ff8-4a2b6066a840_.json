@@ -1,0 +1,410 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "BBA08_VAM-A Nanoindentation",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Step Magnitude",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "8e1d8b5e-3e97-4145-8c84-e47d50e83131",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 25.0,
+            "type": "nominal_real",
+            "units": "millinewton"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Load",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "eee81b1c-60c0-422c-8a05-b571cb40ae13",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 1000.0,
+            "type": "nominal_real",
+            "units": "millinewton"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Target Ind Strain Rate",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "41f0b6ae-f31e-467f-840e-609cd5d5bd0f",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 2.0,
+            "type": "nominal_real",
+            "units": "1 / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Hold Maximum Load Time",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c6cdb4d6-b19d-416b-9f14-a6c444ead706",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 2.0,
+            "type": "nominal_real",
+            "units": "second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Unload Time",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "3d22475f-21c7-4baa-9e18-30503add4f9a",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 1.0,
+            "type": "nominal_real",
+            "units": "second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Surface Stiffness Trigger",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c27b5f7e-a62c-42fd-bf1a-c68c25c988af",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 800.0,
+            "type": "nominal_real",
+            "units": "newton / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Number of indents",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "6607d36f-abd4-4e29-8f32-a420fed16bdb",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 5.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Drift",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "dc187bb2-1fd2-474d-ae0e-e0582ffdd8c1",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.5,
+            "type": "nominal_real",
+            "units": "nanometer / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Drift Timeout",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "dfb57574-5494-480d-8e0e-25a8ce11e0c7",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 2.0,
+            "type": "nominal_real",
+            "units": "second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Frame Stiffness",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "d7cb420d-f1e5-4e6d-bac5-afd24be85bd6",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 8000000.0,
+            "type": "nominal_real",
+            "units": "newton / meter"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Actuator Spring Stiffness",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c068f2aa-9cd1-4cf1-a581-a284333b4797",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 448.0,
+            "type": "nominal_real",
+            "units": "newton / meter"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Actuator Damping Coefficient",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "6b2d9cfa-eb32-48ff-8764-0252afe1a342",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.144,
+            "type": "nominal_real",
+            "units": "newton * meter / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Actuator Column Mass",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "93788a53-c97d-45d1-ab51-489b6c44eca8",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0090855,
+            "type": "nominal_real",
+            "units": "kilogram"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Actuator Calibration Coefficient",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "9a9db453-0840-4e6f-8609-a60fd9c44777",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 10.546,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Piezo Load Cell Stiffness",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "831ddaff-bc9c-4c15-bfd2-28b6b89f9545",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 14700000.0,
+            "type": "nominal_real",
+            "units": "newton / meter"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Piezo Load Cell Damping Coefficient",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "46f478c8-acf6-4141-b35c-523ab7c30091",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 40.0,
+            "type": "nominal_real",
+            "units": "newton * meter / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Piezo Load Cell Effective Mass",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "43b8cc03-5eb2-4662-8421-90001e6791f4",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.00513,
+            "type": "nominal_real",
+            "units": "kilogram"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Piezo Calibration Coefficient",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "502e8a09-91e7-4e1c-99e3-279dfad6478c",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Tip Area Function m0",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "4df84e88-eb8a-43fa-a024-ec1f158b18f3",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Tip Area Function m1",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "4df84e88-eb8a-43fa-a024-ec1f158b18f3",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Tip Area Function m2",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "4df84e88-eb8a-43fa-a024-ec1f158b18f3",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Tip Area Function m3",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "4df84e88-eb8a-43fa-a024-ec1f158b18f3",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Tip Area Function m4",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "4df84e88-eb8a-43fa-a024-ec1f158b18f3",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "eee68db3-93e5-4bd6-9496-763f10a36e69",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "c7693290-e852-46bc-9ff8-4a2b6066a840"
+   }
+}

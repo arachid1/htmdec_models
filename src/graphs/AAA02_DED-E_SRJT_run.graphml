@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="relationship" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="Target Strain Rate: Jump 4" for="node" attr.name="Target Strain Rate: Jump 4" attr.type="string"/>
+<key id="Target Strain Rate: Jump 3" for="node" attr.name="Target Strain Rate: Jump 3" attr.type="string"/>
+<key id="Target Strain Rate: Jump 2" for="node" attr.name="Target Strain Rate: Jump 2" attr.type="string"/>
+<key id="Target Strain Rate: Jump 1" for="node" attr.name="Target Strain Rate: Jump 1" attr.type="string"/>
+<key id="Initial Target Strain Rate" for="node" attr.name="Initial Target Strain Rate" attr.type="string"/>
+<key id="Target Depth: Jump 4" for="node" attr.name="Target Depth: Jump 4" attr.type="string"/>
+<key id="Target Depth: Jump 3" for="node" attr.name="Target Depth: Jump 3" attr.type="string"/>
+<key id="Target Depth: Jump 2" for="node" attr.name="Target Depth: Jump 2" attr.type="string"/>
+<key id="Target Depth: Jump 1" for="node" attr.name="Target Depth: Jump 1" attr.type="string"/>
+<key id="Final Depth" for="node" attr.name="Final Depth" attr.type="string"/>
+<key id="Initial Depth" for="node" attr.name="Initial Depth" attr.type="string"/>
+<key id="Final Load" for="node" attr.name="Final Load" attr.type="string"/>
+<key id="Surface Approach Distance" for="node" attr.name="Surface Approach Distance" attr.type="string"/>
+<key id="Hold Max Load Time" for="node" attr.name="Hold Max Load Time" attr.type="string"/>
+<key id="Target Dynamic Displacement" for="node" attr.name="Target Dynamic Displacement" attr.type="string"/>
+<key id="Surface Approach Velocity" for="node" attr.name="Surface Approach Velocity" attr.type="string"/>
+<key id="Target CSM Frequency" for="node" attr.name="Target CSM Frequency" attr.type="string"/>
+<key id="Target Depth" for="node" attr.name="Target Depth" attr.type="string"/>
+<key id="Target Load" for="node" attr.name="Target Load" attr.type="string"/>
+<key id="source" for="node" attr.name="source" attr.type="string"/>
+<key id="short_name" for="node" attr.name="short_name" attr.type="string"/>
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="uuid" for="node" attr.name="uuid" attr.type="string"/>
+<key id="shape" for="node" attr.name="shape" attr.type="string"/>
+<key id="color" for="node" attr.name="color" attr.type="string"/>
+<key id="name" for="graph" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><data key="name">AAA02_DED-E_SRJT</data>
+<node id="AAA02_DED-E Sample Preparation Process [3ba8, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">3ba81a30-8369-4310-b90c-283a410d57f1</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAA02_DED-E Sample Preparation Process</data>
+  <data key="source">ProcessRun_AAA02_DED-E Sample Preparation Process_3ba81a30-8369-4310-b90c-283a410d57f1_.json</data>
+</node>
+<node id="AAA02_DED-E Prepared Sample [108b, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">108b14db-012e-4c48-9a29-09dee51958b4</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAA02_DED-E Prepared Sample</data>
+  <data key="source">MaterialRun_AAA02_DED-E Prepared Sample_108b14db-012e-4c48-9a29-09dee51958b4_.json</data>
+</node>
+<node id="AAA02_DED-E Prepared Sample for SRJT [df54, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">df54b3f3-d074-4690-b8db-6af043e7ba9c</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAA02_DED-E Prepared Sample for SRJT</data>
+  <data key="source">IngredientRun_AAA02_DED-E Prepared Sample for SRJT_df54b3f3-d074-4690-b8db-6af043e7ba9c_.json</data>
+</node>
+<node id="AAA02_DED-E SRJT Test [1c49, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">1c49ca7e-f35d-4285-9765-be173d3b07ab</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAA02_DED-E SRJT Test</data>
+  <data key="Target Load">Target Load, 1000.0 millinewton</data>
+  <data key="Target Depth">Target Depth, 3000.0 nanometer</data>
+  <data key="Target CSM Frequency">Target CSM Frequency, 100.0 hertz</data>
+  <data key="Surface Approach Velocity">Surface Approach Velocity, 150.0 nanometer / second</data>
+  <data key="Target Dynamic Displacement">Target Dynamic Displacement, 2.0 nanometer</data>
+  <data key="Hold Max Load Time">Hold Max Load Time, 0.0 second</data>
+  <data key="Surface Approach Distance">Surface Approach Distance, 2000.0 nanometer</data>
+  <data key="Final Load">Final Load, 576.0 millinewton</data>
+  <data key="Initial Depth">Initial Depth, 600.0 nanometer</data>
+  <data key="Final Depth">Final Depth, 3400.0 nanometer</data>
+  <data key="Target Depth: Jump 1">Target Depth: Jump 1, 1000.0 nanometer</data>
+  <data key="Target Depth: Jump 2">Target Depth: Jump 2, 1500.0 nanometer</data>
+  <data key="Target Depth: Jump 3">Target Depth: Jump 3, 2000.0 nanometer</data>
+  <data key="Target Depth: Jump 4">Target Depth: Jump 4, 2500.0 nanometer</data>
+  <data key="Initial Target Strain Rate">Initial Target Strain Rate, 0.2 1 / second</data>
+  <data key="Target Strain Rate: Jump 1">Target Strain Rate: Jump 1, 0.02 1 / second</data>
+  <data key="Target Strain Rate: Jump 2">Target Strain Rate: Jump 2, 0.2 1 / second</data>
+  <data key="Target Strain Rate: Jump 3">Target Strain Rate: Jump 3, 0.002 1 / second</data>
+  <data key="Target Strain Rate: Jump 4">Target Strain Rate: Jump 4, 0.2 1 / second</data>
+  <data key="source">ProcessRun_AAA02_DED-E SRJT Test_1c49ca7e-f35d-4285-9765-be173d3b07ab_.json</data>
+</node>
+<node id="AAA02_DED-E Sample for SRJT [52a3, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">52a3022a-e413-4fa5-b7ac-45894b8d8b73</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAA02_DED-E Sample for SRJT</data>
+  <data key="source">IngredientRun_AAA02_DED-E Sample for SRJT_52a3022a-e413-4fa5-b7ac-45894b8d8b73_.json</data>
+</node>
+<edge source="AAA02_DED-E Sample Preparation Process [3ba8, process_run]" target="AAA02_DED-E Prepared Sample [108b, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAA02_DED-E Prepared Sample [108b, material_run]" target="AAA02_DED-E Prepared Sample for SRJT [df54, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAA02_DED-E Prepared Sample for SRJT [df54, ingredient_run]" target="AAA02_DED-E SRJT Test [1c49, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAA02_DED-E Sample for SRJT [52a3, ingredient_run]" target="AAA02_DED-E Sample Preparation Process [3ba8, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+</graph></graphml>

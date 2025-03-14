@@ -1,0 +1,144 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "8ac6cac1-e652-4bc5-a0ed-ecf17288505e",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "AAA11_VAM-B Weighed Mass",
+   "notes": null,
+   "parameters": [],
+   "properties": [
+      {
+         "file_links": [],
+         "name": "Al",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c28bd5c0-7ec0-4b54-ba75-ec98fcc4ec09",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "gram"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Co",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c28bd5c0-7ec0-4b54-ba75-ec98fcc4ec09",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 4.6738,
+            "type": "nominal_real",
+            "units": "gram"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Cr",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c28bd5c0-7ec0-4b54-ba75-ec98fcc4ec09",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 1.3748,
+            "type": "nominal_real",
+            "units": "gram"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Fe",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c28bd5c0-7ec0-4b54-ba75-ec98fcc4ec09",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 13.2901,
+            "type": "nominal_real",
+            "units": "gram"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Mn",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c28bd5c0-7ec0-4b54-ba75-ec98fcc4ec09",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "gram"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Ni",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c28bd5c0-7ec0-4b54-ba75-ec98fcc4ec09",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 9.3138,
+            "type": "nominal_real",
+            "units": "gram"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "V",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "c28bd5c0-7ec0-4b54-ba75-ec98fcc4ec09",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 1.349,
+            "type": "nominal_real",
+            "units": "gram"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "835b6763-947f-40ab-8212-be99a80c46a1",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "45eb614a-cbd7-4196-a283-cf46248d567f"
+   }
+}

@@ -1,0 +1,86 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "AAA08_VAM-B Homogenization",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Purging Sequence Pressure 1",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "cbcd9d8d-71f4-48fc-af37-59b78c7184c5",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 4.8e-05,
+            "type": "nominal_real",
+            "units": "pascal"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Purging Sequence Pressure 2",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "cbcd9d8d-71f4-48fc-af37-59b78c7184c5",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 3.8e-05,
+            "type": "nominal_real",
+            "units": "pascal"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Purging Sequence Pressure 3",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "cbcd9d8d-71f4-48fc-af37-59b78c7184c5",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 3e-05,
+            "type": "nominal_real",
+            "units": "pascal"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Purging Sequence Pressure 4",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "cbcd9d8d-71f4-48fc-af37-59b78c7184c5",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 1.5e-05,
+            "type": "nominal_real",
+            "units": "pascal"
+         }
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "c59a8923-a08e-43e9-bfd3-f01ce0e63b3a",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "process_spec",
+   "uids": {
+      "auto": "7832c1dc-210a-4500-a1e8-9c3e30a25c5e"
+   }
+}

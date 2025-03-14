@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="relationship" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="Vacuum Before Melt" for="node" attr.name="Vacuum Before Melt" attr.type="string"/>
+<key id="V" for="node" attr.name="V" attr.type="string"/>
+<key id="Ni" for="node" attr.name="Ni" attr.type="string"/>
+<key id="Mn" for="node" attr.name="Mn" attr.type="string"/>
+<key id="Fe" for="node" attr.name="Fe" attr.type="string"/>
+<key id="Cu" for="node" attr.name="Cu" attr.type="string"/>
+<key id="Cr" for="node" attr.name="Cr" attr.type="string"/>
+<key id="Co" for="node" attr.name="Co" attr.type="string"/>
+<key id="Al" for="node" attr.name="Al" attr.type="string"/>
+<key id="Low Vacuum" for="node" attr.name="Low Vacuum" attr.type="string"/>
+<key id="Working Distance" for="node" attr.name="Working Distance" attr.type="string"/>
+<key id="Sample Tilt" for="node" attr.name="Sample Tilt" attr.type="string"/>
+<key id="Beam Voltage" for="node" attr.name="Beam Voltage" attr.type="string"/>
+<key id="Beam Current" for="node" attr.name="Beam Current" attr.type="string"/>
+<key id="source" for="node" attr.name="source" attr.type="string"/>
+<key id="Target Strain Rate: Jump 4" for="node" attr.name="Target Strain Rate: Jump 4" attr.type="string"/>
+<key id="Target Strain Rate: Jump 3" for="node" attr.name="Target Strain Rate: Jump 3" attr.type="string"/>
+<key id="Target Strain Rate: Jump 2" for="node" attr.name="Target Strain Rate: Jump 2" attr.type="string"/>
+<key id="Target Strain Rate: Jump 1" for="node" attr.name="Target Strain Rate: Jump 1" attr.type="string"/>
+<key id="Initial Target Strain Rate" for="node" attr.name="Initial Target Strain Rate" attr.type="string"/>
+<key id="Target Depth: Jump 4" for="node" attr.name="Target Depth: Jump 4" attr.type="string"/>
+<key id="Target Depth: Jump 3" for="node" attr.name="Target Depth: Jump 3" attr.type="string"/>
+<key id="Target Depth: Jump 2" for="node" attr.name="Target Depth: Jump 2" attr.type="string"/>
+<key id="Target Depth: Jump 1" for="node" attr.name="Target Depth: Jump 1" attr.type="string"/>
+<key id="Final Depth" for="node" attr.name="Final Depth" attr.type="string"/>
+<key id="Initial Depth" for="node" attr.name="Initial Depth" attr.type="string"/>
+<key id="Final Load" for="node" attr.name="Final Load" attr.type="string"/>
+<key id="Surface Approach Distance" for="node" attr.name="Surface Approach Distance" attr.type="string"/>
+<key id="Hold Max Load Time" for="node" attr.name="Hold Max Load Time" attr.type="string"/>
+<key id="Target Dynamic Displacement" for="node" attr.name="Target Dynamic Displacement" attr.type="string"/>
+<key id="Surface Approach Velocity" for="node" attr.name="Surface Approach Velocity" attr.type="string"/>
+<key id="Target CSM Frequency" for="node" attr.name="Target CSM Frequency" attr.type="string"/>
+<key id="Target Depth" for="node" attr.name="Target Depth" attr.type="string"/>
+<key id="Target Load" for="node" attr.name="Target Load" attr.type="string"/>
+<key id="short_name" for="node" attr.name="short_name" attr.type="string"/>
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="uuid" for="node" attr.name="uuid" attr.type="string"/>
+<key id="shape" for="node" attr.name="shape" attr.type="string"/>
+<key id="color" for="node" attr.name="color" attr.type="string"/>
+<key id="name" for="graph" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><data key="name">AAE05_VAM-A_EDS_SRJT_Syn</data>
+<node id="AAE05_VAM-A SRJT Test [7da3, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">7da3113f-dc00-4d85-9de9-e0f5305dc9d8</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAE05_VAM-A SRJT Test</data>
+  <data key="Target Load">Target Load, 1000.0 millinewton</data>
+  <data key="Target Depth">Target Depth, 3000.0 nanometer</data>
+  <data key="Target CSM Frequency">Target CSM Frequency, 100.0 hertz</data>
+  <data key="Surface Approach Velocity">Surface Approach Velocity, 100.0 nanometer / second</data>
+  <data key="Target Dynamic Displacement">Target Dynamic Displacement, 2.0 nanometer</data>
+  <data key="Hold Max Load Time">Hold Max Load Time, 0.0 second</data>
+  <data key="Surface Approach Distance">Surface Approach Distance, 2000.0 nanometer</data>
+  <data key="Final Load">Final Load, 701.0 millinewton</data>
+  <data key="Initial Depth">Initial Depth, 600.0 nanometer</data>
+  <data key="Final Depth">Final Depth, 0.0 nanometer</data>
+  <data key="Target Depth: Jump 1">Target Depth: Jump 1, 1000.0 nanometer</data>
+  <data key="Target Depth: Jump 2">Target Depth: Jump 2, 1500.0 nanometer</data>
+  <data key="Target Depth: Jump 3">Target Depth: Jump 3, 2000.0 nanometer</data>
+  <data key="Target Depth: Jump 4">Target Depth: Jump 4, 2500.0 nanometer</data>
+  <data key="Initial Target Strain Rate">Initial Target Strain Rate, 0.2 1 / second</data>
+  <data key="Target Strain Rate: Jump 1">Target Strain Rate: Jump 1, 0.02 1 / second</data>
+  <data key="Target Strain Rate: Jump 2">Target Strain Rate: Jump 2, 0.2 1 / second</data>
+  <data key="Target Strain Rate: Jump 3">Target Strain Rate: Jump 3, 0.002 1 / second</data>
+  <data key="Target Strain Rate: Jump 4">Target Strain Rate: Jump 4, 0.2 1 / second</data>
+  <data key="source">ProcessRun_AAE05_VAM-A SRJT Test_7da3113f-dc00-4d85-9de9-e0f5305dc9d8_.json</data>
+</node>
+<node id="AAE05_VAM-A Sample Preparation Process [d87a, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">d87acb71-2ea2-411a-b9a8-46ebd606f524</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAE05_VAM-A Sample Preparation Process</data>
+  <data key="source">ProcessRun_AAE05_VAM-A Sample Preparation Process_d87acb71-2ea2-411a-b9a8-46ebd606f524_.json</data>
+</node>
+<node id="AAE05_VAM-A Prepared Sample for SRJT [272c, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">272c87ad-3b59-4a2e-9f43-4813c3582dbd</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAE05_VAM-A Prepared Sample for SRJT</data>
+  <data key="source">IngredientRun_AAE05_VAM-A Prepared Sample for SRJT_272c87ad-3b59-4a2e-9f43-4813c3582dbd_.json</data>
+</node>
+<node id="AAE05_VAM-A Prepared Sample [95f4, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">95f44987-e40b-4998-ba5b-3349660b2696</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAE05_VAM-A Prepared Sample</data>
+  <data key="source">MaterialRun_AAE05_VAM-A Prepared Sample_95f44987-e40b-4998-ba5b-3349660b2696_.json</data>
+</node>
+<node id="AAE05_VAM-A Prepared Sample for SRJT [d9e2, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">d9e27c2c-305a-4485-9ea4-596ed790e9d4</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAE05_VAM-A Prepared Sample for SRJT</data>
+  <data key="source">IngredientRun_AAE05_VAM-A Prepared Sample for SRJT_d9e27c2c-305a-4485-9ea4-596ed790e9d4_.json</data>
+</node>
+<node id="AAE05_VAM-A SRJT Test [00e1, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">00e16698-735a-4595-9dba-4b9e92959a3e</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAE05_VAM-A SRJT Test</data>
+  <data key="Target Load">Target Load, 1000.0 millinewton</data>
+  <data key="Target Depth">Target Depth, 3000.0 nanometer</data>
+  <data key="Target CSM Frequency">Target CSM Frequency, 100.0 hertz</data>
+  <data key="Surface Approach Velocity">Surface Approach Velocity, 100.0 nanometer / second</data>
+  <data key="Target Dynamic Displacement">Target Dynamic Displacement, 2.0 nanometer</data>
+  <data key="Hold Max Load Time">Hold Max Load Time, 0.0 second</data>
+  <data key="Surface Approach Distance">Surface Approach Distance, 2000.0 nanometer</data>
+  <data key="Final Load">Final Load, 701.0 millinewton</data>
+  <data key="Initial Depth">Initial Depth, 600.0 nanometer</data>
+  <data key="Final Depth">Final Depth, 0.0 nanometer</data>
+  <data key="Target Depth: Jump 1">Target Depth: Jump 1, 1000.0 nanometer</data>
+  <data key="Target Depth: Jump 2">Target Depth: Jump 2, 1500.0 nanometer</data>
+  <data key="Target Depth: Jump 3">Target Depth: Jump 3, 2000.0 nanometer</data>
+  <data key="Target Depth: Jump 4">Target Depth: Jump 4, 2500.0 nanometer</data>
+  <data key="Initial Target Strain Rate">Initial Target Strain Rate, 0.2 1 / second</data>
+  <data key="Target Strain Rate: Jump 1">Target Strain Rate: Jump 1, 0.02 1 / second</data>
+  <data key="Target Strain Rate: Jump 2">Target Strain Rate: Jump 2, 0.2 1 / second</data>
+  <data key="Target Strain Rate: Jump 3">Target Strain Rate: Jump 3, 0.002 1 / second</data>
+  <data key="Target Strain Rate: Jump 4">Target Strain Rate: Jump 4, 0.2 1 / second</data>
+  <data key="source">ProcessRun_AAE05_VAM-A SRJT Test_00e16698-735a-4595-9dba-4b9e92959a3e_.json</data>
+</node>
+<node id="AAE05_VAM-A Prepared Sample [54f7, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">54f73f33-9b38-4472-83d8-e65833a40fd5</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAE05_VAM-A Prepared Sample</data>
+  <data key="source">MaterialRun_AAE05_VAM-A Prepared Sample_54f73f33-9b38-4472-83d8-e65833a40fd5_.json</data>
+</node>
+<node id="AAE05_VAM-A Sample for SRJT [15ac, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">15ac3b69-859d-48ee-b51c-859608516aa7</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAE05_VAM-A Sample for SRJT</data>
+  <data key="source">IngredientRun_AAE05_VAM-A Sample for SRJT_15ac3b69-859d-48ee-b51c-859608516aa7_.json</data>
+</node>
+<node id="AAE05_VAM-A Sample Preparation Process [8551, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">855152df-870e-47aa-a75d-1f6e2623c838</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAE05_VAM-A Sample Preparation Process</data>
+  <data key="source">ProcessRun_AAE05_VAM-A Sample Preparation Process_855152df-870e-47aa-a75d-1f6e2623c838_.json</data>
+</node>
+<node id="AAE05_VAM-A Arc Melted Sample [a406, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">a406a943-dded-4ca0-8e73-af4f36d11943</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAE05_VAM-A Arc Melted Sample</data>
+  <data key="source">MaterialRun_AAE05_VAM-A Arc Melted Sample_a406a943-dded-4ca0-8e73-af4f36d11943_.json</data>
+</node>
+<node id="AAE05_VAM-A Sample for SRJT [1998, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">1998c99d-ef13-4541-9970-15e0b7237a02</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAE05_VAM-A Sample for SRJT</data>
+  <data key="source">IngredientRun_AAE05_VAM-A Sample for SRJT_1998c99d-ef13-4541-9970-15e0b7237a02_.json</data>
+</node>
+<node id="AAE05_VAM-A Sample from EBSD and EDS Mapping [f063, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">f063fb24-47a8-417a-8935-00082ba57da6</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAE05_VAM-A Sample from EBSD and EDS Mapping</data>
+  <data key="source">MaterialRun_AAE05_VAM-A Sample from EBSD and EDS Mapping_f063fb24-47a8-417a-8935-00082ba57da6_.json</data>
+</node>
+<node id="AAE05_VAM-A EBSD and EDS Mapping [77d9, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">77d94821-0eb5-46d4-89e9-0748acd8a1ec</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAE05_VAM-A EBSD and EDS Mapping</data>
+  <data key="Beam Current">Beam Current, 26.0 nanoampere</data>
+  <data key="Beam Voltage">Beam Voltage, 20.0 kilovolt</data>
+  <data key="Sample Tilt">Sample Tilt, 70.0 degree</data>
+  <data key="Working Distance">Working Distance, 9.0 millimeter</data>
+  <data key="Low Vacuum">Low Vacuum, None</data>
+  <data key="source">ProcessRun_AAE05_VAM-A EBSD and EDS Mapping_77d94821-0eb5-46d4-89e9-0748acd8a1ec_.json</data>
+</node>
+<node id="AAE05_VAM-A EBS Ingredient [d0db, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">d0db4752-2b20-4320-86f5-afa6755cfd88</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAE05_VAM-A EBS Ingredient</data>
+  <data key="source">IngredientRun_AAE05_VAM-A EBS Ingredient_d0db4752-2b20-4320-86f5-afa6755cfd88_.json</data>
+</node>
+<node id="AAE05_VAM-A EDS Measured Composition StdDev [42c2, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">42c29d30-04ec-4588-9d99-4b251d435054</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAE05_VAM-A EDS Measured Composition StdDev</data>
+  <data key="Al">Al, 0.0 dimensionless</data>
+  <data key="Co">Co, 64.0 dimensionless</data>
+  <data key="Cr">Cr, 15.8 dimensionless</data>
+  <data key="Cu">Cu, 0.0 dimensionless</data>
+  <data key="Fe">Fe, 0.0 dimensionless</data>
+  <data key="Mn">Mn, 0.0 dimensionless</data>
+  <data key="Ni">Ni, 9.8 dimensionless</data>
+  <data key="V">V, 10.5 dimensionless</data>
+  <data key="source">MeasurementRun_AAE05_VAM-A EDS Measured Composition StdDev_42c29d30-04ec-4588-9d99-4b251d435054_.json</data>
+</node>
+<node id="AAE05_VAM-A EDS Measured Composition [ad05, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">ad05d6ad-e582-40e9-9d9e-a18380871b25</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAE05_VAM-A EDS Measured Composition</data>
+  <data key="Al">Al, 0.0 dimensionless</data>
+  <data key="Co">Co, 64.0 dimensionless</data>
+  <data key="Cr">Cr, 15.8 dimensionless</data>
+  <data key="Cu">Cu, 0.0 dimensionless</data>
+  <data key="Fe">Fe, 0.0 dimensionless</data>
+  <data key="Mn">Mn, 0.0 dimensionless</data>
+  <data key="Ni">Ni, 9.8 dimensionless</data>
+  <data key="V">V, 10.5 dimensionless</data>
+  <data key="source">MeasurementRun_AAE05_VAM-A EDS Measured Composition_ad05d6ad-e582-40e9-9d9e-a18380871b25_.json</data>
+</node>
+<node id="AAE05_VAM-A Posterior Dimension [a3c4, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">a3c46f65-cf13-4aaf-aff6-9a29eaf8b154</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAE05_VAM-A Posterior Dimension</data>
+  <data key="source">MeasurementRun_AAE05_VAM-A Posterior Dimension_a3c46f65-cf13-4aaf-aff6-9a29eaf8b154_.json</data>
+</node>
+<node id="AAE05_VAM-A Forged Ingot [4d4d, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">4d4d281f-85b2-46fa-a7a6-a29e6cb9738b</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAE05_VAM-A Forged Ingot</data>
+  <data key="source">MaterialRun_AAE05_VAM-A Forged Ingot_4d4d281f-85b2-46fa-a7a6-a29e6cb9738b_.json</data>
+</node>
+<node id="AAE05_VAM-A Homogenous Sample [f939, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">f939cfc6-c35b-419c-b813-89dcc5192182</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAE05_VAM-A Homogenous Sample</data>
+  <data key="source">IngredientRun_AAE05_VAM-A Homogenous Sample_f939cfc6-c35b-419c-b813-89dcc5192182_.json</data>
+</node>
+<node id="AAE05_VAM-A Arc Melting [637e, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">637efb59-7f29-4a73-9637-d4f31f5c49b5</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAE05_VAM-A Arc Melting</data>
+  <data key="Vacuum Before Melt">Vacuum Before Melt, 5e-05 pascal</data>
+  <data key="source">ProcessRun_AAE05_VAM-A Arc Melting_637efb59-7f29-4a73-9637-d4f31f5c49b5_.json</data>
+</node>
+<node id="AAE05_VAM-A Homogenous Material [4981, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">49817238-18dc-40b4-9d0c-50d12a83d93c</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAE05_VAM-A Homogenous Material</data>
+  <data key="source">MaterialRun_AAE05_VAM-A Homogenous Material_49817238-18dc-40b4-9d0c-50d12a83d93c_.json</data>
+</node>
+<node id="AAE05_VAM-A Prior Dimension [5423, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">54230dc4-7880-4745-92f7-11971c980ed1</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAE05_VAM-A Prior Dimension</data>
+  <data key="source">MeasurementRun_AAE05_VAM-A Prior Dimension_54230dc4-7880-4745-92f7-11971c980ed1_.json</data>
+</node>
+<node id="AAE05_VAM-A Time Spent Measurement [0b50, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">0b50e12a-6d18-406b-9e83-ca04bde20bba</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAE05_VAM-A Time Spent Measurement</data>
+  <data key="source">MeasurementRun_AAE05_VAM-A Time Spent Measurement_0b50e12a-6d18-406b-9e83-ca04bde20bba_.json</data>
+</node>
+<node id="AAE05_VAM-A Temperature [e840, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">e840f5e6-5282-49f1-976d-0c1f651fa280</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAE05_VAM-A Temperature</data>
+  <data key="source">MeasurementRun_AAE05_VAM-A Temperature_e840f5e6-5282-49f1-976d-0c1f651fa280_.json</data>
+</node>
+<node id="AAE05_VAM-A Soak Time [5b60, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">5b60e678-0a08-468b-af0c-4ca2a4fdfa26</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAE05_VAM-A Soak Time</data>
+  <data key="source">MeasurementRun_AAE05_VAM-A Soak Time_5b60e678-0a08-468b-af0c-4ca2a4fdfa26_.json</data>
+</node>
+<node id="AAE05_VAM-A Ingot [336a, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">336a296a-818b-4fbe-8ce0-47d70331c30c</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAE05_VAM-A Ingot</data>
+  <data key="source">IngredientRun_AAE05_VAM-A Ingot_336a296a-818b-4fbe-8ce0-47d70331c30c_.json</data>
+</node>
+<node id="AAE05_VAM-A Forging [e673, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">e6732013-36a1-4241-9ec9-44324fafabbf</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAE05_VAM-A Forging</data>
+  <data key="source">ProcessRun_AAE05_VAM-A Forging_e6732013-36a1-4241-9ec9-44324fafabbf_.json</data>
+</node>
+<node id="AAE05_VAM-A Forged Sample [cfa3, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">cfa35d9e-af4a-4934-ba67-000a27358ff8</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAE05_VAM-A Forged Sample</data>
+  <data key="source">IngredientRun_AAE05_VAM-A Forged Sample_cfa35d9e-af4a-4934-ba67-000a27358ff8_.json</data>
+</node>
+<node id="AAE05_VAM-A Homogenization [aba3, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">aba3b044-cbe5-4052-a226-0891eafb18c8</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAE05_VAM-A Homogenization</data>
+  <data key="source">ProcessRun_AAE05_VAM-A Homogenization_aba3b044-cbe5-4052-a226-0891eafb18c8_.json</data>
+</node>
+<node id="AAE05_VAM-A Weighed Mass [4a6b, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">4a6ba5be-2309-4fdf-94e2-526a95e22f55</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAE05_VAM-A Weighed Mass</data>
+  <data key="Al">Al, 0.0 gram</data>
+  <data key="Co">Co, 20.1395 gram</data>
+  <data key="Cr">Cr, 4.1031 gram</data>
+  <data key="Fe">Fe, 0.0 gram</data>
+  <data key="Mn">Mn, 0.0 gram</data>
+  <data key="Ni">Ni, 3.0822 gram</data>
+  <data key="V">V, 2.6741 gram</data>
+  <data key="source">MeasurementRun_AAE05_VAM-A Weighed Mass_4a6ba5be-2309-4fdf-94e2-526a95e22f55_.json</data>
+</node>
+<edge source="AAE05_VAM-A Sample Preparation Process [d87a, process_run]" target="AAE05_VAM-A Prepared Sample [54f7, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAE05_VAM-A Prepared Sample for SRJT [272c, ingredient_run]" target="AAE05_VAM-A SRJT Test [7da3, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAE05_VAM-A Prepared Sample [95f4, material_run]" target="AAE05_VAM-A Prepared Sample for SRJT [272c, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAE05_VAM-A Prepared Sample for SRJT [d9e2, ingredient_run]" target="AAE05_VAM-A SRJT Test [00e1, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAE05_VAM-A Prepared Sample [54f7, material_run]" target="AAE05_VAM-A Prepared Sample for SRJT [d9e2, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAE05_VAM-A Sample for SRJT [15ac, ingredient_run]" target="AAE05_VAM-A Sample Preparation Process [8551, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAE05_VAM-A Sample Preparation Process [8551, process_run]" target="AAE05_VAM-A Prepared Sample [95f4, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAE05_VAM-A Arc Melted Sample [a406, material_run]" target="AAE05_VAM-A Sample for SRJT [15ac, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAE05_VAM-A Arc Melted Sample [a406, material_run]" target="AAE05_VAM-A EBS Ingredient [d0db, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAE05_VAM-A Arc Melted Sample [a406, material_run]" target="AAE05_VAM-A Weighed Mass [4a6b, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAE05_VAM-A Sample for SRJT [1998, ingredient_run]" target="AAE05_VAM-A Sample Preparation Process [d87a, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAE05_VAM-A Sample from EBSD and EDS Mapping [f063, material_run]" target="AAE05_VAM-A EDS Measured Composition StdDev [42c2, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAE05_VAM-A Sample from EBSD and EDS Mapping [f063, material_run]" target="AAE05_VAM-A EDS Measured Composition [ad05, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAE05_VAM-A EBSD and EDS Mapping [77d9, process_run]" target="AAE05_VAM-A Sample from EBSD and EDS Mapping [f063, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAE05_VAM-A EBS Ingredient [d0db, ingredient_run]" target="AAE05_VAM-A EBSD and EDS Mapping [77d9, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAE05_VAM-A Forged Ingot [4d4d, material_run]" target="AAE05_VAM-A Posterior Dimension [a3c4, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAE05_VAM-A Forged Ingot [4d4d, material_run]" target="AAE05_VAM-A Prior Dimension [5423, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAE05_VAM-A Forged Ingot [4d4d, material_run]" target="AAE05_VAM-A Temperature [e840, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAE05_VAM-A Forged Ingot [4d4d, material_run]" target="AAE05_VAM-A Soak Time [5b60, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAE05_VAM-A Forged Ingot [4d4d, material_run]" target="AAE05_VAM-A Forged Sample [cfa3, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAE05_VAM-A Homogenous Sample [f939, ingredient_run]" target="AAE05_VAM-A Arc Melting [637e, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAE05_VAM-A Arc Melting [637e, process_run]" target="AAE05_VAM-A Arc Melted Sample [a406, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAE05_VAM-A Homogenous Material [4981, material_run]" target="AAE05_VAM-A Homogenous Sample [f939, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAE05_VAM-A Homogenous Material [4981, material_run]" target="AAE05_VAM-A Time Spent Measurement [0b50, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAE05_VAM-A Ingot [336a, ingredient_run]" target="AAE05_VAM-A Forging [e673, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAE05_VAM-A Forging [e673, process_run]" target="AAE05_VAM-A Forged Ingot [4d4d, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAE05_VAM-A Forged Sample [cfa3, ingredient_run]" target="AAE05_VAM-A Homogenization [aba3, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAE05_VAM-A Homogenization [aba3, process_run]" target="AAE05_VAM-A Homogenous Material [4981, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+</graph></graphml>
