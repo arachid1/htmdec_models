@@ -1,0 +1,35 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "AAD05_VAM-A Time Spent Measurement",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Time",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "a95439f4-73df-415a-a2f2-e961d390dccb",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 5.0,
+        "type": "nominal_real",
+        "units": "hour"
+      }
+    }
+  ],
+  "tags": [],
+  "template": {
+    "id": "7febd153-321d-412e-9d06-ac1dcaf834ed",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "type": "measurement_spec",
+  "uids": {
+    "auto": "71132bbc-5542-4ade-b3b3-34a7eec1bb10"
+  }
+}

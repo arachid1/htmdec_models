@@ -1,0 +1,169 @@
+{
+  "file_links": [],
+  "name": "AAD10_VAM-A Arc Melted Sample",
+  "notes": null,
+  "process": {
+    "id": "a49b4891-f79f-4a5d-b3ad-6f4d76d4e66b",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "properties": [
+    {
+      "conditions": [],
+      "property": {
+        "file_links": [],
+        "name": "Target Al Mass",
+        "notes": null,
+        "origin": "unknown",
+        "template": {
+          "id": "d3ba57a0-b61c-4674-9b84-75d0e7c4582a",
+          "scope": "auto",
+          "type": "link_by_uid"
+        },
+        "type": "property",
+        "value": {
+          "nominal": 0.0,
+          "type": "nominal_real",
+          "units": "gram"
+        }
+      },
+      "type": "property_and_conditions"
+    },
+    {
+      "conditions": [],
+      "property": {
+        "file_links": [],
+        "name": "Target Co Mass",
+        "notes": null,
+        "origin": "unknown",
+        "template": {
+          "id": "d3ba57a0-b61c-4674-9b84-75d0e7c4582a",
+          "scope": "auto",
+          "type": "link_by_uid"
+        },
+        "type": "property",
+        "value": {
+          "nominal": 1.5474,
+          "type": "nominal_real",
+          "units": "gram"
+        }
+      },
+      "type": "property_and_conditions"
+    },
+    {
+      "conditions": [],
+      "property": {
+        "file_links": [],
+        "name": "Target Cr Mass",
+        "notes": null,
+        "origin": "unknown",
+        "template": {
+          "id": "d3ba57a0-b61c-4674-9b84-75d0e7c4582a",
+          "scope": "auto",
+          "type": "link_by_uid"
+        },
+        "type": "property",
+        "value": {
+          "nominal": 1.3652,
+          "type": "nominal_real",
+          "units": "gram"
+        }
+      },
+      "type": "property_and_conditions"
+    },
+    {
+      "conditions": [],
+      "property": {
+        "file_links": [],
+        "name": "Target Fe Mass",
+        "notes": null,
+        "origin": "unknown",
+        "template": {
+          "id": "d3ba57a0-b61c-4674-9b84-75d0e7c4582a",
+          "scope": "auto",
+          "type": "link_by_uid"
+        },
+        "type": "property",
+        "value": {
+          "nominal": 8.7978,
+          "type": "nominal_real",
+          "units": "gram"
+        }
+      },
+      "type": "property_and_conditions"
+    },
+    {
+      "conditions": [],
+      "property": {
+        "file_links": [],
+        "name": "Target Mn Mass",
+        "notes": null,
+        "origin": "unknown",
+        "template": {
+          "id": "d3ba57a0-b61c-4674-9b84-75d0e7c4582a",
+          "scope": "auto",
+          "type": "link_by_uid"
+        },
+        "type": "property",
+        "value": {
+          "nominal": 0.0,
+          "type": "nominal_real",
+          "units": "gram"
+        }
+      },
+      "type": "property_and_conditions"
+    },
+    {
+      "conditions": [],
+      "property": {
+        "file_links": [],
+        "name": "Target Ni Mass",
+        "notes": null,
+        "origin": "unknown",
+        "template": {
+          "id": "d3ba57a0-b61c-4674-9b84-75d0e7c4582a",
+          "scope": "auto",
+          "type": "link_by_uid"
+        },
+        "type": "property",
+        "value": {
+          "nominal": 16.952,
+          "type": "nominal_real",
+          "units": "gram"
+        }
+      },
+      "type": "property_and_conditions"
+    },
+    {
+      "conditions": [],
+      "property": {
+        "file_links": [],
+        "name": "Target V Mass",
+        "notes": null,
+        "origin": "unknown",
+        "template": {
+          "id": "d3ba57a0-b61c-4674-9b84-75d0e7c4582a",
+          "scope": "auto",
+          "type": "link_by_uid"
+        },
+        "type": "property",
+        "value": {
+          "nominal": 1.3376,
+          "type": "nominal_real",
+          "units": "gram"
+        }
+      },
+      "type": "property_and_conditions"
+    }
+  ],
+  "tags": [],
+  "template": {
+    "id": "dcd3002d-beeb-4b3e-bca7-843a408f2fb1",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "type": "material_spec",
+  "uids": {
+    "auto": "c20e1153-44a7-40f1-a9ce-295445999c71"
+  }
+}

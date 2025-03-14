@@ -1,0 +1,36 @@
+{
+  "conditions": [
+    {
+      "file_links": [],
+      "name": "Vacuum Before Melt",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "21ef0918-663e-4a18-a134-78a5dcecc20c",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "condition",
+      "value": {
+        "nominal": 3e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    }
+  ],
+  "file_links": [],
+  "name": "BAA11_VAM-A Arc Melting",
+  "notes": null,
+  "parameters": [],
+  "source": null,
+  "spec": {
+    "id": "fadf2140-694e-44cb-9e92-f97702507b03",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "process_run",
+  "uids": {
+    "auto": "ab953cfe-400d-493f-b7b9-2209728e88c3"
+  }
+}

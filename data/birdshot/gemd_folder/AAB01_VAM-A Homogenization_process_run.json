@@ -1,0 +1,102 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "AAB01_VAM-A Homogenization",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Atmosphere",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "8877e526-66f6-49cf-bd1f-6853d4e05898",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "category": "Ar",
+        "type": "nominal_categorical"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Cooling Rate",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "e84f0d74-6c37-47fd-899f-044af806ad1a",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "category": "FC",
+        "type": "nominal_categorical"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Duration",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "35c05b20-ecb8-4aa7-9bfe-747cb6bcd8c5",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 24.0,
+        "type": "nominal_real",
+        "units": "hour"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Pressure",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "0692ede1-f3fd-4fcc-bb36-95794c961eec",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 5.0,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Temperature",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "7d213d45-dd97-4ff6-85d9-6b5d6aa6797d",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 1150.0,
+        "type": "nominal_real",
+        "units": "degree_Celsius"
+      }
+    }
+  ],
+  "source": null,
+  "spec": {
+    "id": "074de282-09df-44f6-bdee-449aed8d02d7",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "process_run",
+  "uids": {
+    "auto": "36bf6b30-72b0-4694-9903-e036acd45a41"
+  }
+}

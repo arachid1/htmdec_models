@@ -1,0 +1,35 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "BBB12_VAM-A EBSD and EDS Mapping",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Dwell Time",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "8ced3264-8b2c-41f4-8259-68d1ea4eda38",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": -1.0,
+        "type": "nominal_real",
+        "units": "second"
+      }
+    }
+  ],
+  "tags": [],
+  "template": {
+    "id": "b975b8ab-88d9-4887-b817-725a7579194d",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "type": "process_spec",
+  "uids": {
+    "auto": "c7c1b80b-edf4-4156-856b-3868752668d4"
+  }
+}

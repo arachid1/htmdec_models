@@ -1,0 +1,76 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "material": {
+    "id": "08e3e8bd-7d90-4748-8b6a-e0011cab5a4e",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "name": "CBA06_VAM-A Prior Dimension",
+  "notes": null,
+  "parameters": [],
+  "properties": [
+    {
+      "file_links": [],
+      "name": "Prior Length",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "5e5252f3-3da5-4e22-864d-97f6108fa046",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 41.67,
+        "type": "nominal_real",
+        "units": "centimeter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Prior Thickness",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "5e5252f3-3da5-4e22-864d-97f6108fa046",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 12.93,
+        "type": "nominal_real",
+        "units": "centimeter"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Prior Width",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "5e5252f3-3da5-4e22-864d-97f6108fa046",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "property",
+      "value": {
+        "nominal": 16.79,
+        "type": "nominal_real",
+        "units": "centimeter"
+      }
+    }
+  ],
+  "source": null,
+  "spec": {
+    "id": "09b99e31-bc73-42b5-b4c3-669402b41406",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "measurement_run",
+  "uids": {
+    "auto": "508adeef-4d09-4e12-b04c-6e37ca95334e"
+  }
+}

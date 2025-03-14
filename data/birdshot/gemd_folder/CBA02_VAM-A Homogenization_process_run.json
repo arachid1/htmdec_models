@@ -1,0 +1,85 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "CBA02_VAM-A Homogenization",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Atmosphere",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "baf8173e-a2b0-4879-bb34-433ec340f054",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "category": "Ar",
+        "type": "nominal_categorical"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Cooling Rate",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "9f4212e2-c362-4489-a3cb-d03db5d2b156",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "category": "FC",
+        "type": "nominal_categorical"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Duration",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "d3c1883d-a6c2-4706-ab21-2d9f97f33d23",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 24.0,
+        "type": "nominal_real",
+        "units": "hour"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Temperature",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "4cc41478-6c25-406b-b7d3-8cdf2445ddc1",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 1050.0,
+        "type": "nominal_real",
+        "units": "degree_Celsius"
+      }
+    }
+  ],
+  "source": null,
+  "spec": {
+    "id": "f0145ccf-ca5c-412c-95be-8c6a60469715",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "tags": [],
+  "type": "process_run",
+  "uids": {
+    "auto": "12ebdcdf-948c-4093-9cfb-f0168819487f"
+  }
+}

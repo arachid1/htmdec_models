@@ -3,24 +3,28 @@
   "file_links": [],
   "labels": [],
   "mass_fraction": null,
-  "material": null,
+  "material": {
+    "id": "973c14d6-0e78-4633-b39b-6d844974548d",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
   "name": "AAA11_VAM-B EBS Ingredient",
   "notes": null,
   "number_fraction": null,
   "process": {
-    "id": "5e869c8f-4459-4e27-b0aa-b63aa3c88f0e",
+    "id": "7b09ce6d-cae7-4cb9-970e-df96d2fde5d8",
     "scope": "auto",
     "type": "link_by_uid"
   },
   "spec": {
-    "id": "1f5a9e6a-6997-4deb-92d0-636090a53fdf",
+    "id": "0fad8a92-1024-4da7-94fa-6dd9c6165050",
     "scope": "auto",
     "type": "link_by_uid"
   },
   "tags": [],
   "type": "ingredient_run",
   "uids": {
-    "auto": "3e1160e3-c1fc-41f2-a269-492338ca97f8"
+    "auto": "d787bb56-afce-4f4a-b011-6c7a0e24bf25"
   },
   "volume_fraction": null
 }

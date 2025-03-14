@@ -1,0 +1,86 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "AAB08_VAM-A Homogenization",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 1",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "67700e09-0716-40e3-adc5-d7b7b74fe497",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 4.4e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 2",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "67700e09-0716-40e3-adc5-d7b7b74fe497",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 3.7e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 3",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "67700e09-0716-40e3-adc5-d7b7b74fe497",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 1.8e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 4",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "67700e09-0716-40e3-adc5-d7b7b74fe497",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 0.0,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    }
+  ],
+  "tags": [],
+  "template": {
+    "id": "b36f1769-3306-42c1-9c41-57893d9689f1",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "type": "process_spec",
+  "uids": {
+    "auto": "b5aeed66-1ad2-4f17-abae-36ca95d8243c"
+  }
+}

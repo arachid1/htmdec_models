@@ -1,0 +1,86 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "AAA03_VAM-B Homogenization",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 1",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "816659b3-5637-43f2-8a38-295d4cfb51c5",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 4.8e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 2",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "816659b3-5637-43f2-8a38-295d4cfb51c5",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 3.8e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 3",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "816659b3-5637-43f2-8a38-295d4cfb51c5",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 3e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 4",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "816659b3-5637-43f2-8a38-295d4cfb51c5",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 1.5e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    }
+  ],
+  "tags": [],
+  "template": {
+    "id": "6819487c-c52d-46e1-8be0-d8c9ad248853",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "type": "process_spec",
+  "uids": {
+    "auto": "b98924b5-edaf-4e2e-9c2b-86c0583ad986"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "AAA09_VAM-B Homogenization",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 1",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "130a466f-73f0-4f9a-9538-9f61dafe52b1",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 3.3e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 2",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "130a466f-73f0-4f9a-9538-9f61dafe52b1",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 3e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 3",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "130a466f-73f0-4f9a-9538-9f61dafe52b1",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 2.1e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 4",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "130a466f-73f0-4f9a-9538-9f61dafe52b1",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 1e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    }
+  ],
+  "tags": [],
+  "template": {
+    "id": "766f2951-9d66-4f7b-a911-1abec62f888a",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "type": "process_spec",
+  "uids": {
+    "auto": "72b106d4-51ed-41f9-afee-113c20282fc4"
+  }
+}

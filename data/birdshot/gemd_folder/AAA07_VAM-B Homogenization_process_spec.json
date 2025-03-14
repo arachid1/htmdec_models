@@ -1,0 +1,86 @@
+{
+  "conditions": [],
+  "file_links": [],
+  "name": "AAA07_VAM-B Homogenization",
+  "notes": null,
+  "parameters": [
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 1",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "a4ccfb72-739b-4908-a6fa-4c5375f1992b",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 4.8e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 2",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "a4ccfb72-739b-4908-a6fa-4c5375f1992b",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 3.8e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 3",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "a4ccfb72-739b-4908-a6fa-4c5375f1992b",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 3e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    },
+    {
+      "file_links": [],
+      "name": "Purging Sequence Pressure 4",
+      "notes": null,
+      "origin": "unknown",
+      "template": {
+        "id": "a4ccfb72-739b-4908-a6fa-4c5375f1992b",
+        "scope": "auto",
+        "type": "link_by_uid"
+      },
+      "type": "parameter",
+      "value": {
+        "nominal": 1.5e-05,
+        "type": "nominal_real",
+        "units": "pascal"
+      }
+    }
+  ],
+  "tags": [],
+  "template": {
+    "id": "e9963103-b8f5-4f10-a80e-a7a4c61918eb",
+    "scope": "auto",
+    "type": "link_by_uid"
+  },
+  "type": "process_spec",
+  "uids": {
+    "auto": "b1eb6050-14bc-4a98-ad89-2aba21472420"
+  }
+}

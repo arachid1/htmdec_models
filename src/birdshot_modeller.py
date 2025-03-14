@@ -1,4 +1,5 @@
 from openmsimodel.interactive.gemd_modeller import GEMDModeller
+from openmsimodel.interactive.gemd_modeller import BIRDSHOTAutomatableComponentTree
 from gemd import (
     MaterialTemplate,
     ProcessTemplate,
@@ -20,15 +21,11 @@ from gemd import (
 )
 from openmsimodel.structures.materials_sequence import MaterialsSequence
 from openmsimodel.science_kit.science_kit import ScienceKit
-from openmsimodel.science_kit.science_kit import ScienceKit
 from openmsimodel.entity.gemd.material import Material
 from openmsimodel.entity.gemd.process import Process
 from openmsimodel.entity.gemd.measurement import Measurement
 from openmsimodel.entity.gemd.ingredient import Ingredient
 from openmsimodel.structures.materials_sequence import MaterialsSequence
-from openmsimodel.db.open_db import OpenDB
-from openmsimodel.graph.open_graph import OpenGraph
-from openmsimodel.graph.helpers import launch_graph_widget
 import re
 import os
 
@@ -58,66 +55,86 @@ class BIRDSHOTModeller(GEMDModeller):
             instantiate_build,
         )
         self.add_automatable_component(
-            lambda s: "NI-HSR" in s and (not ("." in s)),
-            (r"\b[A-Z]{3}[0-9]{2}\b", True),
-            [],
-            lambda file_name, file_path, component: ni_model(
-                file_name, file_path, component
+            "NI-HSR",
+            lambda file_name, file_path: "NI-HSR" in file_path
+            and (not ("." in file_path)),
+            (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
+            lambda file_name, file_path, component, form: self.hsr_ni_model(
+                file_name, file_path, component, form
             ),
         )
         self.add_automatable_component(
-            lambda s: "EDS" in s and (not ("." in s)),
-            (r"\b[A-Z]{3}[0-9]{2}\b", True),
-            [],
-            lambda file_name, file_path, component: self.eds_model(
-                file_name, file_path, component
+            "EDS",
+            lambda file_name, file_path: "EDS" in file_path
+            and (not ("." in file_path)),
+            (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
+            lambda file_name, file_path, component, form: self.eds_model(
+                file_name, file_path, component, form
             ),
         )
         self.add_automatable_component(
-            lambda s: "Syn" in s and (not ("." in s)),
-            (r"\b[A-Z]{3}[0-9]{2}\b", True),
-            [],
-            lambda file_name, file_path, component: self.synthesis_model(
-                file_name, file_path, component
+            "Syn",
+            lambda file_name, file_path: "Syn" in file_path
+            and (not ("." in file_path)),
+            (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
+            lambda file_name, file_path, component, form: self.synthesis_model(
+                file_name, file_path, component, form
             ),
         )
-        self.start_folder_monitoring()
+        self.tree_class = BIRDSHOTAutomatableComponentTree
+        self.start_monitoring()
 
-    def synthesis_model(self, file_name, file_path, component):
+    def hsr_ni_model(self, file_name, file_path, component, form):
+        science_kit = ScienceKit()
+        print(form)
+        ni_data = form["data"]
+        file_id = form["data"]["sampleId"]
+
+        print(form["files"])
+
+        files = [("File", item) for item in form["files"]]
+
+    def synthesis_model(self, file_name, file_path, component, form):
 
         science_kit = ScienceKit()
-        match = re.search(component["file_id_regex_pattern"][0], file_path)
+        if not form:
+            match = re.search(component["file_id_regex_pattern"][0], file_path)
 
-        file_id = match.group()
-        if not match:
-            print("No pattern found.")
-            return
+            file_id = match.group()
+            if not match:
+                print("No pattern found.")
+                return
 
-        raw_data_forms = self.client.get(
-            "entry/search",
-            parameters={"query": f"^{match.group()[:3]}.._VAM-.", "limit": 1000},
-        )
-        synthesis_data = {}
-        for form in raw_data_forms:
-            if (
-                "Syn" in form["data"]["targetPath"]
-                and match.group() in form["data"]["targetPath"]
-            ):
-                synthesis_data.update(form["data"])
-                file_id = form["data"]["sampleId"]
+            raw_data_forms = self.client.get(
+                "entry/search",
+                parameters={"query": f"^{match.group()[:3]}.._VAM-.", "limit": 1000},
+            )
+            synthesis_data = {}
+            for form in raw_data_forms:
+                if (
+                    "Syn" in form["data"]["targetPath"]
+                    and match.group() in form["data"]["targetPath"]
+                ):
+                    synthesis_data.update(form["data"])
+                    file_id = form["data"]["sampleId"]
 
-        synthesis_folder_id = self.find_folder_by_path(
-            self.girder_root_folder_id, form["data"]["targetPath"]
-        )
+            synthesis_folder_id = self.find_folder_by_path(
+                self.girder_root_folder_id, form["data"]["targetPath"]
+            )
 
-        dms_syn_folder_items = self.client.get(
-            f"/item",
-            parameters={
-                "folderId": synthesis_folder_id,
-            },
-        )
+            dms_syn_folder_items = self.client.get(
+                f"/item",
+                parameters={
+                    "folderId": synthesis_folder_id,
+                },
+            )
 
-        files = [(item["name"], item["_id"]) for item in dms_syn_folder_items]
+            files = [(item["name"], item["_id"]) for item in dms_syn_folder_items]
+        else:
+            synthesis_data = form["data"]
+            file_id = form["data"]["sampleId"]
+
+            files = [(item["name"], item["_id"]) for item in form["files"]]
 
         def make_forging_sequence(data):
             ingot_ingredient = Ingredient(f"{file_id} Ingot")
@@ -201,37 +218,6 @@ class BIRDSHOTModeller(GEMDModeller):
                     )
                 except Exception as e:
                     print(f"Error processing attribute: {e}. Skipping...")
-                # dimensions_before_measurement.update_properties(  # TODO: add thickness reduction
-                #     Property(
-                #     "Prior Length",
-                #     value=NominalReal(
-                #         data["Forging"]["Ingot Dimensions Before"]["Length"],
-                #         "cm",
-                #     ),
-                #     template=dimension_property_template,
-                # ),
-                # Property(
-                #     "Prior Thickness",
-                #     value=NominalReal(
-                #         synthesis_data["Forging"]["Ingot Dimensions Before"][
-                #             "Thickness"
-                #         ],
-                #         "cm",
-                #     ),
-                #     template=dimension_property_template,
-                # ),
-                #     Property(
-                #         "Prior Width",
-                #         value=NominalReal(
-                #             synthesis_data["Forging"]["Ingot Dimensions Before"][
-                #                 "Width"
-                #             ],
-                #             "cm",
-                #         ),
-                #         template=dimension_property_template,
-                #     ),
-                #     which="run",
-                # )
             dimensions_after_measurement = Measurement(
                 f"{file_id} Posterior Dimension",
                 template=dimension_measurement_template,
@@ -859,53 +845,6 @@ class BIRDSHOTModeller(GEMDModeller):
             except Exception as e:
                 print(f"Error processing attribute: {e}. Skipping...")
 
-            # weighed_mass_measurement.update_properties(
-            # Property(
-            #     "Al",
-            #     value=NominalReal(
-            #         data["Material Preparation"]["Weighed Mass"]["Al"], "gram"
-            #     ),
-            #     template=mass_property_template,
-            # ),
-            # Property(
-            #     "Co",
-            #     value=NominalReal(
-            #         data["Material Preparation"]["Weighed Mass"]["Co"], "gram"
-            #     ),
-            #     template=mass_property_template,
-            # ),
-            # Property(
-            #     "Cr",
-            #     value=NominalReal(
-            #         data["Material Preparation"]["Weighed Mass"]["Cr"], "gram"
-            #     ),
-            #     template=mass_property_template,
-            # ),
-            # Property(
-            #     "Fe",
-            #     value=NominalReal(
-            #         data["Material Preparation"]["Weighed Mass"]["Fe"], "gram"
-            #     ),
-            #     template=mass_property_template,
-            # ),
-            # Property(
-            #     "Mn",
-            #     value=NominalReal(
-            #         data["Material Preparation"]["Weighed Mass"]["Mn"], "gram"
-            #     ),
-            #     template=mass_property_template,
-            # ),
-            # Property(
-            #     "Ni",
-            #     value=NominalReal(
-            #         data["Material Preparation"]["Weighed Mass"]["Ni"], "gram"
-            #     ),
-            #     template=mass_property_template,
-            # ),
-
-            # which="run",
-            # )
-
             # Create the MaterialsSequence for Arc Melting
             arc_melting_sequence = MaterialsSequence(
                 name="Arc Melting Sequence",
@@ -927,42 +866,47 @@ class BIRDSHOTModeller(GEMDModeller):
             homogenization_sequence, ingredient_name_to_link=ingredient_name
         )
 
-        return science_kit.assets()
+        return science_kit
 
-    def eds_model(self, file_name, file_path, component):
+    def eds_model(self, file_name, file_path, component, form=None):
         science_kit = ScienceKit()
-        match = re.search(component["file_id_regex_pattern"][0], file_path)
+        if not form:
+            match = re.search(component["file_id_regex_pattern"][0], file_path)
 
-        if not match:
-            print("No pattern found.")
-            return
+            if not match:
+                print("No pattern found.")
+                return
 
-        file_id = match.group()
+            file_id = match.group()
 
-        raw_data_forms = self.client.get(
-            "entry/search",
-            parameters={"query": f"^{file_id[:3]}.._VAM-.", "limit": 1000},
-        )
-        for form in raw_data_forms:
-            if (
-                "EDS" in form["data"]["targetPath"]
-                and file_id in form["data"]["targetPath"]
-            ):
-                ebsd_eds_data = form["data"]
-                file_id = form["data"]["sampleId"]
+            raw_data_forms = self.client.get(
+                "entry/search",
+                parameters={"query": f"^{file_id[:3]}.._VAM-.", "limit": 1000},
+            )
+            for form in raw_data_forms:
+                if (
+                    "EDS" in form["data"]["targetPath"]
+                    and file_id in form["data"]["targetPath"]
+                ):
+                    ebsd_eds_data = form["data"]
+                    file_id = form["data"]["sampleId"]
 
-        eds_folder_id = self.find_folder_by_path(
-            self.girder_root_folder_id, ebsd_eds_data["targetPath"]
-        )
+            eds_folder_id = self.find_folder_by_path(
+                self.girder_root_folder_id, ebsd_eds_data["targetPath"]
+            )
 
-        dms_eds_folder_items = self.client.get(
-            f"/item",
-            parameters={
-                "folderId": eds_folder_id,
-            },
-        )
+            dms_eds_folder_items = self.client.get(
+                f"/item",
+                parameters={
+                    "folderId": eds_folder_id,
+                },
+            )
 
-        files = [(item["name"], item["_id"]) for item in dms_eds_folder_items]
+            files = [(item["name"], item["_id"]) for item in dms_eds_folder_items]
+        else:
+            ebsd_eds_data = form["data"]
+            file_id = form["data"]["sampleId"]
+            files = [(item["name"], item["_id"]) for item in form["files"]]
 
         def make_ebsd_eds_mapping_sequence(data):
 
@@ -1077,7 +1021,8 @@ class BIRDSHOTModeller(GEMDModeller):
 
             # Create Material for the EBSD and EDS Mapping sample
             ebsd_sample_material = Material(
-                "Sample from EBSD and EDS Mapping", template=sample_material_template
+                f"{file_id} Sample from EBSD and EDS Mapping",
+                template=sample_material_template,
             )
 
             ### Create Measurement templates for EDS Measured Composition and StdDev
@@ -1426,7 +1371,7 @@ class BIRDSHOTModeller(GEMDModeller):
             return ebsd_eds_mapping_sequence
 
         ebsd_eds_mapping_sequence = make_ebsd_eds_mapping_sequence(ebsd_eds_data)
-        return science_kit.assets()
+        return science_kit
 
     # Function to get subfolders of a folder using the Girder API
     def get_subfolders(self, parent_folder_id):
