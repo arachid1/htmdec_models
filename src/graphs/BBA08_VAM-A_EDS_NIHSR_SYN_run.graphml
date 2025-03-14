@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="relationship" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="Low Vacuum" for="node" attr.name="Low Vacuum" attr.type="string"/>
+<key id="Working Distance" for="node" attr.name="Working Distance" attr.type="string"/>
+<key id="Sample Tilt" for="node" attr.name="Sample Tilt" attr.type="string"/>
+<key id="Beam Voltage" for="node" attr.name="Beam Voltage" attr.type="string"/>
+<key id="Beam Current" for="node" attr.name="Beam Current" attr.type="string"/>
+<key id="Cu" for="node" attr.name="Cu" attr.type="string"/>
+<key id="Vacuum Before Melt" for="node" attr.name="Vacuum Before Melt" attr.type="string"/>
+<key id="V" for="node" attr.name="V" attr.type="string"/>
+<key id="Ni" for="node" attr.name="Ni" attr.type="string"/>
+<key id="Mn" for="node" attr.name="Mn" attr.type="string"/>
+<key id="Fe" for="node" attr.name="Fe" attr.type="string"/>
+<key id="Cr" for="node" attr.name="Cr" attr.type="string"/>
+<key id="Co" for="node" attr.name="Co" attr.type="string"/>
+<key id="Al" for="node" attr.name="Al" attr.type="string"/>
+<key id="Tip Area Function m4" for="node" attr.name="Tip Area Function m4" attr.type="string"/>
+<key id="Tip Area Function m3" for="node" attr.name="Tip Area Function m3" attr.type="string"/>
+<key id="Tip Area Function m2" for="node" attr.name="Tip Area Function m2" attr.type="string"/>
+<key id="Tip Area Function m1" for="node" attr.name="Tip Area Function m1" attr.type="string"/>
+<key id="Tip Area Function m0" for="node" attr.name="Tip Area Function m0" attr.type="string"/>
+<key id="Piezo Calibration Coefficient" for="node" attr.name="Piezo Calibration Coefficient" attr.type="string"/>
+<key id="Piezo Load Cell Effective Mass" for="node" attr.name="Piezo Load Cell Effective Mass" attr.type="string"/>
+<key id="Piezo Load Cell Damping Coefficient" for="node" attr.name="Piezo Load Cell Damping Coefficient" attr.type="string"/>
+<key id="Piezo Load Cell Stiffness" for="node" attr.name="Piezo Load Cell Stiffness" attr.type="string"/>
+<key id="Actuator Calibration Coefficient" for="node" attr.name="Actuator Calibration Coefficient" attr.type="string"/>
+<key id="Actuator Column Mass" for="node" attr.name="Actuator Column Mass" attr.type="string"/>
+<key id="Actuator Damping Coefficient" for="node" attr.name="Actuator Damping Coefficient" attr.type="string"/>
+<key id="Actuator Spring Stiffness" for="node" attr.name="Actuator Spring Stiffness" attr.type="string"/>
+<key id="Frame Stiffness" for="node" attr.name="Frame Stiffness" attr.type="string"/>
+<key id="Drift Timeout" for="node" attr.name="Drift Timeout" attr.type="string"/>
+<key id="Drift" for="node" attr.name="Drift" attr.type="string"/>
+<key id="Number of indents" for="node" attr.name="Number of indents" attr.type="string"/>
+<key id="Surface Stiffness Trigger" for="node" attr.name="Surface Stiffness Trigger" attr.type="string"/>
+<key id="Unload Time" for="node" attr.name="Unload Time" attr.type="string"/>
+<key id="Hold Maximum Load Time" for="node" attr.name="Hold Maximum Load Time" attr.type="string"/>
+<key id="Target Ind Strain Rate" for="node" attr.name="Target Ind Strain Rate" attr.type="string"/>
+<key id="Target Load" for="node" attr.name="Target Load" attr.type="string"/>
+<key id="Step Magnitude" for="node" attr.name="Step Magnitude" attr.type="string"/>
+<key id="source" for="node" attr.name="source" attr.type="string"/>
+<key id="short_name" for="node" attr.name="short_name" attr.type="string"/>
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="uuid" for="node" attr.name="uuid" attr.type="string"/>
+<key id="shape" for="node" attr.name="shape" attr.type="string"/>
+<key id="color" for="node" attr.name="color" attr.type="string"/>
+<key id="name" for="graph" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><data key="name">BBA08_VAM-A_EDS_NIHSR_SYN</data>
+<node id="BBA08_VAM-A Sample Preparation Process [c91d, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">c91d84b2-6dad-4c73-945e-fe846a64911e</data>
+  <data key="type">process_run</data>
+  <data key="short_name">BBA08_VAM-A Sample Preparation Process</data>
+  <data key="source">ProcessRun_BBA08_VAM-A Sample Preparation Process_c91d84b2-6dad-4c73-945e-fe846a64911e_.json</data>
+</node>
+<node id="BBA08_VAM-A Nanoindentation [45c2, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">45c23ddd-0a3f-4cde-aa7f-b1011124a29e</data>
+  <data key="type">process_run</data>
+  <data key="short_name">BBA08_VAM-A Nanoindentation</data>
+  <data key="Step Magnitude">Step Magnitude, 25.0 millinewton</data>
+  <data key="Target Load">Target Load, 1000.0 millinewton</data>
+  <data key="Target Ind Strain Rate">Target Ind Strain Rate, 2.0 1 / second</data>
+  <data key="Hold Maximum Load Time">Hold Maximum Load Time, 2.0 second</data>
+  <data key="Unload Time">Unload Time, 1.0 second</data>
+  <data key="Surface Stiffness Trigger">Surface Stiffness Trigger, 800.0 newton / second</data>
+  <data key="Number of indents">Number of indents, 5.0 dimensionless</data>
+  <data key="Drift">Drift, 0.5 nanometer / second</data>
+  <data key="Drift Timeout">Drift Timeout, 2.0 second</data>
+  <data key="Frame Stiffness">Frame Stiffness, 8000000.0 newton / meter</data>
+  <data key="Actuator Spring Stiffness">Actuator Spring Stiffness, 448.0 newton / meter</data>
+  <data key="Actuator Damping Coefficient">Actuator Damping Coefficient, 0.144 newton * meter / second</data>
+  <data key="Actuator Column Mass">Actuator Column Mass, 0.0090855 kilogram</data>
+  <data key="Actuator Calibration Coefficient">Actuator Calibration Coefficient, 10.546 dimensionless</data>
+  <data key="Piezo Load Cell Stiffness">Piezo Load Cell Stiffness, 14700000.0 newton / meter</data>
+  <data key="Piezo Load Cell Damping Coefficient">Piezo Load Cell Damping Coefficient, 40.0 newton * meter / second</data>
+  <data key="Piezo Load Cell Effective Mass">Piezo Load Cell Effective Mass, 0.00513 kilogram</data>
+  <data key="Piezo Calibration Coefficient">Piezo Calibration Coefficient, 0.0 dimensionless</data>
+  <data key="Tip Area Function m0">Tip Area Function m0, 0.0 dimensionless</data>
+  <data key="Tip Area Function m1">Tip Area Function m1, 0.0 dimensionless</data>
+  <data key="Tip Area Function m2">Tip Area Function m2, 0.0 dimensionless</data>
+  <data key="Tip Area Function m3">Tip Area Function m3, 0.0 dimensionless</data>
+  <data key="Tip Area Function m4">Tip Area Function m4, 0.0 dimensionless</data>
+  <data key="source">ProcessRun_BBA08_VAM-A Nanoindentation_45c23ddd-0a3f-4cde-aa7f-b1011124a29e_.json</data>
+</node>
+<node id="BBA08_VAM-A Prepared Sample for HSR-NI [f22a, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">f22a74ae-b3ec-4ca8-bfd3-99544de7875d</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">BBA08_VAM-A Prepared Sample for HSR-NI</data>
+  <data key="source">IngredientRun_BBA08_VAM-A Prepared Sample for HSR-NI_f22a74ae-b3ec-4ca8-bfd3-99544de7875d_.json</data>
+</node>
+<node id="BBA08_VAM-A Prepared Sample [fcfa, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">fcfa6ec6-53a4-4fda-9d52-dd0969e76639</data>
+  <data key="type">material_run</data>
+  <data key="short_name">BBA08_VAM-A Prepared Sample</data>
+  <data key="source">MaterialRun_BBA08_VAM-A Prepared Sample_fcfa6ec6-53a4-4fda-9d52-dd0969e76639_.json</data>
+</node>
+<node id="BBA08_VAM-A Sample for HSR-NI [3e6f, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">3e6f9285-e9b2-4795-b49c-721986b39ff4</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">BBA08_VAM-A Sample for HSR-NI</data>
+  <data key="source">IngredientRun_BBA08_VAM-A Sample for HSR-NI_3e6f9285-e9b2-4795-b49c-721986b39ff4_.json</data>
+</node>
+<node id="BBA08_VAM-A Arc Melted Sample [842e, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">842e7f33-3dd8-48fc-9190-ef716ae6861d</data>
+  <data key="type">material_run</data>
+  <data key="short_name">BBA08_VAM-A Arc Melted Sample</data>
+  <data key="source">MaterialRun_BBA08_VAM-A Arc Melted Sample_842e7f33-3dd8-48fc-9190-ef716ae6861d_.json</data>
+</node>
+<node id="BBA08_VAM-A Weighed Mass [cd0f, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">cd0fc5fa-edd1-469d-bdc1-c152656e969e</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A Weighed Mass</data>
+  <data key="Al">Al, 0.0 gram</data>
+  <data key="Co">Co, 8.7391 gram</data>
+  <data key="Cr">Cr, 2.571 gram</data>
+  <data key="Fe">Fe, 4.1401 gram</data>
+  <data key="Mn">Mn, 5.4328 gram</data>
+  <data key="Ni">Ni, 11.6023 gram</data>
+  <data key="V">V, 2.515 gram</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A Weighed Mass_cd0fc5fa-edd1-469d-bdc1-c152656e969e_.json</data>
+</node>
+<node id="BBA08_VAM-A Arc Melting [1003, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">10036c8a-4325-46fb-a9d7-2032d9e2237b</data>
+  <data key="type">process_run</data>
+  <data key="short_name">BBA08_VAM-A Arc Melting</data>
+  <data key="Vacuum Before Melt">Vacuum Before Melt, 3e-05 pascal</data>
+  <data key="source">ProcessRun_BBA08_VAM-A Arc Melting_10036c8a-4325-46fb-a9d7-2032d9e2237b_.json</data>
+</node>
+<node id="BBA08_VAM-A Homogenous Sample [502c, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">502c12f0-416b-4757-8e97-cd5935a79940</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">BBA08_VAM-A Homogenous Sample</data>
+  <data key="source">IngredientRun_BBA08_VAM-A Homogenous Sample_502c12f0-416b-4757-8e97-cd5935a79940_.json</data>
+</node>
+<node id="BBA08_VAM-A Homogenous Material [2267, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">2267bfba-418b-466e-aedf-8cbe65d352da</data>
+  <data key="type">material_run</data>
+  <data key="short_name">BBA08_VAM-A Homogenous Material</data>
+  <data key="source">MaterialRun_BBA08_VAM-A Homogenous Material_2267bfba-418b-466e-aedf-8cbe65d352da_.json</data>
+</node>
+<node id="BBA08_VAM-A Prior Dimension [12b0, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">12b02b1d-ed0f-440c-8557-276da9077860</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A Prior Dimension</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A Prior Dimension_12b02b1d-ed0f-440c-8557-276da9077860_.json</data>
+</node>
+<node id="BBA08_VAM-A Forged Ingot [b7cf, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">b7cf505a-f4e6-47fc-b105-247dce1389dd</data>
+  <data key="type">material_run</data>
+  <data key="short_name">BBA08_VAM-A Forged Ingot</data>
+  <data key="source">MaterialRun_BBA08_VAM-A Forged Ingot_b7cf505a-f4e6-47fc-b105-247dce1389dd_.json</data>
+</node>
+<node id="BBA08_VAM-A Forged Sample [3b43, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">3b431b06-6e5d-4c3a-9bf9-beec96d4fde6</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">BBA08_VAM-A Forged Sample</data>
+  <data key="source">IngredientRun_BBA08_VAM-A Forged Sample_3b431b06-6e5d-4c3a-9bf9-beec96d4fde6_.json</data>
+</node>
+<node id="BBA08_VAM-A Homogenization [cafc, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">cafcf9b1-bfd2-433f-a32e-be4bb47b7cd7</data>
+  <data key="type">process_run</data>
+  <data key="short_name">BBA08_VAM-A Homogenization</data>
+  <data key="source">ProcessRun_BBA08_VAM-A Homogenization_cafcf9b1-bfd2-433f-a32e-be4bb47b7cd7_.json</data>
+</node>
+<node id="BBA08_VAM-A Forging [a09b, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">a09b001a-0cbf-43ad-82d1-1ef4b28f24d4</data>
+  <data key="type">process_run</data>
+  <data key="short_name">BBA08_VAM-A Forging</data>
+  <data key="source">ProcessRun_BBA08_VAM-A Forging_a09b001a-0cbf-43ad-82d1-1ef4b28f24d4_.json</data>
+</node>
+<node id="BBA08_VAM-A Time Spent Measurement [bcb9, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">bcb9d48f-7b14-48e3-bb7c-68240402d9a5</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A Time Spent Measurement</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A Time Spent Measurement_bcb9d48f-7b14-48e3-bb7c-68240402d9a5_.json</data>
+</node>
+<node id="BBA08_VAM-A Ingot [69dc, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">69dca95b-6ac5-47d8-b250-cef6bb4dea01</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">BBA08_VAM-A Ingot</data>
+  <data key="source">IngredientRun_BBA08_VAM-A Ingot_69dca95b-6ac5-47d8-b250-cef6bb4dea01_.json</data>
+</node>
+<node id="BBA08_VAM-A Temperature [5f36, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">5f364c8f-94aa-4cfd-835e-3f9eaad077aa</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A Temperature</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A Temperature_5f364c8f-94aa-4cfd-835e-3f9eaad077aa_.json</data>
+</node>
+<node id="BBA08_VAM-A Posterior Dimension [bdec, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">bdec2fc7-4297-4854-a041-6aa5f305a9fb</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A Posterior Dimension</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A Posterior Dimension_bdec2fc7-4297-4854-a041-6aa5f305a9fb_.json</data>
+</node>
+<node id="BBA08_VAM-A Soak Time [1ef3, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">1ef37cf3-a4f6-4de3-aebb-9d115b8c0e38</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A Soak Time</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A Soak Time_1ef37cf3-a4f6-4de3-aebb-9d115b8c0e38_.json</data>
+</node>
+<node id="BBA08_VAM-A 2nd Phase EDS Measured Composition StdDev [2db3, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">2db3a8fc-5f83-40ed-857c-73f1586cecd1</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A 2nd Phase EDS Measured Composition StdDev</data>
+  <data key="Al">Al, 0.0 dimensionless</data>
+  <data key="Co">Co, 0.0 dimensionless</data>
+  <data key="Cr">Cr, 0.0 dimensionless</data>
+  <data key="Cu">Cu, 0.0 dimensionless</data>
+  <data key="Fe">Fe, 0.0 dimensionless</data>
+  <data key="Mn">Mn, 0.0 dimensionless</data>
+  <data key="Ni">Ni, 0.0 dimensionless</data>
+  <data key="V">V, 0.0 dimensionless</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A 2nd Phase EDS Measured Composition StdDev_2db3a8fc-5f83-40ed-857c-73f1586cecd1_.json</data>
+</node>
+<node id="BBA08_VAM-A Sample from EBSD and EDS Mapping [c020, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">c020e6f8-5751-4627-8745-0bcf3e159e70</data>
+  <data key="type">material_run</data>
+  <data key="short_name">BBA08_VAM-A Sample from EBSD and EDS Mapping</data>
+  <data key="source">MaterialRun_BBA08_VAM-A Sample from EBSD and EDS Mapping_c020e6f8-5751-4627-8745-0bcf3e159e70_.json</data>
+</node>
+<node id="BBA08_VAM-A EBSD and EDS Mapping [6cff, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">6cffe89e-1d20-4eca-a7b2-f52e71741f3a</data>
+  <data key="type">process_run</data>
+  <data key="short_name">BBA08_VAM-A EBSD and EDS Mapping</data>
+  <data key="Beam Current">Beam Current, -1.0 nanoampere</data>
+  <data key="Beam Voltage">Beam Voltage, 20.0 kilovolt</data>
+  <data key="Sample Tilt">Sample Tilt, -1.0 degree</data>
+  <data key="Working Distance">Working Distance, -1.0 millimeter</data>
+  <data key="Low Vacuum">Low Vacuum, None</data>
+  <data key="source">ProcessRun_BBA08_VAM-A EBSD and EDS Mapping_6cffe89e-1d20-4eca-a7b2-f52e71741f3a_.json</data>
+</node>
+<node id="BBA08_VAM-A EDS Measured Composition StdDev [6340, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">6340cc65-3ab1-4c65-b888-ae2401c5632a</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A EDS Measured Composition StdDev</data>
+  <data key="Al">Al, 0.0 dimensionless</data>
+  <data key="Co">Co, 22.89266666666667 dimensionless</data>
+  <data key="Cr">Cr, 8.061333333333332 dimensionless</data>
+  <data key="Cu">Cu, 0.0 dimensionless</data>
+  <data key="Fe">Fe, 12.24 dimensionless</data>
+  <data key="Mn">Mn, 15.982666666666669 dimensionless</data>
+  <data key="Ni">Ni, 32.69133333333333 dimensionless</data>
+  <data key="V">V, 8.132000000000001 dimensionless</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A EDS Measured Composition StdDev_6340cc65-3ab1-4c65-b888-ae2401c5632a_.json</data>
+</node>
+<node id="BBA08_VAM-A EBS Ingredient [dce8, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">dce873bd-8c22-4314-b0f0-5b5045235eee</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">BBA08_VAM-A EBS Ingredient</data>
+  <data key="source">IngredientRun_BBA08_VAM-A EBS Ingredient_dce873bd-8c22-4314-b0f0-5b5045235eee_.json</data>
+</node>
+<node id="BBA08_VAM-A 2nd Phase EDS Measured Composition [152d, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">152d46c7-9c68-4e81-859f-f70fbda81389</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A 2nd Phase EDS Measured Composition</data>
+  <data key="Al">Al, 0.0 dimensionless</data>
+  <data key="Co">Co, 0.0 dimensionless</data>
+  <data key="Cr">Cr, 0.0 dimensionless</data>
+  <data key="Cu">Cu, 0.0 dimensionless</data>
+  <data key="Fe">Fe, 0.0 dimensionless</data>
+  <data key="Mn">Mn, 0.0 dimensionless</data>
+  <data key="Ni">Ni, 0.0 dimensionless</data>
+  <data key="V">V, 0.0 dimensionless</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A 2nd Phase EDS Measured Composition_152d46c7-9c68-4e81-859f-f70fbda81389_.json</data>
+</node>
+<node id="BBA08_VAM-A EDS Measured Composition [24e2, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">24e24d6f-b7d7-4eee-bbc5-6d8e7af5df4e</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">BBA08_VAM-A EDS Measured Composition</data>
+  <data key="Al">Al, 0.0 dimensionless</data>
+  <data key="Co">Co, 22.89266666666667 dimensionless</data>
+  <data key="Cr">Cr, 8.061333333333332 dimensionless</data>
+  <data key="Cu">Cu, 0.0 dimensionless</data>
+  <data key="Fe">Fe, 12.24 dimensionless</data>
+  <data key="Mn">Mn, 15.982666666666669 dimensionless</data>
+  <data key="Ni">Ni, 32.69133333333333 dimensionless</data>
+  <data key="V">V, 8.132000000000001 dimensionless</data>
+  <data key="source">MeasurementRun_BBA08_VAM-A EDS Measured Composition_24e24d6f-b7d7-4eee-bbc5-6d8e7af5df4e_.json</data>
+</node>
+<edge source="BBA08_VAM-A Sample Preparation Process [c91d, process_run]" target="BBA08_VAM-A Prepared Sample [fcfa, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="BBA08_VAM-A Prepared Sample for HSR-NI [f22a, ingredient_run]" target="BBA08_VAM-A Nanoindentation [45c2, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="BBA08_VAM-A Prepared Sample [fcfa, material_run]" target="BBA08_VAM-A Prepared Sample for HSR-NI [f22a, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="BBA08_VAM-A Sample for HSR-NI [3e6f, ingredient_run]" target="BBA08_VAM-A Sample Preparation Process [c91d, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="BBA08_VAM-A Arc Melted Sample [842e, material_run]" target="BBA08_VAM-A Sample for HSR-NI [3e6f, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="BBA08_VAM-A Arc Melted Sample [842e, material_run]" target="BBA08_VAM-A Weighed Mass [cd0f, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A Arc Melted Sample [842e, material_run]" target="BBA08_VAM-A EBS Ingredient [dce8, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="BBA08_VAM-A Arc Melting [1003, process_run]" target="BBA08_VAM-A Arc Melted Sample [842e, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="BBA08_VAM-A Homogenous Sample [502c, ingredient_run]" target="BBA08_VAM-A Arc Melting [1003, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="BBA08_VAM-A Homogenous Material [2267, material_run]" target="BBA08_VAM-A Homogenous Sample [502c, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="BBA08_VAM-A Homogenous Material [2267, material_run]" target="BBA08_VAM-A Time Spent Measurement [bcb9, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A Forged Ingot [b7cf, material_run]" target="BBA08_VAM-A Prior Dimension [12b0, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A Forged Ingot [b7cf, material_run]" target="BBA08_VAM-A Forged Sample [3b43, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="BBA08_VAM-A Forged Ingot [b7cf, material_run]" target="BBA08_VAM-A Temperature [5f36, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A Forged Ingot [b7cf, material_run]" target="BBA08_VAM-A Posterior Dimension [bdec, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A Forged Ingot [b7cf, material_run]" target="BBA08_VAM-A Soak Time [1ef3, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A Forged Sample [3b43, ingredient_run]" target="BBA08_VAM-A Homogenization [cafc, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="BBA08_VAM-A Homogenization [cafc, process_run]" target="BBA08_VAM-A Homogenous Material [2267, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="BBA08_VAM-A Forging [a09b, process_run]" target="BBA08_VAM-A Forged Ingot [b7cf, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="BBA08_VAM-A Ingot [69dc, ingredient_run]" target="BBA08_VAM-A Forging [a09b, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="BBA08_VAM-A Sample from EBSD and EDS Mapping [c020, material_run]" target="BBA08_VAM-A 2nd Phase EDS Measured Composition StdDev [2db3, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A Sample from EBSD and EDS Mapping [c020, material_run]" target="BBA08_VAM-A EDS Measured Composition StdDev [6340, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A Sample from EBSD and EDS Mapping [c020, material_run]" target="BBA08_VAM-A 2nd Phase EDS Measured Composition [152d, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A Sample from EBSD and EDS Mapping [c020, material_run]" target="BBA08_VAM-A EDS Measured Composition [24e2, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="BBA08_VAM-A EBSD and EDS Mapping [6cff, process_run]" target="BBA08_VAM-A Sample from EBSD and EDS Mapping [c020, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="BBA08_VAM-A EBS Ingredient [dce8, ingredient_run]" target="BBA08_VAM-A EBSD and EDS Mapping [6cff, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+</graph></graphml>

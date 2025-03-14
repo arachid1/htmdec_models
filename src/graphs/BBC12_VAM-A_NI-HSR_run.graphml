@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="relationship" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="Tip Area Function m4" for="node" attr.name="Tip Area Function m4" attr.type="string"/>
+<key id="Tip Area Function m3" for="node" attr.name="Tip Area Function m3" attr.type="string"/>
+<key id="Tip Area Function m2" for="node" attr.name="Tip Area Function m2" attr.type="string"/>
+<key id="Tip Area Function m1" for="node" attr.name="Tip Area Function m1" attr.type="string"/>
+<key id="Tip Area Function m0" for="node" attr.name="Tip Area Function m0" attr.type="string"/>
+<key id="Piezo Calibration Coefficient" for="node" attr.name="Piezo Calibration Coefficient" attr.type="string"/>
+<key id="Piezo Load Cell Effective Mass" for="node" attr.name="Piezo Load Cell Effective Mass" attr.type="string"/>
+<key id="Piezo Load Cell Damping Coefficient" for="node" attr.name="Piezo Load Cell Damping Coefficient" attr.type="string"/>
+<key id="Piezo Load Cell Stiffness" for="node" attr.name="Piezo Load Cell Stiffness" attr.type="string"/>
+<key id="Actuator Calibration Coefficient" for="node" attr.name="Actuator Calibration Coefficient" attr.type="string"/>
+<key id="Actuator Column Mass" for="node" attr.name="Actuator Column Mass" attr.type="string"/>
+<key id="Actuator Damping Coefficient" for="node" attr.name="Actuator Damping Coefficient" attr.type="string"/>
+<key id="Actuator Spring Stiffness" for="node" attr.name="Actuator Spring Stiffness" attr.type="string"/>
+<key id="Frame Stiffness" for="node" attr.name="Frame Stiffness" attr.type="string"/>
+<key id="Drift Timeout" for="node" attr.name="Drift Timeout" attr.type="string"/>
+<key id="Drift" for="node" attr.name="Drift" attr.type="string"/>
+<key id="Number of indents" for="node" attr.name="Number of indents" attr.type="string"/>
+<key id="Surface Stiffness Trigger" for="node" attr.name="Surface Stiffness Trigger" attr.type="string"/>
+<key id="Unload Time" for="node" attr.name="Unload Time" attr.type="string"/>
+<key id="Hold Maximum Load Time" for="node" attr.name="Hold Maximum Load Time" attr.type="string"/>
+<key id="Target Ind Strain Rate" for="node" attr.name="Target Ind Strain Rate" attr.type="string"/>
+<key id="Target Load" for="node" attr.name="Target Load" attr.type="string"/>
+<key id="Step Magnitude" for="node" attr.name="Step Magnitude" attr.type="string"/>
+<key id="source" for="node" attr.name="source" attr.type="string"/>
+<key id="short_name" for="node" attr.name="short_name" attr.type="string"/>
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="uuid" for="node" attr.name="uuid" attr.type="string"/>
+<key id="shape" for="node" attr.name="shape" attr.type="string"/>
+<key id="color" for="node" attr.name="color" attr.type="string"/>
+<key id="name" for="graph" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><data key="name">BBC12_VAM-A_NI-HSR</data>
+<node id="BBC12_VAM-A Sample Preparation Process [a13a, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">a13a4d9b-6a51-436e-96f4-429333ccb252</data>
+  <data key="type">process_run</data>
+  <data key="short_name">BBC12_VAM-A Sample Preparation Process</data>
+  <data key="source">ProcessRun_BBC12_VAM-A Sample Preparation Process_a13a4d9b-6a51-436e-96f4-429333ccb252_.json</data>
+</node>
+<node id="BBC12_VAM-A Prepared Sample for HSR-NI [b82c, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">b82c3883-b3a0-4292-83df-a05fc6bf9b03</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">BBC12_VAM-A Prepared Sample for HSR-NI</data>
+  <data key="source">IngredientRun_BBC12_VAM-A Prepared Sample for HSR-NI_b82c3883-b3a0-4292-83df-a05fc6bf9b03_.json</data>
+</node>
+<node id="BBC12_VAM-A Nanoindentation [a7e9, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">a7e9841a-64e3-4033-a1b8-5d65b07f5a5b</data>
+  <data key="type">process_run</data>
+  <data key="short_name">BBC12_VAM-A Nanoindentation</data>
+  <data key="Step Magnitude">Step Magnitude, 25.0 millinewton</data>
+  <data key="Target Load">Target Load, 1000.0 millinewton</data>
+  <data key="Target Ind Strain Rate">Target Ind Strain Rate, 2.0 1 / second</data>
+  <data key="Hold Maximum Load Time">Hold Maximum Load Time, 2.0 second</data>
+  <data key="Unload Time">Unload Time, 1.0 second</data>
+  <data key="Surface Stiffness Trigger">Surface Stiffness Trigger, 800.0 newton / second</data>
+  <data key="Number of indents">Number of indents, 5.0 dimensionless</data>
+  <data key="Drift">Drift, 0.5 nanometer / second</data>
+  <data key="Drift Timeout">Drift Timeout, 2.0 second</data>
+  <data key="Frame Stiffness">Frame Stiffness, 8000000.0 newton / meter</data>
+  <data key="Actuator Spring Stiffness">Actuator Spring Stiffness, 448.0 newton / meter</data>
+  <data key="Actuator Damping Coefficient">Actuator Damping Coefficient, 0.144 newton * meter / second</data>
+  <data key="Actuator Column Mass">Actuator Column Mass, 0.0090855 kilogram</data>
+  <data key="Actuator Calibration Coefficient">Actuator Calibration Coefficient, 10.546 dimensionless</data>
+  <data key="Piezo Load Cell Stiffness">Piezo Load Cell Stiffness, 14700000.0 newton / meter</data>
+  <data key="Piezo Load Cell Damping Coefficient">Piezo Load Cell Damping Coefficient, 40.0 newton * meter / second</data>
+  <data key="Piezo Load Cell Effective Mass">Piezo Load Cell Effective Mass, 0.00513 kilogram</data>
+  <data key="Piezo Calibration Coefficient">Piezo Calibration Coefficient, 0.0 dimensionless</data>
+  <data key="Tip Area Function m0">Tip Area Function m0, 0.0 dimensionless</data>
+  <data key="Tip Area Function m1">Tip Area Function m1, 0.0 dimensionless</data>
+  <data key="Tip Area Function m2">Tip Area Function m2, 0.0 dimensionless</data>
+  <data key="Tip Area Function m3">Tip Area Function m3, 0.0 dimensionless</data>
+  <data key="Tip Area Function m4">Tip Area Function m4, 0.0 dimensionless</data>
+  <data key="source">ProcessRun_BBC12_VAM-A Nanoindentation_a7e9841a-64e3-4033-a1b8-5d65b07f5a5b_.json</data>
+</node>
+<node id="BBC12_VAM-A Prepared Sample [e86b, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">e86bbda1-5c68-4747-ab71-afff2543aa6d</data>
+  <data key="type">material_run</data>
+  <data key="short_name">BBC12_VAM-A Prepared Sample</data>
+  <data key="source">MaterialRun_BBC12_VAM-A Prepared Sample_e86bbda1-5c68-4747-ab71-afff2543aa6d_.json</data>
+</node>
+<node id="BBC12_VAM-A Sample for HSR-NI [2e97, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">2e97353c-6496-4c1b-8ce2-336d58f2973e</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">BBC12_VAM-A Sample for HSR-NI</data>
+  <data key="source">IngredientRun_BBC12_VAM-A Sample for HSR-NI_2e97353c-6496-4c1b-8ce2-336d58f2973e_.json</data>
+</node>
+<edge source="BBC12_VAM-A Sample Preparation Process [a13a, process_run]" target="BBC12_VAM-A Prepared Sample [e86b, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="BBC12_VAM-A Prepared Sample for HSR-NI [b82c, ingredient_run]" target="BBC12_VAM-A Nanoindentation [a7e9, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="BBC12_VAM-A Prepared Sample [e86b, material_run]" target="BBC12_VAM-A Prepared Sample for HSR-NI [b82c, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="BBC12_VAM-A Sample for HSR-NI [2e97, ingredient_run]" target="BBC12_VAM-A Sample Preparation Process [a13a, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+</graph></graphml>

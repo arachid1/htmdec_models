@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="relationship" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="Vacuum Before Melt" for="node" attr.name="Vacuum Before Melt" attr.type="string"/>
+<key id="Low Vacuum" for="node" attr.name="Low Vacuum" attr.type="string"/>
+<key id="Working Distance" for="node" attr.name="Working Distance" attr.type="string"/>
+<key id="Sample Tilt" for="node" attr.name="Sample Tilt" attr.type="string"/>
+<key id="Beam Voltage" for="node" attr.name="Beam Voltage" attr.type="string"/>
+<key id="Beam Current" for="node" attr.name="Beam Current" attr.type="string"/>
+<key id="source" for="node" attr.name="source" attr.type="string"/>
+<key id="V" for="node" attr.name="V" attr.type="string"/>
+<key id="Ni" for="node" attr.name="Ni" attr.type="string"/>
+<key id="Mn" for="node" attr.name="Mn" attr.type="string"/>
+<key id="Fe" for="node" attr.name="Fe" attr.type="string"/>
+<key id="Cu" for="node" attr.name="Cu" attr.type="string"/>
+<key id="Cr" for="node" attr.name="Cr" attr.type="string"/>
+<key id="Co" for="node" attr.name="Co" attr.type="string"/>
+<key id="Al" for="node" attr.name="Al" attr.type="string"/>
+<key id="short_name" for="node" attr.name="short_name" attr.type="string"/>
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="uuid" for="node" attr.name="uuid" attr.type="string"/>
+<key id="shape" for="node" attr.name="shape" attr.type="string"/>
+<key id="color" for="node" attr.name="color" attr.type="string"/>
+<key id="name" for="graph" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><data key="name">AAA15_VAM-B</data>
+<node id="AAA15_VAM-B EDS Measured Composition [0bae, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">0baeea27-cd41-4d04-8226-70d06ce7d2f5</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAA15_VAM-B EDS Measured Composition</data>
+  <data key="Al">Al, 4.9 dimensionless</data>
+  <data key="Co">Co, 45.5 dimensionless</data>
+  <data key="Cr">Cr, 44.2 dimensionless</data>
+  <data key="Cu">Cu, 0.0 dimensionless</data>
+  <data key="Fe">Fe, 0.0 dimensionless</data>
+  <data key="Mn">Mn, 0.0 dimensionless</data>
+  <data key="Ni">Ni, 5.4 dimensionless</data>
+  <data key="V">V, 0.0 dimensionless</data>
+  <data key="source">MeasurementRun_AAA15_VAM-B EDS Measured Composition_0baeea27-cd41-4d04-8226-70d06ce7d2f5_.json</data>
+</node>
+<node id="AAA15_VAM-B Sample from EBSD and EDS Mapping [f837, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">f837ff86-1a75-4c98-8cb8-3918a262f140</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAA15_VAM-B Sample from EBSD and EDS Mapping</data>
+  <data key="source">MaterialRun_AAA15_VAM-B Sample from EBSD and EDS Mapping_f837ff86-1a75-4c98-8cb8-3918a262f140_.json</data>
+</node>
+<node id="AAA15_VAM-B EBSD and EDS Mapping [b261, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">b26184da-e2d4-4f69-95a9-e0ee853ef232</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAA15_VAM-B EBSD and EDS Mapping</data>
+  <data key="Beam Current">Beam Current, 26.0 nanoampere</data>
+  <data key="Beam Voltage">Beam Voltage, 20.0 kilovolt</data>
+  <data key="Sample Tilt">Sample Tilt, 70.0 degree</data>
+  <data key="Working Distance">Working Distance, 9.0 millimeter</data>
+  <data key="Low Vacuum">Low Vacuum, None</data>
+  <data key="source">ProcessRun_AAA15_VAM-B EBSD and EDS Mapping_b26184da-e2d4-4f69-95a9-e0ee853ef232_.json</data>
+</node>
+<node id="AAA15_VAM-B EDS Measured Composition StdDev [ad9e, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">ad9ecad0-6e5c-4c37-9920-a643fa5fd41a</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAA15_VAM-B EDS Measured Composition StdDev</data>
+  <data key="Al">Al, 4.9 dimensionless</data>
+  <data key="Co">Co, 45.5 dimensionless</data>
+  <data key="Cr">Cr, 44.2 dimensionless</data>
+  <data key="Cu">Cu, 0.0 dimensionless</data>
+  <data key="Fe">Fe, 0.0 dimensionless</data>
+  <data key="Mn">Mn, 0.0 dimensionless</data>
+  <data key="Ni">Ni, 5.4 dimensionless</data>
+  <data key="V">V, 0.0 dimensionless</data>
+  <data key="source">MeasurementRun_AAA15_VAM-B EDS Measured Composition StdDev_ad9ecad0-6e5c-4c37-9920-a643fa5fd41a_.json</data>
+</node>
+<node id="AAA15_VAM-B EBS Ingredient [76f5, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">76f59bed-67f1-41c1-b820-e6208ebd3dd9</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAA15_VAM-B EBS Ingredient</data>
+  <data key="source">IngredientRun_AAA15_VAM-B EBS Ingredient_76f59bed-67f1-41c1-b820-e6208ebd3dd9_.json</data>
+</node>
+<node id="AAA15_VAM-B Arc Melted Sample [87ca, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">87ca01a7-55fc-498f-ad54-b78953353ba0</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAA15_VAM-B Arc Melted Sample</data>
+  <data key="source">MaterialRun_AAA15_VAM-B Arc Melted Sample_87ca01a7-55fc-498f-ad54-b78953353ba0_.json</data>
+</node>
+<node id="AAA15_VAM-B Forging [3e80, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">3e80b86d-62f8-4533-b9e2-27bf66289245</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAA15_VAM-B Forging</data>
+  <data key="source">ProcessRun_AAA15_VAM-B Forging_3e80b86d-62f8-4533-b9e2-27bf66289245_.json</data>
+</node>
+<node id="AAA15_VAM-B Time Spent Measurement [4d92, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">4d927658-0a02-4455-88ae-ee2e7548cdde</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAA15_VAM-B Time Spent Measurement</data>
+  <data key="source">MeasurementRun_AAA15_VAM-B Time Spent Measurement_4d927658-0a02-4455-88ae-ee2e7548cdde_.json</data>
+</node>
+<node id="AAA15_VAM-B Homogenous Material [4048, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">40487212-05cf-4efd-89f0-9f9dbe508455</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAA15_VAM-B Homogenous Material</data>
+  <data key="source">MaterialRun_AAA15_VAM-B Homogenous Material_40487212-05cf-4efd-89f0-9f9dbe508455_.json</data>
+</node>
+<node id="AAA15_VAM-B Homogenization [8a06, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">8a064fb7-8230-4b3f-aae3-432aeca59fd9</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAA15_VAM-B Homogenization</data>
+  <data key="source">ProcessRun_AAA15_VAM-B Homogenization_8a064fb7-8230-4b3f-aae3-432aeca59fd9_.json</data>
+</node>
+<node id="AAA15_VAM-B Posterior Dimension [307e, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">307e6071-c9d4-4957-8679-476c2de5a5a3</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAA15_VAM-B Posterior Dimension</data>
+  <data key="source">MeasurementRun_AAA15_VAM-B Posterior Dimension_307e6071-c9d4-4957-8679-476c2de5a5a3_.json</data>
+</node>
+<node id="AAA15_VAM-B Forged Ingot [7ad1, material_run]">
+  <data key="color">green</data>
+  <data key="shape">circle</data>
+  <data key="uuid">7ad1ba8a-1848-40ef-b119-90d9b4f00015</data>
+  <data key="type">material_run</data>
+  <data key="short_name">AAA15_VAM-B Forged Ingot</data>
+  <data key="source">MaterialRun_AAA15_VAM-B Forged Ingot_7ad1ba8a-1848-40ef-b119-90d9b4f00015_.json</data>
+</node>
+<node id="AAA15_VAM-B Homogenous Sample [9fda, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">9fdab237-76d9-406c-9b18-9b42a202d5fd</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAA15_VAM-B Homogenous Sample</data>
+  <data key="source">IngredientRun_AAA15_VAM-B Homogenous Sample_9fdab237-76d9-406c-9b18-9b42a202d5fd_.json</data>
+</node>
+<node id="AAA15_VAM-B Arc Melting [5b1a, process_run]">
+  <data key="color">red</data>
+  <data key="shape">circle</data>
+  <data key="uuid">5b1ac9d7-37ee-48a9-85e0-fa4c1a31d344</data>
+  <data key="type">process_run</data>
+  <data key="short_name">AAA15_VAM-B Arc Melting</data>
+  <data key="Vacuum Before Melt">Vacuum Before Melt, 5e-05 pascal</data>
+  <data key="source">ProcessRun_AAA15_VAM-B Arc Melting_5b1ac9d7-37ee-48a9-85e0-fa4c1a31d344_.json</data>
+</node>
+<node id="AAA15_VAM-B Ingot [5b5c, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">5b5cd037-ff5a-4df1-a8fc-fdc651e8a079</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAA15_VAM-B Ingot</data>
+  <data key="source">IngredientRun_AAA15_VAM-B Ingot_5b5cd037-ff5a-4df1-a8fc-fdc651e8a079_.json</data>
+</node>
+<node id="AAA15_VAM-B Prior Dimension [d093, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">d093a014-de5b-4f3f-b06d-48710d101b61</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAA15_VAM-B Prior Dimension</data>
+  <data key="source">MeasurementRun_AAA15_VAM-B Prior Dimension_d093a014-de5b-4f3f-b06d-48710d101b61_.json</data>
+</node>
+<node id="AAA15_VAM-B Soak Time [d2fe, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">d2fede5d-ff27-4f67-a772-dae49fda6b51</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAA15_VAM-B Soak Time</data>
+  <data key="source">MeasurementRun_AAA15_VAM-B Soak Time_d2fede5d-ff27-4f67-a772-dae49fda6b51_.json</data>
+</node>
+<node id="AAA15_VAM-B Forged Sample [3e56, ingredient_run]">
+  <data key="color">blue</data>
+  <data key="shape">circle</data>
+  <data key="uuid">3e561da7-4e35-4084-8b08-53035666a26d</data>
+  <data key="type">ingredient_run</data>
+  <data key="short_name">AAA15_VAM-B Forged Sample</data>
+  <data key="source">IngredientRun_AAA15_VAM-B Forged Sample_3e561da7-4e35-4084-8b08-53035666a26d_.json</data>
+</node>
+<node id="AAA15_VAM-B Temperature [20d7, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">20d788bb-9411-498e-a48c-4cc70e6c6132</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAA15_VAM-B Temperature</data>
+  <data key="source">MeasurementRun_AAA15_VAM-B Temperature_20d788bb-9411-498e-a48c-4cc70e6c6132_.json</data>
+</node>
+<node id="AAA15_VAM-B Weighed Mass [a30f, measurement_run]">
+  <data key="color">purple</data>
+  <data key="shape">circle</data>
+  <data key="uuid">a30fff94-eed6-4721-8400-2c21f41dadd5</data>
+  <data key="type">measurement_run</data>
+  <data key="short_name">AAA15_VAM-B Weighed Mass</data>
+  <data key="Al">Al, 0.7297 gram</data>
+  <data key="Co">Co, 0.0 gram</data>
+  <data key="Cr">Cr, 1.4052 gram</data>
+  <data key="Fe">Fe, 13.5868 gram</data>
+  <data key="Mn">Mn, 0.0 gram</data>
+  <data key="Ni">Ni, 14.2788 gram</data>
+  <data key="V">V, 0.0 gram</data>
+  <data key="source">MeasurementRun_AAA15_VAM-B Weighed Mass_a30fff94-eed6-4721-8400-2c21f41dadd5_.json</data>
+</node>
+<edge source="AAA15_VAM-B Sample from EBSD and EDS Mapping [f837, material_run]" target="AAA15_VAM-B EDS Measured Composition [0bae, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAA15_VAM-B Sample from EBSD and EDS Mapping [f837, material_run]" target="AAA15_VAM-B EDS Measured Composition StdDev [ad9e, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAA15_VAM-B EBSD and EDS Mapping [b261, process_run]" target="AAA15_VAM-B Sample from EBSD and EDS Mapping [f837, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAA15_VAM-B EBS Ingredient [76f5, ingredient_run]" target="AAA15_VAM-B EBSD and EDS Mapping [b261, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAA15_VAM-B Arc Melted Sample [87ca, material_run]" target="AAA15_VAM-B EBS Ingredient [76f5, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAA15_VAM-B Arc Melted Sample [87ca, material_run]" target="AAA15_VAM-B Weighed Mass [a30f, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAA15_VAM-B Forging [3e80, process_run]" target="AAA15_VAM-B Forged Ingot [7ad1, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAA15_VAM-B Homogenous Material [4048, material_run]" target="AAA15_VAM-B Time Spent Measurement [4d92, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAA15_VAM-B Homogenous Material [4048, material_run]" target="AAA15_VAM-B Homogenous Sample [9fda, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAA15_VAM-B Homogenization [8a06, process_run]" target="AAA15_VAM-B Homogenous Material [4048, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAA15_VAM-B Forged Ingot [7ad1, material_run]" target="AAA15_VAM-B Posterior Dimension [307e, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAA15_VAM-B Forged Ingot [7ad1, material_run]" target="AAA15_VAM-B Prior Dimension [d093, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAA15_VAM-B Forged Ingot [7ad1, material_run]" target="AAA15_VAM-B Soak Time [d2fe, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAA15_VAM-B Forged Ingot [7ad1, material_run]" target="AAA15_VAM-B Forged Sample [3e56, ingredient_run]">
+  <data key="relationship">becomes</data>
+</edge>
+<edge source="AAA15_VAM-B Forged Ingot [7ad1, material_run]" target="AAA15_VAM-B Temperature [20d7, measurement_run]">
+  <data key="relationship">is measured with</data>
+</edge>
+<edge source="AAA15_VAM-B Homogenous Sample [9fda, ingredient_run]" target="AAA15_VAM-B Arc Melting [5b1a, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAA15_VAM-B Arc Melting [5b1a, process_run]" target="AAA15_VAM-B Arc Melted Sample [87ca, material_run]">
+  <data key="relationship">creates</data>
+</edge>
+<edge source="AAA15_VAM-B Ingot [5b5c, ingredient_run]" target="AAA15_VAM-B Forging [3e80, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+<edge source="AAA15_VAM-B Forged Sample [3e56, ingredient_run]" target="AAA15_VAM-B Homogenization [8a06, process_run]">
+  <data key="relationship">is used in</data>
+</edge>
+</graph></graphml>
