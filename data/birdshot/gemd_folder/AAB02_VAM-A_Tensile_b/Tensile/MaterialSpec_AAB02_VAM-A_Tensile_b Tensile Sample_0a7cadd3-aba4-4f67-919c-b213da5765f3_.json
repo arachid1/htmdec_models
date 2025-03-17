@@ -1,0 +1,106 @@
+{
+   "file_links": [],
+   "name": "AAB02_VAM-A_Tensile_b Tensile Sample",
+   "notes": null,
+   "process": {
+      "id": "b09f02ca-35e1-4ede-b47a-d46f1d6a4148",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "properties": [
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Area",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "dc264d1d-3c64-4a87-9abc-d5a24a1c5db7",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 3.0502000000000002,
+               "type": "nominal_real",
+               "units": "millimeter ** 2"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Gauge Length",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "860a1e2c-dffb-4c81-9c00-5d5b35f6a4ef",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 8.0,
+               "type": "nominal_real",
+               "units": "millimeter"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Thickness",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "860a1e2c-dffb-4c81-9c00-5d5b35f6a4ef",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 1.01,
+               "type": "nominal_real",
+               "units": "millimeter"
+            }
+         },
+         "type": "property_and_conditions"
+      },
+      {
+         "conditions": [],
+         "property": {
+            "file_links": [],
+            "name": "Width",
+            "notes": null,
+            "origin": "unknown",
+            "template": {
+               "id": "860a1e2c-dffb-4c81-9c00-5d5b35f6a4ef",
+               "scope": "auto",
+               "type": "link_by_uid"
+            },
+            "type": "property",
+            "value": {
+               "nominal": 3.02,
+               "type": "nominal_real",
+               "units": "millimeter"
+            }
+         },
+         "type": "property_and_conditions"
+      }
+   ],
+   "tags": [],
+   "template": {
+      "id": "a65298a3-e093-415d-a018-1ae6b77ea46f",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "type": "material_spec",
+   "uids": {
+      "auto": "0a7cadd3-aba4-4f67-919c-b213da5765f3"
+   }
+}

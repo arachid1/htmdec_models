@@ -1,0 +1,38 @@
+{
+   "allowed_labels": [],
+   "allowed_names": [],
+   "conditions": [],
+   "description": null,
+   "name": "Tensile Strength Test",
+   "parameters": [
+      [
+         {
+            "id": "43a26158-913c-4007-9827-db301c855786",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         null
+      ],
+      [
+         {
+            "id": "e8d995bf-550c-49aa-8156-491d44c75d6d",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         null
+      ],
+      [
+         {
+            "id": "9c00cc0c-27f9-46c7-beff-ccb8f00bcd27",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         null
+      ]
+   ],
+   "tags": [],
+   "type": "process_template",
+   "uids": {
+      "auto": "842876ef-7208-41c5-948c-b402b6c60770"
+   }
+}

@@ -1,0 +1,42 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "434594d9-2688-4d7e-9e09-0ac6efcb7fde",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "BBA01_VAM-A_Tensile_a Ultimate Tensile Strength",
+   "notes": null,
+   "parameters": [],
+   "properties": [
+      {
+         "file_links": [],
+         "name": "Ultimate Tensile Strength",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "e3c3f23c-619e-45d3-a2f4-93620a032a64",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 660.91722605207,
+            "type": "nominal_real",
+            "units": "megapascal"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "4c545f57-f45d-4d2b-b21a-c175d9f06808",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "f34ea3cf-82c7-45c3-92c5-f5bbb77063bc"
+   }
+}

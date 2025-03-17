@@ -1,0 +1,70 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "name": "AAA03_VAM-B_Tensile_a Tensile Strength Test",
+   "notes": null,
+   "parameters": [
+      {
+         "file_links": [],
+         "name": "Force Rate",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "3b17ebcf-4251-4c72-8d8b-88bfb3095e52",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 10.0,
+            "type": "nominal_real",
+            "units": "newton / second"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Max Force",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "aaff7ca1-8862-43a3-91a7-6dd1f4244457",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 657.0,
+            "type": "nominal_real",
+            "units": "newton"
+         }
+      },
+      {
+         "file_links": [],
+         "name": "Max Stress",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "22905b7b-bcc6-4c63-b337-4c676366bdb4",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "parameter",
+         "value": {
+            "nominal": 200.0,
+            "type": "nominal_real",
+            "units": "megapascal"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "ff9923c5-6c4e-43d7-912c-3cc3302566d1",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "process_run",
+   "uids": {
+      "auto": "91a4c999-0227-4d74-a86a-ec41c17e6e2f"
+   }
+}

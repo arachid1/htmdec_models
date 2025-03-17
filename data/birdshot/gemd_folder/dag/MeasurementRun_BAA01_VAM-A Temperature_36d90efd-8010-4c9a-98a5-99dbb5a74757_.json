@@ -1,0 +1,42 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "9f684225-888b-42a0-b038-c57e6b9a50be",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "BAA01_VAM-A Temperature",
+   "notes": null,
+   "parameters": [],
+   "properties": [
+      {
+         "file_links": [],
+         "name": "Temperature",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "958c08bb-e178-43ad-930d-b02fe731846f",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 1150.0,
+            "type": "nominal_real",
+            "units": "degree_Celsius"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "ea4459bc-2c89-4aae-8544-8c9553fd2112",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "36d90efd-8010-4c9a-98a5-99dbb5a74757"
+   }
+}

@@ -1,0 +1,42 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "63512b5c-3f8b-401a-8568-ecdcb322dbcb",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "BBB04_VAM-A_Tensile_c Elongation",
+   "notes": null,
+   "parameters": [],
+   "properties": [
+      {
+         "file_links": [],
+         "name": "Elongation",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "9cd6c139-6eb4-4c60-b7e4-9a365e3da0e1",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 1.0,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "f3f18bed-f7f6-401c-a88b-2bf630560bee",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "36a21fa1-a10e-4999-aa71-f60c77dd7746"
+   }
+}

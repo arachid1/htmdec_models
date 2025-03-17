@@ -1,0 +1,42 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "682bcd6c-dc8d-413c-83ff-da5f900421a0",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "AAA12_VAM-B_Tensile_a UTS YS Ratio",
+   "notes": null,
+   "parameters": [],
+   "properties": [
+      {
+         "file_links": [],
+         "name": "UTS YS Ratio",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "3408a6ab-3b00-4e29-ad76-3d71faf38905",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 1.5892857142857142,
+            "type": "nominal_real",
+            "units": "dimensionless"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "2c971d9e-5e0b-416c-ad6a-b1d11e65351b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "338cd9dc-1c5e-4f79-a730-2d7d29b56db1"
+   }
+}

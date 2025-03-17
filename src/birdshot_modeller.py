@@ -8,8 +8,6 @@ from gemd import (
     ParameterTemplate,
     PropertyTemplate,
     ConditionTemplate,
-    MaterialRun,
-    MaterialSpec,
     RealBounds,
     CategoricalBounds,
     Parameter,
@@ -28,7 +26,7 @@ from openmsimodel.entity.gemd.measurement import Measurement
 from openmsimodel.entity.gemd.ingredient import Ingredient
 from openmsimodel.structures.materials_sequence import MaterialsSequence
 import re
-import os
+from openmsimodel.utilities.io import out
 
 
 class BIRDSHOTAutomatableComponentTree(AutomatableComponentTree):
@@ -67,6 +65,17 @@ class BIRDSHOTAutomatableComponentTree(AutomatableComponentTree):
                 )
                 _all.extend(ni_hsr_kit.assets())
                 del ni_hsr_kit
+            if "Tensile" in self.file_mappings:
+                tensile_kit = self.file_mappings["Tensile"].output
+                tensile_kit_first_sequence = list(tensile_kit.structures.values())[0]
+                tensile_kit.link_prior(
+                    synthesis_kit,
+                    ingredient_name_to_link=tensile_kit_first_sequence.element_assets[
+                        0
+                    ].name,
+                )
+                _all.extend(tensile_kit.assets())
+                del tensile_kit
             if "SRJT" in self.file_mappings:
                 srjt_kit = self.file_mappings["SRJT"].output
                 srjt_kit_first_sequence = list(srjt_kit.structures.values())[0]
@@ -106,14 +115,14 @@ class BIRDSHOTModeller(GEMDModeller):
             girder_root_folder_id,
             instantiate_build,
         )
-        # self.add_automatable_component(
-        #     "Tensile",
-        #     lambda file_name, file_path: "Tensile" in file_path,
-        #     (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
-        #     lambda file_name, file_path, component, form: self.tensile_model(
-        #         file_name, file_path, component, form
-        #     ),
-        # )
+        self.add_automatable_component(
+            "Tensile",
+            lambda file_name, file_path: "Tensile" in file_path,
+            (r"\b[A-Z]{3}\d{2}_(?:VAM|DED)-[A-Z](?:_[A-Za-z]+_[a-z])?\b", False),
+            lambda file_name, file_path, component, form: self.tensile_model(
+                file_name, file_path, component, form
+            ),
+        )
         self.add_automatable_component(
             "SRJT",
             lambda file_name, file_path: "SRJT" in file_path,
@@ -409,8 +418,298 @@ class BIRDSHOTModeller(GEMDModeller):
         science_kit = ScienceKit()
         tensile_data = form["data"]
         file_id = form["data"]["sampleId"]
-        print(tensile_data)
-        exit()
+
+        force_rate_template = ParameterTemplate(
+            "Force Rate", bounds=RealBounds(0, 100, "N/s")
+        )
+        max_force_template = ParameterTemplate(
+            "Max Force", bounds=RealBounds(0, 10000, "N")
+        )
+        max_stress_template = ParameterTemplate(
+            "Max Stress", bounds=RealBounds(0, 1000, "MPa")
+        )
+
+        sample_dimension_template = PropertyTemplate(
+            "Sample Dimension", bounds=RealBounds(0, 100, "mm")
+        )
+        area_template = PropertyTemplate("Area", bounds=RealBounds(0, 100, "mm²"))
+
+        elastic_modulus_property_template = PropertyTemplate(
+            "Elastic Modulus", bounds=RealBounds(0, 500, "GPa")
+        )
+        elastic_modulus_measurement_template = MeasurementTemplate(
+            "Elastic Modulus", properties=elastic_modulus_property_template
+        )
+        elongation_property_template = PropertyTemplate(
+            "Elongation", bounds=RealBounds(0, 100, "dimensionless")
+        )
+        elongation_measurement_template = MeasurementTemplate(
+            "Elongation", properties=elongation_property_template
+        )
+
+        sigma_derivative_property_template = PropertyTemplate(
+            "Maximum ∂2σ_∂ε2", bounds=RealBounds(-5000, 5000, "MPa")
+        )
+        sigma_derivative_measurement_template = MeasurementTemplate(
+            "Maximum ∂2σ_∂ε2", properties=sigma_derivative_property_template
+        )
+
+        uts_ys_ratio_property_template = PropertyTemplate(
+            "UTS YS Ratio", bounds=RealBounds(0, 5, "dimensionless")
+        )
+        uts_ys_ratio_measurement_template = MeasurementTemplate(
+            "UTS YS Ratio", properties=uts_ys_ratio_property_template
+        )
+
+        ultimate_tensile_strength_property_template = PropertyTemplate(
+            "Ultimate Tensile Strength", bounds=RealBounds(0, 2000, "MPa")
+        )
+        ultimate_tensile_strength_measurement_template = MeasurementTemplate(
+            "Ultimate Tensile Strength",
+            properties=ultimate_tensile_strength_property_template,
+        )
+
+        yield_strength_property_template = PropertyTemplate(
+            "Yield Strength", bounds=RealBounds(0, 2000, "MPa")
+        )
+        yield_strength_measurement_template = MeasurementTemplate(
+            "Yield Strength", properties=yield_strength_property_template
+        )
+
+        # elongation_template = PropertyTemplate(
+        #     "Elongation", bounds=RealBounds(0, 100, "dimensionless")
+        # )
+        # sigma_derivative_template = PropertyTemplate(
+        #     "Maximum ∂2σ/∂ε2", bounds=RealBounds(-5000, 5000, "MPa")
+        # )
+        # uts_ys_ratio_template = PropertyTemplate(
+        #     "UTS/YS Ratio", bounds=RealBounds(0, 5, "dimensionless")
+        # )
+        # ultimate_tensile_strength_template = PropertyTemplate(
+        #     "Ultimate Tensile Strength", bounds=RealBounds(0, 2000, "MPa")
+        # )
+        # yield_strength_template = PropertyTemplate(
+        #     "Yield Strength", bounds=RealBounds(0, 2000, "MPa")
+        # )
+
+        def make_sample_preparation_sequence():
+            """Creates a Sample Preparation sequence for Tensile Test."""
+            sample_ingredient = Ingredient(f"{file_id} Sample for Tensile Test")
+
+            sample_prep_process_template = ProcessTemplate("Tensile Sample Preparation")
+            sample_prep_process = Process(
+                f"{file_id} Sample Preparation Process",
+                template=sample_prep_process_template,
+            )
+
+            prepared_sample_template = MaterialTemplate("Tensile Sample")
+            prepared_sample = Material(
+                f"{file_id} Prepared Sample", template=prepared_sample_template
+            )
+
+            # Create an empty sample preparation sequence
+            sample_preparation_sequence = MaterialsSequence(
+                name="Sample Preparation Sequence",
+                science_kit=science_kit,
+                ingredients=[sample_ingredient],
+                process=sample_prep_process,
+                material=prepared_sample,
+                measurements=[],
+            )
+
+            # Link internal structure
+            sample_preparation_sequence.link_within()
+
+            return sample_preparation_sequence
+
+        sample_preparation_sequence = make_sample_preparation_sequence()
+
+        def make_tensile_sequence(name):
+            """Creates the Tensile Test sequence using metadata from Sample Dimensions, Modulus Check, and Results."""
+
+            tensile_sample_ingredient = Ingredient(name)
+
+            # Extract metadata
+            sample_dimensions = tensile_data["Sample Dimensions"]
+            modulus_check = tensile_data["Modulus Check"]
+            results = tensile_data["Results"]
+
+            sample_material_template = MaterialTemplate(
+                "Tensile Sample",
+                properties=sample_dimension_template,  # Assigns all dimensions
+            )
+
+            tensile_sample_material = Material(
+                name=f"{file_id} Tensile Sample", template=sample_material_template
+            )
+
+            for key, value in sample_dimensions.items():
+                unit = "mm" if key != "Area" else "mm²"  # Use different unit for Area
+                template = sample_dimension_template if key != "Area" else area_template
+                print(value)
+                print(unit)
+
+                tensile_sample_material.update_properties_and_conditions(
+                    PropertyAndConditions(
+                        property=Property(
+                            key,
+                            value=NominalReal(float(value), unit),  # Convert to float
+                            template=template,  # Use appropriate template
+                        ),
+                        conditions=[],
+                    )
+                )
+
+            # Initialize the process template for the tensile test
+            tensile_process_template = ProcessTemplate(
+                "Tensile Strength Test",
+                parameters=[
+                    force_rate_template,
+                    max_force_template,
+                    max_stress_template,
+                ],
+            )
+
+            tensile_process = Process(
+                f"{file_id} Tensile Strength Test", template=tensile_process_template
+            )
+
+            # Update parameters for Modulus Check
+            tensile_process.update_parameters(
+                Parameter(
+                    "Force Rate",
+                    value=NominalReal(modulus_check["Force Rate"], "N/s"),
+                    template=force_rate_template,
+                ),
+                which="run",
+            )
+
+            tensile_process.update_parameters(
+                Parameter(
+                    "Max Force",
+                    value=NominalReal(modulus_check["Max Force"], "N"),
+                    template=max_force_template,
+                ),
+                which="run",
+            )
+
+            tensile_process.update_parameters(
+                Parameter(
+                    "Max Stress",
+                    value=NominalReal(modulus_check["Max Stress"], "MPa"),
+                    template=max_stress_template,
+                ),
+                which="run",
+            )
+
+            # Create measurements for Results
+            measurements = []
+
+            def create_measurement(
+                name, value, measurement_template, unit, property_template
+            ):
+                measurement = Measurement(
+                    f"{file_id} {name}", template=measurement_template
+                )
+                measurement.update_properties(
+                    Property(
+                        name,
+                        value=NominalReal(value, unit),
+                        template=template,
+                    ),
+                    which="run",
+                )
+                return measurement
+
+            # Convert UTS/YS Ratio to float since it's stored as a string
+            results["UTS/YS Ratio"] = float(results["UTS/YS Ratio"])
+
+            measurements.append(
+                create_measurement(
+                    "Elastic Modulus",
+                    results["Elastic Modulus"],
+                    elastic_modulus_measurement_template,
+                    "GPa",
+                    elastic_modulus_property_template,
+                )
+            )
+
+            measurements.append(
+                create_measurement(
+                    "Elongation",
+                    results["Elongation"],
+                    elongation_measurement_template,
+                    "dimensionless",
+                    elongation_property_template,
+                )
+            )
+
+            # print(results["Maximum ∂2σ/∂ε2"])
+
+            try:
+                measurements.append(
+                    create_measurement(
+                        "Maximum ∂2σ_∂ε2",
+                        results["Maximum ∂2σ/∂ε2"],
+                        sigma_derivative_measurement_template,
+                        "MPa",
+                        sigma_derivative_property_template,
+                    )
+                )
+            except Exception as e:
+                print("can't")
+
+            measurements.append(
+                create_measurement(
+                    "UTS YS Ratio",
+                    results["UTS/YS Ratio"],
+                    uts_ys_ratio_measurement_template,
+                    "dimensionless",
+                    uts_ys_ratio_property_template,
+                )
+            )
+
+            measurements.append(
+                create_measurement(
+                    "Ultimate Tensile Strength",
+                    results["Ultimate Tensile Strength"],
+                    ultimate_tensile_strength_measurement_template,
+                    "MPa",
+                    ultimate_tensile_strength_property_template,
+                )
+            )
+
+            measurements.append(
+                create_measurement(
+                    "Yield Strength",
+                    results["Yield Strength"],
+                    yield_strength_measurement_template,
+                    "MPa",
+                    yield_strength_property_template,
+                )
+            )
+
+            # Create the Tensile Test sequence
+            tensile_sequence = MaterialsSequence(
+                name="Tensile Strength Test Sequence",
+                science_kit=science_kit,
+                ingredients=[tensile_sample_ingredient],
+                process=tensile_process,
+                material=tensile_sample_material,
+                measurements=measurements,
+            )
+
+            # Link internal structure
+            tensile_sequence.link_within()
+
+            return tensile_sequence
+
+        ing_name = f"{file_id} Prepared Sample for Tensile Test"
+        tensile_sequence = make_tensile_sequence(ing_name)
+        tensile_sequence.link_prior(
+            sample_preparation_sequence, ingredient_name_to_link=ing_name
+        )
+        return science_kit
 
     def hsr_ni_model(self, file_name, file_path, component, form):
         science_kit = ScienceKit()
@@ -815,8 +1114,11 @@ class BIRDSHOTModeller(GEMDModeller):
 
             files = [(item["name"], item["_id"]) for item in form["files"]]
 
+        ingot_ingredient_name = f"{file_id} Ingot"
+        science_kit.ingredient_name_to_link = ingot_ingredient_name
+
         def make_forging_sequence(data):
-            ingot_ingredient = Ingredient(f"{file_id} Ingot")
+            ingot_ingredient = Ingredient(ingot_ingredient_name)
 
             forging_process_template = ProcessTemplate("Forging")
             forging_process = Process(
@@ -2096,6 +2398,60 @@ class BIRDSHOTModeller(GEMDModeller):
                 return None
 
         return current_folder_id  # Return the ID of the final folder if found
+
+    def post_process(self):
+        print("here")
+        file_ids = list(self.automatable_components_trees.keys())
+        iterations = ["A", "B", "C", "AAA", "AAB", "AAC", "AAE", "BAA", "BBA", "CBA"]
+        for iteration in iterations:
+            target = self.gemd_folder / "post_process" / iteration
+            target.mkdir(parents=True, exist_ok=True)
+
+            iteration_inferred_compositions_material = Material(
+                f"{iteration}XX Inferred Compositions",
+                template=MaterialTemplate("Inferred Compositions"),
+            )
+            inferred_compositions_science_kit = ScienceKit()
+            inferred_compositions_sequence = MaterialsSequence(
+                name=f"{iteration} Inferred Compositions Sequence",
+                science_kit=inferred_compositions_science_kit,
+                ingredients=[],
+                process=None,
+                material=iteration_inferred_compositions_material,
+                measurements=[],
+            )
+            inferred_compositions_sequence.link_within()
+
+            iteration_file_ids = [
+                file_id for file_id in file_ids if file_id.startswith(iteration)
+            ]
+            for iteration_file_id in iteration_file_ids:
+                if (
+                    "Syn"
+                    in self.automatable_components_trees[
+                        iteration_file_id
+                    ].file_mappings
+                ):
+                    iteration_file_id_science_kit = (
+                        self.automatable_components_trees[iteration_file_id]
+                        .file_mappings["Syn"]
+                        .output
+                    )
+                    # print(iteration_file_id_science_kit.elements)
+                    iteration_file_id_science_kit.link_prior(
+                        inferred_compositions_science_kit,
+                        ingredient_name_to_link=iteration_file_id_science_kit.ingredient_name_to_link,
+                    )
+                    for tree in self.automatable_components_trees[
+                        iteration_file_id
+                    ].file_mappings.values():
+                        for ele in tree.output.assets():
+                            out(ele, target, self.encoder)
+
+            for ele in inferred_compositions_science_kit.assets():
+                out(ele, target, self.encoder)
+        # iteration_file_
+        exit()
 
 
 def main(args=None):

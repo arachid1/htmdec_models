@@ -1,0 +1,42 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "fb3045a1-3b0d-4de9-842a-44772b28cc07",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "AAA14_VAM-B_Tensile_b Yield Strength",
+   "notes": null,
+   "parameters": [],
+   "properties": [
+      {
+         "file_links": [],
+         "name": "Yield Strength",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "8ab78f1f-ab8f-499f-8863-285c9d46c206",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 636.0,
+            "type": "nominal_real",
+            "units": "megapascal"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "41fcf45a-47dc-440f-be55-252ed75aefe8",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "5a9dc510-a483-402d-97d2-ab9272dcf22a"
+   }
+}

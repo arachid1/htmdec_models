@@ -1,0 +1,42 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "95f546e8-0c6b-42a8-9255-cb3597352aee",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "CBA05_VAM-A Posterior Dimension",
+   "notes": null,
+   "parameters": [],
+   "properties": [
+      {
+         "file_links": [],
+         "name": "Posterior Width",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "0b3a22e2-3e21-4dc8-8e9c-6a72c376acf0",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 18.56,
+            "type": "nominal_real",
+            "units": "centimeter"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "b0b5cee3-6ead-4085-899f-23dff36a0a50",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "b2813a17-0517-4b7b-9f73-75bb053c1afd"
+   }
+}

@@ -1,0 +1,42 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "10c3bb4a-68bb-4035-8fb2-e423a620819b",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "BBB08_VAM-A_Tensile_b Elastic Modulus",
+   "notes": null,
+   "parameters": [],
+   "properties": [
+      {
+         "file_links": [],
+         "name": "Elastic Modulus",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "75df9fe1-2ce9-46e8-aeab-73780a2a0ce6",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 173.367555975508,
+            "type": "nominal_real",
+            "units": "gigapascal"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "f2a58c79-f46d-47d1-b5aa-f9e55c609855",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "de1003e7-e6ba-4997-8e95-88aaf221db56"
+   }
+}

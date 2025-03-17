@@ -1,0 +1,42 @@
+{
+   "conditions": [],
+   "file_links": [],
+   "material": {
+      "id": "0bb280da-c8d2-4b0e-a00f-a05740230307",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "name": "BBC08_VAM-A Soak Time",
+   "notes": null,
+   "parameters": [],
+   "properties": [
+      {
+         "file_links": [],
+         "name": "Soak Time",
+         "notes": null,
+         "origin": "unknown",
+         "template": {
+            "id": "7b7b1dfa-b3f2-43a5-b4cb-2e6eefade19f",
+            "scope": "auto",
+            "type": "link_by_uid"
+         },
+         "type": "property",
+         "value": {
+            "nominal": 0.0,
+            "type": "nominal_real",
+            "units": "minute"
+         }
+      }
+   ],
+   "source": null,
+   "spec": {
+      "id": "7a63faf9-b350-45de-9d15-1cdbd5167ae2",
+      "scope": "auto",
+      "type": "link_by_uid"
+   },
+   "tags": [],
+   "type": "measurement_run",
+   "uids": {
+      "auto": "84186eea-6e75-492e-9d56-9eb0fb612f84"
+   }
+}
