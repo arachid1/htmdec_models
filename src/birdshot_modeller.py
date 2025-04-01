@@ -2400,13 +2400,14 @@ class BIRDSHOTModeller(GEMDModeller):
         return current_folder_id  # Return the ID of the final folder if found
 
     def post_process(self):
-        print("here")
         file_ids = list(self.automatable_components_trees.keys())
         iterations = ["A", "B", "C", "AAA", "AAB", "AAC", "AAE", "BAA", "BBA", "CBA"]
+        iteration_kits = {}
         for iteration in iterations:
             target = self.gemd_folder / "post_process" / iteration
             target.mkdir(parents=True, exist_ok=True)
-
+            ingredient_name = f"{iteration}XX Inferred Compositions Ingredient"
+            iteration_inferred_compositions_ingredient = Ingredient(ingredient_name)
             iteration_inferred_compositions_material = Material(
                 f"{iteration}XX Inferred Compositions",
                 template=MaterialTemplate("Inferred Compositions"),
@@ -2415,7 +2416,7 @@ class BIRDSHOTModeller(GEMDModeller):
             inferred_compositions_sequence = MaterialsSequence(
                 name=f"{iteration} Inferred Compositions Sequence",
                 science_kit=inferred_compositions_science_kit,
-                ingredients=[],
+                ingredients=[iteration_inferred_compositions_ingredient],
                 process=None,
                 material=iteration_inferred_compositions_material,
                 measurements=[],
@@ -2437,11 +2438,20 @@ class BIRDSHOTModeller(GEMDModeller):
                         .file_mappings["Syn"]
                         .output
                     )
-                    # print(iteration_file_id_science_kit.elements)
                     iteration_file_id_science_kit.link_prior(
                         inferred_compositions_science_kit,
                         ingredient_name_to_link=iteration_file_id_science_kit.ingredient_name_to_link,
                     )
+                    iteration_kits[iteration] = iteration_file_id_science_kit
+                    if iteration == "B":
+                        iteration_kits[iteration].link_prior(
+                            iteration_kits["A"], ingredient_name_to_link=ingredient_name
+                        )
+                    if iteration == "C":
+                        iteration_kits[iteration].link_prior(
+                            iteration_kits["B"], ingredient_name_to_link=ingredient_name
+                        )
+
                     for tree in self.automatable_components_trees[
                         iteration_file_id
                     ].file_mappings.values():
@@ -2450,7 +2460,7 @@ class BIRDSHOTModeller(GEMDModeller):
 
             for ele in inferred_compositions_science_kit.assets():
                 out(ele, target, self.encoder)
-        # iteration_file_
+
         exit()
 
 
